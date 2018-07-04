@@ -1,12 +1,19 @@
 # CIL
 
-Implementations tried so far:
+Project of team make for the Collaborative Filtering project from the Computational Intelligence Lab at ETH Zürich.
 
-1. Stochastic Gradient Descent with Regularization (ex4-pyCharm)
-2. Integrated model described in the "Factorization Meets the Neighborhood: a Multifaceted Collaborative Filtering Model" by Koren (Koren folder)
-3. Neural Networks with user and movie embeddings (not finished yet, the architecture must be set and maybe use implicit data?) (keras folder)
-4. Non-negative Matrix Factorization (nmf folder)
-5. SVD (notebook folder)
+# Overview 
+We tried several models:
+1. Stochastic Gradient Descent with Regularization (SGD).
+2. Non-Negative Matrix Factorization (NMF).
+3. Bayesian Probabilistic Matrix Factorization (BPMF).
+4. Bayesian Probabilistic Matrix Factorization with bias (BPMFB).
+5. Bayesian Probabilistic Matrix Factorization with bias and implicit data (BPMFBI).
+6. Bayesian Probabilistic Matrix Factorization with Mixture Rank (BPMFMR).
+
+Our best model is BPMFMR, in which we employ a  Gaussian  mixture  model (GMM)  to characterize  user-item ratings as a mixture of LRMA models of  different ranks and propose a fully Bayesian treatment of the model (hyper-)parameters. 
+
+
 
 
 # ToDo
