@@ -27,7 +27,7 @@ def extract_training_scores(train_data_path, verbose=False):
 
     if verbose: print("Loading data... ")
     data, row_col_search = load_data(datapath=train_data_path)
-    if verbose: print("Data loaded")
+    if verbose: print("data loaded")
     if verbose: print("Extracting data...")
     for i in range(len(data)):
         pos_string, score = data[i]
@@ -36,7 +36,7 @@ def extract_training_scores(train_data_path, verbose=False):
         n = int(row_col.group(2)) - 1
         X += [(d, n)]
         y += [int(score)]
-    if verbose: print("Data extracted")
+    if verbose: print("data extracted")
     return X, y
 
 """
@@ -47,7 +47,7 @@ def numpy_training_data(train_data_path, verbose=False):
 
     if verbose: print("Loading data... ")
     data, row_col_search = load_data(datapath=train_data_path)
-    if verbose: print("Data loaded")
+    if verbose: print("data loaded")
     if verbose: print("Extracting data...")
     train = np.zeros([len(data), 3], np.int64)
     for i in range(len(data)):
@@ -57,7 +57,7 @@ def numpy_training_data(train_data_path, verbose=False):
         n = int(row_col.group(2)) - 1
         train[i] = np.array([d, n, int(score)])
 
-    if verbose: print("Data extracted")
+    if verbose: print("data extracted")
     return train
 
 def output_submission(matrix, filename, verbose=False):

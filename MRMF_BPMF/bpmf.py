@@ -15,13 +15,11 @@ from numpy.linalg import inv, cholesky
 from numpy.random import RandomState
 from scipy.stats import wishart
 
-from utils.base import ModelBase
-from utils.exceptions import NotFittedError
-from utils.datasets import build_user_item_matrix
-from utils.validation import check_ratings
-from utils.evaluation import RMSE
-import pickle
-import os.path
+from MRMF_BPMF.utils.base import ModelBase
+from MRMF_BPMF.utils.exceptions import NotFittedError
+from MRMF_BPMF.utils.datasets import build_user_item_matrix
+from MRMF_BPMF.utils.validation import check_ratings
+from MRMF_BPMF.utils.evaluation import RMSE
 
 logger = logging.getLogger(__name__)
 

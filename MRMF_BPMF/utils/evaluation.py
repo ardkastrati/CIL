@@ -1,3 +1,6 @@
+"""
+Core implementation borrowed from: https://github.com/chyikwei/recommend
+"""
 import numpy as np
 
 
