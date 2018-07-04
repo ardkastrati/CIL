@@ -1,14 +1,12 @@
 # configuration used by the training and evaluation scripts
 general_params = {}
 bpmrmf_params = {}
-bpmf_params = {}
 nmf_params = {}
 svd_params = {}
 sgd_params = {}
 """
 Models:
 bpmrmf: Bayesian Probabilistic Matrix Factorization with Mixture Rank Matrix Factorization
-bpmf: Bayesian Probabilistic Matrix Factorization
 sgd: SGD Collaborative Filtering
 nmf: Non-Negative Matrix Factorization
 svd: Singular Value Decomposition
@@ -37,33 +35,6 @@ bpmrmf_params['max_rating'] = 5.
 bpmrmf_params['min_rating'] = 1.
 bpmrmf_params['n_features'] = [8,9,10,50] #ranks used in bpmrmf
 bpmrmf_params['bpmrmf_alpha'] = 1.
-
-# bpmf parameters
-bpmf_params['eval_iters'] = 2
-bpmf_params['train_pct'] = 1.0
-bpmf_params['beta'] = 2.0
-bpmf_params['beta0_user'] = 2.0
-bpmf_params['beta0_item'] = 2.0
-bpmf_params['nu0_user'] = None
-bpmf_params['nu0_item'] = None
-bpmf_params['mu0_user'] = 0
-bpmf_params['mu0_item'] = 0
-bpmf_params['converge'] = 1e-5
-bpmf_params['max_rating'] = 5.
-bpmf_params['min_rating'] = 1.
-bpmf_params['bpmf_n_features'] = 8
-bpmf_params['bpmf_bias'] = False
-bpmf_params['bpmf_implicit'] = False
-bpmf_params['burn_in'] = 10
-bpmf_params['beta0_a'] = 2.0
-bpmf_params['nu0_a'] = None
-bpmf_params['mu0_a'] = 0.
-bpmf_params['beta0_b'] = 2.0
-bpmf_params['nu0_b'] = None
-bpmf_params['mu0_b'] = 0.
-bpmf_params['beta0_implicit'] = 2.0
-bpmf_params['nu0_implicit'] = None
-bpmf_params['mu0_implicit'] = 0.
 
 # sgd parameters
 sgd_params['sgd_eta'] = 0.001
