@@ -1,0 +1,6 @@
+rank [8,9] seed = 0: perfekt (other seeds not so good)
+Rank [8, 40], seed=0 : iteration: 20, train RMSE: 0.8667955875971884 , val RMSE: 0.97356422048778 
+Rank [8, 40], seed=100: iteration: 12, train RMSE: 0.8957197870892429 , val RMSE: 0.9838345751130579 
+Rank [6, 7, 8, 9] seed=0: iteration: 28, train RMSE: 0.9218287097841444 , val RMSE: 0.9787695821227674
+
+

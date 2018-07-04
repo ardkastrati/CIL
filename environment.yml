@@ -1,0 +1,7 @@
+name: cil-env
+dependencies:
+    - python
+    - numpy
+    - scikit-learn
+    - pip: 
+        - scikit-surprise

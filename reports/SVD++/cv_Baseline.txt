@@ -1,0 +1,2725 @@
+############################################################################
+Hyperparameters:
+method = 'sgd'
+n_epochs = range(1, 30)
+learning_rate = [0.00001, 0.0001, 0.001, 0.01, 0.1, 1]
+
+
+Result:
+SGD with n_epochs  1  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1191  1.1140  1.1168  1.1157  1.1163  1.1164  0.0017  
+Fit time          0.72    1.02    1.15    1.09    1.12    1.02    0.16    
+Test time         2.53    2.89    2.45    2.52    2.62    2.60    0.16    
+SGD with n_epochs  1  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0996  1.0945  1.0973  1.0962  1.0967  1.0969  0.0017  
+Fit time          0.75    1.15    1.00    1.30    1.29    1.10    0.21    
+Test time         2.77    2.29    2.85    3.28    2.64    2.76    0.32    
+SGD with n_epochs  1  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0434  1.0391  1.0416  1.0405  1.0408  1.0411  0.0014  
+Fit time          0.77    0.97    1.12    1.12    0.96    0.99    0.13    
+Test time         2.65    2.60    2.91    2.37    2.48    2.60    0.18    
+SGD with n_epochs  1  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0186  1.0170  1.0201  1.0183  1.0184  1.0185  0.0010  
+Fit time          0.76    0.96    0.96    0.96    0.98    0.92    0.08    
+Test time         2.64    2.47    2.23    2.37    2.19    2.38    0.16    
+SGD with n_epochs  1  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0686  1.0710  1.0768  1.0735  1.0758  1.0731  0.0030  
+Fit time          0.73    0.98    0.97    1.05    0.96    0.94    0.11    
+Test time         2.43    2.45    2.49    2.21    2.46    2.41    0.10    
+SGD with n_epochs  1  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.3530  2.3577  2.3390  2.3330  2.3255  2.3417  0.0121  
+Fit time          0.72    0.97    0.97    0.99    0.99    0.93    0.10    
+Test time         2.25    2.39    2.45    2.25    2.46    2.36    0.09    
+SGD with n_epochs  2  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1166  1.1114  1.1143  1.1131  1.1137  1.1138  0.0017  
+Fit time          1.03    1.26    1.27    1.25    1.28    1.22    0.09    
+Test time         2.48    2.42    2.39    2.47    2.54    2.46    0.05    
+SGD with n_epochs  2  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0847  1.0796  1.0824  1.0814  1.0817  1.0820  0.0017  
+Fit time          1.08    1.26    1.49    1.46    1.24    1.31    0.15    
+Test time         2.32    2.42    2.58    3.08    2.24    2.53    0.30    
+SGD with n_epochs  2  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0279  1.0240  1.0265  1.0252  1.0255  1.0258  0.0013  
+Fit time          1.01    1.29    1.25    1.48    1.27    1.26    0.15    
+Test time         2.57    2.42    2.73    2.56    2.42    2.54    0.12    
+SGD with n_epochs  2  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0141  1.0120  1.0151  1.0134  1.0134  1.0136  0.0010  
+Fit time          1.04    1.25    1.25    1.24    1.44    1.25    0.13    
+Test time         2.71    2.53    2.47    2.72    2.73    2.63    0.11    
+SGD with n_epochs  2  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0675  1.0670  1.0724  1.0687  1.0706  1.0693  0.0020  
+Fit time          1.12    1.33    1.34    1.29    1.26    1.27    0.08    
+Test time         2.70    2.44    2.54    2.46    2.39    2.51    0.11    
+SGD with n_epochs  2  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.3873  2.4017  2.3781  2.3797  2.3862  2.3866  0.0083  
+Fit time          1.04    1.24    1.41    1.24    1.28    1.24    0.12    
+Test time         2.47    2.37    2.26    2.43    2.22    2.35    0.10    
+SGD with n_epochs  3  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1141  1.1090  1.1118  1.1107  1.1112  1.1114  0.0017  
+Fit time          1.29    1.55    1.56    1.57    1.55    1.50    0.11    
+Test time         2.47    2.39    2.48    2.18    2.41    2.38    0.11    
+SGD with n_epochs  3  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0741  1.0691  1.0719  1.0709  1.0712  1.0714  0.0016  
+Fit time          1.35    1.54    1.55    1.57    1.57    1.51    0.08    
+Test time         2.28    2.37    2.45    2.16    2.69    2.39    0.18    
+SGD with n_epochs  3  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0203  1.0165  1.0190  1.0176  1.0179  1.0183  0.0013  
+Fit time          1.29    1.58    1.61    1.54    1.60    1.52    0.12    
+Test time         2.45    2.22    2.41    2.43    2.71    2.44    0.16    
+SGD with n_epochs  3  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0128  1.0104  1.0136  1.0118  1.0118  1.0121  0.0011  
+Fit time          1.46    1.79    1.70    1.66    1.68    1.66    0.11    
+Test time         2.95    2.71    2.42    2.49    2.50    2.62    0.19    
+SGD with n_epochs  3  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0668  1.0658  1.0713  1.0673  1.0689  1.0680  0.0019  
+Fit time          1.31    1.51    1.60    1.55    1.51    1.50    0.10    
+Test time         2.42    2.38    2.42    2.20    2.37    2.36    0.08    
+SGD with n_epochs  3  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4161  2.3993  2.3895  2.4001  2.4074  2.4025  0.0089  
+Fit time          1.28    1.53    1.53    1.53    1.65    1.50    0.12    
+Test time         2.22    2.39    2.33    2.11    2.36    2.28    0.11    
+SGD with n_epochs  4  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1118  1.1066  1.1095  1.1083  1.1089  1.1090  0.0017  
+Fit time          1.68    1.96    2.08    1.93    1.85    1.90    0.13    
+Test time         2.63    2.36    2.43    2.48    2.48    2.48    0.09    
+SGD with n_epochs  4  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0663  1.0614  1.0641  1.0631  1.0634  1.0636  0.0016  
+Fit time          1.60    1.90    1.89    1.84    1.90    1.82    0.12    
+Test time         2.34    2.44    2.22    2.47    2.27    2.35    0.09    
+SGD with n_epochs  4  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0156  1.0118  1.0144  1.0129  1.0132  1.0136  0.0013  
+Fit time          1.59    1.83    1.86    1.86    1.89    1.81    0.11    
+Test time         2.51    2.43    2.52    2.23    2.52    2.44    0.11    
+SGD with n_epochs  4  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0120  1.0095  1.0126  1.0109  1.0108  1.0112  0.0011  
+Fit time          1.62    1.90    1.88    1.87    1.88    1.83    0.11    
+Test time         2.25    2.45    2.50    2.27    2.45    2.38    0.10    
+SGD with n_epochs  4  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0659  1.0651  1.0707  1.0667  1.0680  1.0673  0.0019  
+Fit time          1.63    1.84    1.88    1.87    1.84    1.81    0.09    
+Test time         2.55    2.20    2.49    2.47    2.49    2.44    0.12    
+SGD with n_epochs  4  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4446  2.4005  2.4104  2.4122  2.4233  2.4182  0.0151  
+Fit time          1.60    1.85    1.89    1.92    1.87    1.82    0.11    
+Test time         2.33    2.52    2.30    2.45    2.20    2.36    0.11    
+SGD with n_epochs  5  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1095  1.1044  1.1072  1.1061  1.1066  1.1068  0.0017  
+Fit time          1.94    2.15    2.16    2.18    2.21    2.13    0.10    
+Test time         2.50    2.47    2.56    2.22    2.44    2.44    0.11    
+SGD with n_epochs  5  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0602  1.0554  1.0581  1.0571  1.0573  1.0577  0.0016  
+Fit time          1.90    2.14    2.16    2.13    2.19    2.10    0.11    
+Test time         2.28    2.45    2.46    2.16    2.49    2.37    0.13    
+SGD with n_epochs  5  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0123  1.0086  1.0112  1.0097  1.0099  1.0103  0.0013  
+Fit time          2.14    2.41    2.38    2.20    2.17    2.26    0.11    
+Test time         2.87    2.50    2.46    2.44    2.63    2.58    0.16    
+SGD with n_epochs  5  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0114  1.0088  1.0120  1.0102  1.0100  1.0105  0.0011  
+Fit time          1.90    2.08    2.30    2.22    2.41    2.18    0.18    
+Test time         2.25    2.51    2.37    2.39    2.36    2.38    0.08    
+SGD with n_epochs  5  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0652  1.0646  1.0702  1.0662  1.0674  1.0667  0.0020  
+Fit time          1.88    2.26    2.32    2.35    2.35    2.23    0.18    
+Test time         2.69    2.57    2.73    2.49    2.59    2.61    0.09    
+SGD with n_epochs  5  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4531  2.4115  2.4346  2.4284  2.4250  2.4305  0.0136  
+Fit time          2.03    2.37    2.44    2.49    2.30    2.33    0.16    
+Test time         2.50    2.55    2.70    2.38    2.49    2.52    0.10    
+SGD with n_epochs  6  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1073  1.1022  1.1050  1.1039  1.1044  1.1046  0.0017  
+Fit time          2.24    2.52    2.47    2.72    2.53    2.50    0.15    
+Test time         2.67    2.16    2.51    2.67    2.53    2.51    0.19    
+SGD with n_epochs  6  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0554  1.0507  1.0533  1.0523  1.0525  1.0529  0.0015  
+Fit time          2.27    2.58    2.46    2.35    2.41    2.41    0.11    
+Test time         2.41    2.41    2.20    2.45    2.25    2.34    0.10    
+SGD with n_epochs  6  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0099  1.0063  1.0089  1.0074  1.0076  1.0080  0.0013  
+Fit time          2.21    2.36    2.48    2.46    2.49    2.40    0.11    
+Test time         2.43    2.38    2.56    2.16    2.54    2.42    0.14    
+SGD with n_epochs  6  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0109  1.0082  1.0114  1.0096  1.0095  1.0099  0.0011  
+Fit time          2.42    2.55    2.39    2.40    2.67    2.49    0.11    
+Test time         2.46    2.62    2.43    2.18    2.59    2.46    0.16    
+SGD with n_epochs  6  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0647  1.0642  1.0698  1.0659  1.0670  1.0663  0.0020  
+Fit time          2.15    2.37    2.40    2.47    2.42    2.36    0.11    
+Test time         2.43    2.19    2.33    2.57    2.40    2.39    0.12    
+SGD with n_epochs  6  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4438  2.4148  2.4236  2.4351  2.4155  2.4265  0.0113  
+Fit time          2.12    2.39    2.36    2.41    2.44    2.35    0.11    
+Test time         2.26    2.41    2.15    2.33    2.45    2.32    0.11    
+SGD with n_epochs  7  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1053  1.1001  1.1030  1.1019  1.1023  1.1025  0.0017  
+Fit time          2.59    2.76    2.78    2.74    2.76    2.73    0.07    
+Test time         2.47    2.51    2.51    2.28    2.55    2.46    0.09    
+SGD with n_epochs  7  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0514  1.0467  1.0494  1.0484  1.0486  1.0489  0.0015  
+Fit time          2.56    2.65    2.91    2.79    2.82    2.75    0.13    
+Test time         2.38    2.42    2.56    2.32    2.47    2.43    0.08    
+SGD with n_epochs  7  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0082  1.0045  1.0072  1.0056  1.0058  1.0063  0.0013  
+Fit time          2.61    2.84    2.82    2.80    2.68    2.75    0.09    
+Test time         2.59    2.35    2.50    2.58    2.36    2.48    0.10    
+SGD with n_epochs  7  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0105  1.0077  1.0110  1.0092  1.0090  1.0095  0.0011  
+Fit time          2.68    3.14    2.77    3.06    2.80    2.89    0.18    
+Test time         2.22    2.48    2.84    2.47    2.18    2.44    0.24    
+SGD with n_epochs  7  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0643  1.0639  1.0695  1.0656  1.0667  1.0660  0.0020  
+Fit time          2.51    2.74    2.80    2.75    2.78    2.72    0.11    
+Test time         2.53    2.40    2.55    2.27    2.45    2.44    0.10    
+SGD with n_epochs  7  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4379  2.4063  2.4346  2.4191  2.4158  2.4228  0.0118  
+Fit time          2.46    2.75    2.79    2.72    2.74    2.69    0.12    
+Test time         2.25    2.37    2.48    2.18    2.37    2.33    0.11    
+SGD with n_epochs  8  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1033  1.0981  1.1010  1.0999  1.1003  1.1005  0.0017  
+Fit time          2.82    3.07    3.07    3.03    3.09    3.02    0.10    
+Test time         2.45    2.27    2.43    2.44    2.48    2.41    0.08    
+SGD with n_epochs  8  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0480  1.0434  1.0460  1.0450  1.0452  1.0455  0.0015  
+Fit time          2.77    3.26    3.03    3.02    3.30    3.08    0.19    
+Test time         2.36    2.45    2.24    2.59    2.45    2.42    0.12    
+SGD with n_epochs  8  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0069  1.0032  1.0059  1.0043  1.0045  1.0050  0.0013  
+Fit time          3.03    3.34    3.06    3.35    3.26    3.21    0.14    
+Test time         2.72    2.52    2.54    2.60    2.48    2.57    0.08    
+SGD with n_epochs  8  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0102  1.0074  1.0106  1.0089  1.0086  1.0091  0.0012  
+Fit time          2.77    2.95    2.99    3.41    3.44    3.11    0.27    
+Test time         2.18    2.38    2.55    2.45    2.64    2.44    0.16    
+SGD with n_epochs  8  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0641  1.0636  1.0693  1.0654  1.0665  1.0658  0.0020  
+Fit time          2.92    2.91    2.96    2.92    3.32    3.01    0.16    
+Test time         2.57    2.17    2.36    2.61    2.50    2.44    0.16    
+SGD with n_epochs  8  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4303  2.4048  2.4344  2.4453  2.4226  2.4275  0.0135  
+Fit time          2.75    3.08    3.23    2.96    3.03    3.01    0.16    
+Test time         2.37    2.45    2.17    2.36    2.16    2.30    0.12    
+SGD with n_epochs  9  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1014  1.0962  1.0991  1.0980  1.0984  1.0986  0.0017  
+Fit time          3.05    3.22    3.22    3.29    3.26    3.21    0.08    
+Test time         2.44    2.38    2.44    2.23    2.41    2.38    0.08    
+SGD with n_epochs  9  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0451  1.0406  1.0432  1.0421  1.0423  1.0427  0.0015  
+Fit time          3.04    3.31    3.30    3.28    3.38    3.26    0.11    
+Test time         2.17    2.39    2.40    2.13    2.37    2.29    0.12    
+SGD with n_epochs  9  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0058  1.0022  1.0049  1.0033  1.0035  1.0039  0.0013  
+Fit time          3.14    3.25    3.32    3.27    3.26    3.25    0.06    
+Test time         2.45    2.18    2.37    2.44    2.37    2.36    0.10    
+SGD with n_epochs  9  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0100  1.0071  1.0103  1.0086  1.0083  1.0089  0.0012  
+Fit time          3.03    3.24    3.22    3.27    3.27    3.21    0.09    
+Test time         2.28    2.46    2.24    2.42    2.22    2.32    0.10    
+SGD with n_epochs  9  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0640  1.0635  1.0692  1.0653  1.0663  1.0656  0.0020  
+Fit time          3.08    3.29    3.30    3.25    3.30    3.24    0.08    
+Test time         2.38    2.37    2.43    2.23    2.44    2.37    0.08    
+SGD with n_epochs  9  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4288  2.4060  2.4382  2.4412  2.4213  2.4271  0.0127  
+Fit time          3.01    3.28    3.23    3.31    3.26    3.22    0.11    
+Test time         2.25    2.32    2.33    2.12    2.37    2.28    0.09    
+SGD with n_epochs  10  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0995  1.0944  1.0972  1.0961  1.0966  1.0968  0.0017  
+Fit time          3.32    3.53    3.54    3.56    3.61    3.51    0.10    
+Test time         2.41    2.15    2.38    2.33    2.42    2.34    0.10    
+SGD with n_epochs  10  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0425  1.0381  1.0406  1.0396  1.0398  1.0401  0.0014  
+Fit time          3.37    3.68    3.66    3.82    3.72    3.65    0.15    
+Test time         2.38    2.46    2.50    2.47    2.32    2.43    0.06    
+SGD with n_epochs  10  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0050  1.0014  1.0041  1.0026  1.0026  1.0032  0.0013  
+Fit time          3.27    3.63    3.70    3.59    3.70    3.58    0.16    
+Test time         2.45    2.50    2.45    2.19    2.53    2.42    0.12    
+SGD with n_epochs  10  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0098  1.0069  1.0101  1.0084  1.0081  1.0087  0.0012  
+Fit time          3.59    3.58    3.58    4.33    4.56    3.93    0.43    
+Test time         2.30    2.42    2.46    2.71    3.12    2.60    0.29    
+SGD with n_epochs  10  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0639  1.0634  1.0691  1.0652  1.0662  1.0656  0.0020  
+Fit time          3.32    3.57    3.61    3.64    3.62    3.55    0.12    
+Test time         2.49    2.21    2.40    2.44    2.59    2.43    0.13    
+SGD with n_epochs  10  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4356  2.4006  2.4407  2.4396  2.4301  2.4293  0.0148  
+Fit time          4.04    4.09    3.65    3.66    3.65    3.82    0.20    
+Test time         2.57    2.46    2.19    2.32    2.18    2.35    0.15    
+SGD with n_epochs  11  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0978  1.0926  1.0955  1.0944  1.0948  1.0950  0.0017  
+Fit time          3.76    3.95    3.92    3.94    4.06    3.92    0.10    
+Test time         2.47    2.44    2.46    2.26    2.54    2.43    0.10    
+SGD with n_epochs  11  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0403  1.0359  1.0384  1.0373  1.0376  1.0379  0.0014  
+Fit time          3.65    3.90    3.96    3.90    3.94    3.87    0.11    
+Test time         2.20    2.39    2.43    2.26    2.42    2.34    0.09    
+SGD with n_epochs  11  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0044  1.0008  1.0035  1.0020  1.0020  1.0025  0.0013  
+Fit time          3.69    3.93    3.90    3.92    3.92    3.87    0.09    
+Test time         2.51    2.25    2.43    2.48    2.48    2.43    0.09    
+SGD with n_epochs  11  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0097  1.0067  1.0100  1.0082  1.0080  1.0085  0.0012  
+Fit time          3.68    3.86    3.94    4.00    3.91    3.88    0.11    
+Test time         2.32    2.46    2.27    2.51    2.29    2.37    0.10    
+SGD with n_epochs  11  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0662  1.0655  0.0020  
+Fit time          3.70    3.87    3.91    3.91    3.99    3.88    0.10    
+Test time         2.54    2.43    2.44    2.18    2.39    2.40    0.12    
+SGD with n_epochs  11  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4365  2.3976  2.4277  2.4322  2.4344  2.4257  0.0143  
+Fit time          3.65    3.93    3.88    3.88    3.95    3.86    0.11    
+Test time         2.28    2.38    2.47    2.12    2.38    2.32    0.12    
+SGD with n_epochs  12  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0961  1.0909  1.0938  1.0927  1.0931  1.0933  0.0017  
+Fit time          3.95    4.28    4.30    4.28    4.21    4.20    0.13    
+Test time         2.47    2.22    2.45    2.49    2.39    2.41    0.10    
+SGD with n_epochs  12  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0382  1.0339  1.0364  1.0353  1.0356  1.0359  0.0014  
+Fit time          4.10    4.25    4.32    4.20    4.24    4.22    0.07    
+Test time         2.28    2.45    2.18    2.37    2.19    2.29    0.10    
+SGD with n_epochs  12  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0039  1.0003  1.0030  1.0015  1.0015  1.0020  0.0013  
+Fit time          4.06    4.16    4.36    4.20    4.18    4.19    0.10    
+Test time         2.45    2.42    2.49    2.22    2.44    2.40    0.10    
+SGD with n_epochs  12  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0096  1.0066  1.0099  1.0081  1.0078  1.0084  0.0012  
+Fit time          3.99    4.19    4.26    4.13    4.27    4.17    0.10    
+Test time         2.27    2.49    2.44    2.18    2.38    2.35    0.11    
+SGD with n_epochs  12  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0662  1.0655  0.0020  
+Fit time          3.98    4.19    4.18    4.22    4.27    4.17    0.10    
+Test time         2.46    2.25    2.42    2.46    2.37    2.39    0.08    
+SGD with n_epochs  12  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4386  2.4068  2.4362  2.4157  2.4369  2.4268  0.0131  
+Fit time          3.98    4.23    4.25    4.28    4.26    4.20    0.11    
+Test time         2.30    2.38    2.26    2.43    2.26    2.33    0.07    
+SGD with n_epochs  13  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0944  1.0893  1.0921  1.0911  1.0915  1.0917  0.0017  
+Fit time          4.34    4.55    4.51    4.66    4.63    4.54    0.11    
+Test time         2.46    2.41    2.44    2.22    2.44    2.39    0.09    
+SGD with n_epochs  13  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0364  1.0321  1.0346  1.0335  1.0338  1.0341  0.0014  
+Fit time          4.35    4.52    4.57    4.56    4.61    4.52    0.09    
+Test time         2.33    2.41    2.44    2.20    2.45    2.37    0.09    
+SGD with n_epochs  13  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0035  0.9999  1.0026  1.0011  1.0011  1.0016  0.0013  
+Fit time          4.34    4.58    4.57    4.63    4.60    4.55    0.10    
+Test time         2.56    2.21    2.39    2.48    2.48    2.42    0.12    
+SGD with n_epochs  13  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0095  1.0065  1.0098  1.0080  1.0078  1.0083  0.0012  
+Fit time          4.34    4.61    4.54    4.62    4.54    4.53    0.10    
+Test time         2.26    2.44    2.23    2.44    2.25    2.32    0.09    
+SGD with n_epochs  13  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0661  1.0655  0.0020  
+Fit time          4.27    4.52    4.55    4.55    4.68    4.52    0.14    
+Test time         2.48    2.44    2.45    2.28    2.39    2.41    0.07    
+SGD with n_epochs  13  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4391  2.4052  2.4343  2.4163  2.4315  2.4253  0.0126  
+Fit time          4.34    4.48    4.61    4.51    4.67    4.52    0.11    
+Test time         2.24    2.36    2.51    2.16    2.43    2.34    0.13    
+SGD with n_epochs  14  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0929  1.0877  1.0906  1.0895  1.0899  1.0901  0.0017  
+Fit time          4.69    4.84    4.81    4.83    4.98    4.83    0.09    
+Test time         2.49    2.25    2.46    2.40    2.48    2.42    0.09    
+SGD with n_epochs  14  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0347  1.0305  1.0330  1.0319  1.0321  1.0324  0.0014  
+Fit time          4.60    4.92    4.96    5.64    5.06    5.04    0.34    
+Test time         2.27    2.45    2.57    2.70    2.28    2.46    0.16    
+SGD with n_epochs  14  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0031  0.9996  1.0023  1.0008  1.0008  1.0013  0.0013  
+Fit time          5.10    5.31    5.08    4.83    5.43    5.15    0.21    
+Test time         2.60    2.55    2.62    2.27    2.57    2.52    0.13    
+SGD with n_epochs  14  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0095  1.0065  1.0097  1.0080  1.0077  1.0083  0.0012  
+Fit time          4.64    5.08    4.87    5.00    4.90    4.90    0.15    
+Test time         2.35    2.42    2.50    2.15    2.33    2.35    0.12    
+SGD with n_epochs  14  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0661  1.0655  0.0020  
+Fit time          4.60    4.83    4.75    4.83    4.81    4.77    0.09    
+Test time         2.40    2.12    2.39    2.54    2.39    2.37    0.14    
+SGD with n_epochs  14  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4430  2.3993  2.4361  2.4185  2.4315  2.4257  0.0154  
+Fit time          4.49    4.71    4.76    4.67    4.93    4.71    0.14    
+Test time         2.21    2.38    2.24    2.29    2.25    2.27    0.06    
+SGD with n_epochs  15  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0913  1.0862  1.0890  1.0880  1.0884  1.0886  0.0017  
+Fit time          4.91    5.00    5.02    4.97    5.39    5.06    0.17    
+Test time         2.53    2.37    2.38    2.23    2.41    2.38    0.10    
+SGD with n_epochs  15  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0332  1.0290  1.0315  1.0303  1.0306  1.0309  0.0014  
+Fit time          4.69    5.14    5.18    5.50    5.14    5.13    0.26    
+Test time         2.20    2.42    2.51    2.26    2.44    2.37    0.12    
+SGD with n_epochs  15  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0029  0.9993  1.0021  1.0005  1.0005  1.0011  0.0013  
+Fit time          5.15    5.19    5.91    5.07    5.46    5.36    0.31    
+Test time         2.52    2.28    2.61    2.44    2.57    2.49    0.12    
+SGD with n_epochs  15  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0095  1.0064  1.0097  1.0079  1.0077  1.0082  0.0012  
+Fit time          4.78    5.05    4.93    5.43    5.29    5.10    0.24    
+Test time         2.22    2.39    2.45    2.47    2.29    2.36    0.09    
+SGD with n_epochs  15  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0661  1.0655  0.0020  
+Fit time          5.50    5.10    5.45    5.22    4.98    5.25    0.20    
+Test time         2.59    2.37    2.61    2.16    2.35    2.42    0.17    
+SGD with n_epochs  15  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4340  2.4019  2.4321  2.4198  2.4235  2.4223  0.0114  
+Fit time          4.69    5.29    5.47    5.02    5.42    5.18    0.29    
+Test time         2.15    2.40    2.45    2.16    2.44    2.32    0.14    
+SGD with n_epochs  16  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0899  1.0848  1.0876  1.0865  1.0869  1.0871  0.0017  
+Fit time          5.23    5.25    5.26    5.30    5.49    5.31    0.10    
+Test time         2.39    2.17    2.43    2.37    2.37    2.35    0.09    
+SGD with n_epochs  16  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0318  1.0277  1.0301  1.0290  1.0292  1.0296  0.0014  
+Fit time          4.94    5.23    5.77    5.60    5.44    5.40    0.29    
+Test time         2.44    2.43    2.27    2.36    2.16    2.33    0.11    
+SGD with n_epochs  16  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0027  0.9991  1.0019  1.0003  1.0003  1.0008  0.0013  
+Fit time          4.96    5.48    5.39    5.49    5.28    5.32    0.19    
+Test time         2.68    2.34    2.52    2.28    2.39    2.44    0.14    
+SGD with n_epochs  16  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0094  1.0064  1.0097  1.0079  1.0076  1.0082  0.0012  
+Fit time          5.73    5.32    5.29    5.29    5.29    5.38    0.17    
+Test time         2.28    2.44    2.42    2.19    2.34    2.33    0.09    
+SGD with n_epochs  16  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0661  1.0655  0.0020  
+Fit time          5.08    5.27    5.23    5.22    5.39    5.24    0.10    
+Test time         2.42    2.14    2.40    2.32    2.40    2.34    0.10    
+SGD with n_epochs  16  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4285  2.4100  2.4272  2.4186  2.4227  2.4214  0.0067  
+Fit time          4.99    5.32    5.30    5.31    5.26    5.23    0.12    
+Test time         2.18    2.33    2.22    2.34    2.13    2.24    0.08    
+SGD with n_epochs  17  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0885  1.0834  1.0862  1.0851  1.0855  1.0857  0.0017  
+Fit time          5.40    5.52    5.59    5.52    5.53    5.51    0.06    
+Test time         2.43    2.34    2.36    2.16    2.35    2.33    0.09    
+SGD with n_epochs  17  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0305  1.0264  1.0289  1.0277  1.0280  1.0283  0.0014  
+Fit time          5.38    5.53    5.56    5.68    5.62    5.55    0.10    
+Test time         2.16    2.33    2.35    2.10    2.39    2.27    0.11    
+SGD with n_epochs  17  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0025  0.9990  1.0017  1.0001  1.0001  1.0007  0.0012  
+Fit time          5.40    5.56    5.51    5.70    5.70    5.57    0.11    
+Test time         2.43    2.17    2.35    2.31    2.43    2.34    0.10    
+SGD with n_epochs  17  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0094  1.0064  1.0096  1.0079  1.0076  1.0082  0.0012  
+Fit time          5.32    5.63    5.69    5.61    5.70    5.59    0.14    
+Test time         2.28    2.42    2.17    2.43    2.30    2.32    0.10    
+SGD with n_epochs  17  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0661  1.0655  0.0020  
+Fit time          5.60    6.22    6.12    5.79    5.62    5.87    0.26    
+Test time         2.81    2.79    2.52    2.23    2.34    2.54    0.23    
+SGD with n_epochs  17  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4246  2.4125  2.4359  2.4188  2.4197  2.4223  0.0078  
+Fit time          5.85    5.57    5.71    5.64    5.67    5.69    0.09    
+Test time         2.23    2.33    2.39    2.17    2.28    2.28    0.07    
+SGD with n_epochs  18  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0871  1.0820  1.0848  1.0838  1.0841  1.0844  0.0017  
+Fit time          5.66    6.28    5.90    5.92    6.29    6.01    0.24    
+Test time         2.37    2.40    2.39    2.66    2.59    2.48    0.12    
+SGD with n_epochs  18  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0293  1.0252  1.0277  1.0265  1.0268  1.0271  0.0014  
+Fit time          5.98    5.90    6.02    6.29    6.22    6.08    0.15    
+Test time         2.23    2.41    2.16    2.57    2.25    2.33    0.15    
+SGD with n_epochs  18  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0023  0.9988  1.0016  1.0000  1.0000  1.0005  0.0012  
+Fit time          6.02    5.85    5.92    5.78    5.88    5.89    0.08    
+Test time         2.40    2.41    2.44    2.22    2.45    2.38    0.09    
+SGD with n_epochs  18  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0094  1.0064  1.0096  1.0079  1.0076  1.0082  0.0012  
+Fit time          5.65    6.28    5.83    5.87    5.89    5.90    0.21    
+Test time         2.26    2.53    2.35    2.21    2.37    2.34    0.11    
+SGD with n_epochs  18  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0662  1.0655  0.0020  
+Fit time          5.73    5.82    5.82    5.83    6.00    5.84    0.09    
+Test time         2.44    2.12    2.34    2.36    2.50    2.35    0.13    
+SGD with n_epochs  18  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4246  2.4163  2.4377  2.4083  2.4161  2.4206  0.0100  
+Fit time          5.56    6.59    6.26    6.54    6.59    6.31    0.40    
+Test time         2.26    2.74    2.42    2.72    2.31    2.49    0.20    
+SGD with n_epochs  19  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0858  1.0807  1.0835  1.0825  1.0828  1.0831  0.0017  
+Fit time          5.92    6.25    6.17    6.22    6.14    6.14    0.12    
+Test time         2.43    2.75    2.42    2.18    2.53    2.46    0.18    
+SGD with n_epochs  19  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0282  1.0242  1.0266  1.0254  1.0257  1.0260  0.0013  
+Fit time          5.94    6.34    6.28    6.33    6.78    6.33    0.27    
+Test time         2.29    2.35    2.31    2.39    2.37    2.34    0.04    
+SGD with n_epochs  19  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0022  0.9987  1.0014  0.9999  0.9999  1.0004  0.0012  
+Fit time          5.89    6.13    6.31    6.17    7.01    6.30    0.38    
+Test time         2.45    2.11    2.42    2.32    2.73    2.41    0.20    
+SGD with n_epochs  19  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0094  1.0064  1.0096  1.0079  1.0076  1.0082  0.0012  
+Fit time          6.63    6.71    6.37    6.22    6.23    6.43    0.20    
+Test time         2.34    2.42    2.20    2.44    2.18    2.32    0.11    
+SGD with n_epochs  19  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0662  1.0655  0.0020  
+Fit time          6.04    6.16    6.13    6.41    6.93    6.33    0.32    
+Test time         2.40    2.40    2.40    2.29    2.54    2.40    0.08    
+SGD with n_epochs  19  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4204  2.4200  2.4385  2.4115  2.4124  2.4206  0.0097  
+Fit time          6.03    6.15    6.29    6.69    7.53    6.54    0.54    
+Test time         2.19    2.40    2.39    2.52    2.48    2.40    0.11    
+SGD with n_epochs  20  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0845  1.0794  1.0823  1.0812  1.0816  1.0818  0.0017  
+Fit time          6.32    6.86    6.43    6.96    6.81    6.68    0.25    
+Test time         2.45    2.20    2.37    2.58    2.45    2.41    0.12    
+SGD with n_epochs  20  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0272  1.0231  1.0256  1.0243  1.0247  1.0250  0.0013  
+Fit time          6.23    6.81    6.80    6.80    6.47    6.62    0.24    
+Test time         2.32    2.53    2.47    2.48    2.17    2.39    0.13    
+SGD with n_epochs  20  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0021  0.9986  1.0014  0.9998  0.9998  1.0003  0.0012  
+Fit time          6.28    6.76    6.70    7.04    6.70    6.70    0.24    
+Test time         2.55    2.50    2.52    2.28    2.48    2.47    0.10    
+SGD with n_epochs  20  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0094  1.0064  1.0096  1.0079  1.0076  1.0082  0.0012  
+Fit time          6.59    6.86    6.74    7.84    7.51    7.11    0.48    
+Test time         2.39    2.47    2.90    2.50    2.59    2.57    0.18    
+SGD with n_epochs  20  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0662  1.0655  0.0020  
+Fit time          6.50    6.72    6.60    6.98    7.61    6.88    0.40    
+Test time         2.59    2.39    2.36    2.68    2.67    2.54    0.14    
+SGD with n_epochs  20  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4245  2.4203  2.4336  2.4054  2.4160  2.4200  0.0093  
+Fit time          6.29    7.41    7.15    6.90    6.72    6.89    0.38    
+Test time         2.29    2.59    2.33    2.54    2.26    2.40    0.14    
+SGD with n_epochs  21  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0833  1.0782  1.0811  1.0800  1.0803  1.0806  0.0017  
+Fit time          6.95    7.54    7.06    6.88    7.35    7.16    0.25    
+Test time         2.54    2.67    2.70    2.12    2.52    2.51    0.21    
+SGD with n_epochs  21  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0262  1.0222  1.0246  1.0234  1.0237  1.0240  0.0013  
+Fit time          6.84    6.73    6.92    6.83    6.96    6.85    0.08    
+Test time         2.23    2.39    2.33    2.13    2.35    2.29    0.09    
+SGD with n_epochs  21  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0020  0.9986  1.0013  0.9997  0.9997  1.0003  0.0012  
+Fit time          6.72    7.43    7.36    7.09    6.96    7.11    0.26    
+Test time         2.82    2.24    2.52    2.52    2.41    2.50    0.19    
+SGD with n_epochs  21  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0094  1.0064  1.0096  1.0079  1.0076  1.0082  0.0012  
+Fit time          6.65    7.29    7.50    7.47    7.54    7.29    0.33    
+Test time         2.51    2.69    2.57    2.57    2.25    2.52    0.15    
+SGD with n_epochs  21  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0662  1.0655  0.0020  
+Fit time          6.81    7.54    6.96    7.13    6.83    7.05    0.27    
+Test time         2.35    2.54    2.40    2.28    2.45    2.40    0.09    
+SGD with n_epochs  21  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4243  2.4170  2.4339  2.4103  2.4198  2.4211  0.0079  
+Fit time          7.14    7.38    6.75    6.82    7.30    7.07    0.25    
+Test time         2.26    2.66    2.75    2.23    2.31    2.44    0.22    
+SGD with n_epochs  22  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0821  1.0771  1.0799  1.0788  1.0792  1.0794  0.0017  
+Fit time          6.86    7.05    7.52    7.27    7.32    7.21    0.23    
+Test time         2.43    2.15    2.50    2.46    2.49    2.41    0.13    
+SGD with n_epochs  22  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0253  1.0213  1.0237  1.0225  1.0228  1.0231  0.0013  
+Fit time          6.86    7.41    8.14    8.20    7.98    7.72    0.51    
+Test time         2.27    2.85    2.50    2.79    2.18    2.52    0.27    
+SGD with n_epochs  22  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0020  0.9985  1.0012  0.9997  0.9996  1.0002  0.0012  
+Fit time          6.82    7.08    7.43    7.98    7.78    7.42    0.43    
+Test time         2.44    2.37    2.79    2.54    2.54    2.54    0.14    
+SGD with n_epochs  22  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0094  1.0064  1.0096  1.0079  1.0076  1.0082  0.0012  
+Fit time          6.89    7.15    7.12    7.05    7.10    7.06    0.09    
+Test time         2.20    2.35    2.40    2.17    2.42    2.31    0.11    
+SGD with n_epochs  22  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0661  1.0655  0.0020  
+Fit time          6.82    7.06    7.06    7.06    7.31    7.06    0.15    
+Test time         2.41    2.16    2.39    2.33    2.39    2.34    0.09    
+SGD with n_epochs  22  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4260  2.4148  2.4248  2.4094  2.4009  2.4152  0.0095  
+Fit time          6.88    7.10    7.00    7.07    7.09    7.03    0.08    
+Test time         2.19    2.31    2.10    2.32    2.14    2.21    0.09    
+SGD with n_epochs  23  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0810  1.0759  1.0787  1.0777  1.0780  1.0783  0.0016  
+Fit time          7.91    7.34    7.27    7.82    7.35    7.54    0.27    
+Test time         2.56    2.33    2.42    2.35    2.42    2.42    0.08    
+SGD with n_epochs  23  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0244  1.0205  1.0229  1.0216  1.0219  1.0223  0.0013  
+Fit time          7.03    7.20    7.46    7.32    7.42    7.29    0.15    
+Test time         2.22    2.44    2.41    2.13    2.37    2.31    0.12    
+SGD with n_epochs  23  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0019  0.9985  1.0012  0.9996  0.9996  1.0002  0.0012  
+Fit time          7.04    7.29    7.37    7.30    7.26    7.25    0.11    
+Test time         2.44    2.24    2.39    2.35    2.41    2.37    0.07    
+SGD with n_epochs  23  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0094  1.0064  1.0096  1.0079  1.0076  1.0082  0.0012  
+Fit time          7.66    7.40    7.32    7.30    7.44    7.42    0.13    
+Test time         2.56    2.39    2.28    2.36    2.17    2.35    0.13    
+SGD with n_epochs  23  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0661  1.0655  0.0020  
+Fit time          7.36    8.47    8.55    8.53    8.63    8.31    0.48    
+Test time         2.74    2.77    2.79    2.47    2.80    2.71    0.12    
+SGD with n_epochs  23  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4289  2.4058  2.4367  2.4107  2.4028  2.4170  0.0134  
+Fit time          7.37    7.36    7.20    7.43    7.39    7.35    0.08    
+Test time         2.22    2.34    2.33    2.42    2.35    2.33    0.06    
+SGD with n_epochs  24  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0799  1.0748  1.0776  1.0766  1.0769  1.0772  0.0016  
+Fit time          7.44    8.04    8.41    7.82    8.13    7.97    0.32    
+Test time         2.40    2.60    2.69    2.43    2.54    2.53    0.11    
+SGD with n_epochs  24  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0236  1.0197  1.0221  1.0208  1.0211  1.0215  0.0013  
+Fit time          7.32    7.77    7.91    8.16    7.64    7.76    0.28    
+Test time         2.36    2.57    2.26    2.56    2.36    2.42    0.12    
+SGD with n_epochs  24  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0019  0.9984  1.0011  0.9996  0.9995  1.0001  0.0012  
+Fit time          7.84    8.03    8.62    8.67    7.63    8.16    0.42    
+Test time         2.54    2.70    2.41    2.19    2.56    2.48    0.17    
+SGD with n_epochs  24  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0094  1.0064  1.0096  1.0079  1.0076  1.0082  0.0012  
+Fit time          7.88    8.16    7.59    7.53    8.07    7.84    0.25    
+Test time         2.19    2.39    2.39    2.16    2.40    2.30    0.11    
+SGD with n_epochs  24  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0661  1.0655  0.0020  
+Fit time          7.36    8.25    8.58    8.17    7.68    8.01    0.43    
+Test time         2.40    2.54    2.38    2.63    2.37    2.47    0.10    
+SGD with n_epochs  24  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4263  2.4115  2.4390  2.4145  2.4016  2.4186  0.0129  
+Fit time          7.37    7.55    7.52    7.55    7.68    7.53    0.10    
+Test time         2.21    2.40    2.15    2.31    2.19    2.25    0.09    
+SGD with n_epochs  25  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0788  1.0738  1.0766  1.0756  1.0759  1.0761  0.0016  
+Fit time          8.04    7.86    7.83    7.89    7.92    7.91    0.07    
+Test time         2.45    2.44    2.40    2.21    2.33    2.37    0.09    
+SGD with n_epochs  25  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0228  1.0189  1.0213  1.0200  1.0204  1.0207  0.0013  
+Fit time          8.04    7.80    7.94    7.87    7.91    7.91    0.08    
+Test time         2.14    2.32    2.34    2.14    2.32    2.25    0.09    
+SGD with n_epochs  25  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0019  0.9984  1.0011  0.9995  0.9995  1.0001  0.0012  
+Fit time          7.66    7.87    7.92    7.89    7.88    7.84    0.09    
+Test time         2.44    2.37    2.36    2.53    2.40    2.42    0.06    
+SGD with n_epochs  25  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0094  1.0064  1.0096  1.0079  1.0076  1.0082  0.0012  
+Fit time          7.60    7.91    7.99    7.87    8.19    7.91    0.19    
+Test time         2.33    2.37    2.18    2.38    2.10    2.27    0.11    
+SGD with n_epochs  25  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0661  1.0655  0.0020  
+Fit time          8.65    8.09    8.05    7.96    7.98    8.15    0.26    
+Test time         2.47    2.34    2.40    2.14    2.37    2.35    0.11    
+SGD with n_epochs  25  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4236  2.4168  2.4360  2.4076  2.3979  2.4164  0.0131  
+Fit time          8.15    7.87    8.65    8.65    7.97    8.26    0.33    
+Test time         2.20    2.78    2.37    2.13    2.38    2.37    0.23    
+SGD with n_epochs  26  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0778  1.0727  1.0756  1.0745  1.0748  1.0751  0.0016  
+Fit time          8.75    8.41    9.25    8.43    8.55    8.68    0.31    
+Test time         2.43    2.23    2.55    2.49    2.58    2.46    0.12    
+SGD with n_epochs  26  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0221  1.0182  1.0206  1.0193  1.0196  1.0200  0.0013  
+Fit time          8.31    8.22    8.41    8.19    8.23    8.27    0.08    
+Test time         2.24    2.34    2.21    2.36    2.21    2.27    0.06    
+SGD with n_epochs  26  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0018  0.9984  1.0011  0.9995  0.9995  1.0001  0.0012  
+Fit time          7.88    8.17    8.26    8.14    8.46    8.18    0.19    
+Test time         2.46    2.34    2.42    2.23    2.36    2.36    0.08    
+SGD with n_epochs  26  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0094  1.0064  1.0096  1.0078  1.0076  1.0082  0.0012  
+Fit time          7.91    8.08    8.27    8.26    8.25    8.15    0.14    
+Test time         2.26    2.41    2.39    2.15    2.49    2.34    0.12    
+SGD with n_epochs  26  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0661  1.0655  0.0020  
+Fit time          7.95    8.51    8.24    8.13    8.24    8.22    0.18    
+Test time         2.47    2.21    2.42    2.33    2.42    2.37    0.09    
+SGD with n_epochs  26  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4190  2.4070  2.4281  2.4242  2.4117  2.4180  0.0078  
+Fit time          8.06    8.75    8.55    8.22    8.48    8.42    0.24    
+Test time         2.33    2.56    2.18    2.36    2.19    2.32    0.14    
+SGD with n_epochs  27  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0768  1.0717  1.0746  1.0735  1.0738  1.0741  0.0016  
+Fit time          8.34    8.49    8.52    8.40    8.42    8.44    0.07    
+Test time         2.42    2.41    2.38    2.39    2.37    2.40    0.02    
+SGD with n_epochs  27  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0214  1.0175  1.0199  1.0186  1.0190  1.0193  0.0013  
+Fit time          8.22    8.55    8.56    8.97    8.73    8.61    0.25    
+Test time         2.21    2.32    2.38    2.21    2.40    2.30    0.08    
+SGD with n_epochs  27  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0018  0.9984  1.0011  0.9995  0.9994  1.0000  0.0012  
+Fit time          8.21    8.45    8.52    8.67    8.42    8.45    0.15    
+Test time         2.40    2.17    2.55    2.38    2.42    2.38    0.12    
+SGD with n_epochs  27  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0094  1.0064  1.0096  1.0078  1.0076  1.0082  0.0012  
+Fit time          8.14    8.64    8.72    8.64    8.48    8.52    0.21    
+Test time         2.26    2.41    2.27    2.34    2.16    2.29    0.08    
+SGD with n_epochs  27  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0661  1.0655  0.0020  
+Fit time          8.45    8.43    8.74    8.67    8.70    8.60    0.13    
+Test time         2.40    2.33    2.41    2.42    2.34    2.38    0.04    
+SGD with n_epochs  27  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4248  2.4083  2.4257  2.4381  2.4152  2.4224  0.0101  
+Fit time          8.16    8.76    9.44    8.42    8.74    8.70    0.43    
+Test time         2.17    2.33    2.53    2.13    2.31    2.30    0.14    
+SGD with n_epochs  28  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0758  1.0708  1.0736  1.0726  1.0729  1.0731  0.0016  
+Fit time          8.93    8.64    9.26    9.03    9.09    8.99    0.21    
+Test time         2.48    2.14    2.45    2.49    2.42    2.40    0.13    
+SGD with n_epochs  28  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0208  1.0169  1.0193  1.0180  1.0183  1.0186  0.0013  
+Fit time          8.47    8.89    8.80    8.88    8.73    8.75    0.15    
+Test time         2.24    2.39    2.17    2.37    2.16    2.27    0.10    
+SGD with n_epochs  28  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0018  0.9984  1.0011  0.9995  0.9994  1.0000  0.0012  
+Fit time          8.51    8.70    8.74    8.77    8.84    8.71    0.11    
+Test time         2.45    2.33    2.35    2.19    2.39    2.34    0.09    
+SGD with n_epochs  28  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0094  1.0064  1.0096  1.0078  1.0076  1.0082  0.0012  
+Fit time          8.49    8.89    8.78    8.84    8.70    8.74    0.14    
+Test time         2.24    2.40    2.41    2.19    2.34    2.32    0.09    
+SGD with n_epochs  28  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0661  1.0655  0.0020  
+Fit time          8.63    8.78    8.72    8.82    8.82    8.76    0.07    
+Test time         2.38    2.18    2.41    2.34    2.41    2.34    0.08    
+SGD with n_epochs  28  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4340  2.4117  2.4364  2.4415  2.4173  2.4282  0.0115  
+Fit time          8.49    8.73    8.86    8.82    8.83    8.75    0.14    
+Test time         2.22    2.34    2.19    2.30    2.15    2.24    0.07    
+SGD with n_epochs  29  and learning rate  1e-05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0749  1.0699  1.0727  1.0716  1.0719  1.0722  0.0016  
+Fit time          8.77    10.56   9.12    8.99    9.16    9.32    0.64    
+Test time         2.66    2.78    2.41    2.20    2.44    2.50    0.20    
+SGD with n_epochs  29  and learning rate  0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0201  1.0163  1.0187  1.0173  1.0177  1.0180  0.0013  
+Fit time          8.88    9.17    9.12    9.09    9.11    9.08    0.10    
+Test time         2.24    2.39    2.42    2.18    2.35    2.32    0.09    
+SGD with n_epochs  29  and learning rate  0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0018  0.9984  1.0011  0.9995  0.9994  1.0000  0.0012  
+Fit time          8.82    9.02    9.01    9.13    9.07    9.01    0.10    
+Test time         2.45    2.20    2.34    2.34    2.40    2.35    0.08    
+SGD with n_epochs  29  and learning rate  0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0094  1.0064  1.0096  1.0078  1.0076  1.0082  0.0012  
+Fit time          8.81    9.16    9.03    9.01    9.13    9.03    0.12    
+Test time         2.27    2.43    2.17    2.43    2.23    2.31    0.11    
+SGD with n_epochs  29  and learning rate  0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0638  1.0633  1.0690  1.0651  1.0661  1.0655  0.0020  
+Fit time          8.82    9.14    9.17    9.10    9.06    9.06    0.13    
+Test time         2.43    2.36    2.41    2.20    2.36    2.35    0.08    
+SGD with n_epochs  29  and learning rate  1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    2.4400  2.4154  2.4424  2.4454  2.4115  2.4309  0.0144  
+Fit time          8.93    9.30    9.22    9.03    9.09    9.11    0.13    
+Test time         2.60    2.36    2.44    2.15    2.33    2.37    0.15 
+
+
+############################################################################
+CV - With regularization hyperparameter
+
+SGD with n_epochs 1 and learning rate 0.001 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0430  1.0387  1.0413  1.0402  1.0404  1.0407  0.0014  
+Fit time          0.78    0.95    1.13    0.95    1.01    0.97    0.11    
+Test time         2.58    2.71    2.58    2.44    2.46    2.55    0.10    
+ 
+SGD with n_epochs 1 and learning rate 0.001 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0431  1.0387  1.0413  1.0402  1.0404  1.0407  0.0014  
+Fit time          0.74    0.97    0.96    0.99    0.95    0.92    0.09    
+Test time         2.49    2.38    2.44    2.55    2.18    2.41    0.13    
+ 
+SGD with n_epochs 1 and learning rate 0.001 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0432  1.0389  1.0415  1.0403  1.0406  1.0409  0.0014  
+Fit time          0.77    0.98    1.04    0.95    0.97    0.94    0.09    
+Test time         2.62    2.46    2.57    2.29    2.37    2.46    0.12    
+ 
+SGD with n_epochs 1 and learning rate 0.001 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0434  1.0391  1.0416  1.0405  1.0408  1.0411  0.0014  
+Fit time          0.71    0.94    0.95    0.93    1.03    0.91    0.11    
+Test time         2.51    2.42    2.21    2.36    2.37    2.37    0.10    
+ 
+SGD with n_epochs 1 and learning rate 0.001 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0439  1.0396  1.0422  1.0410  1.0413  1.0416  0.0014  
+Fit time          0.76    0.96    0.94    0.98    0.96    0.92    0.08    
+Test time         2.56    2.37    2.42    2.24    2.39    2.39    0.10    
+ 
+SGD with n_epochs 1 and learning rate 0.001 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0449  1.0405  1.0431  1.0420  1.0423  1.0426  0.0014  
+Fit time          0.74    0.94    0.97    0.94    0.97    0.91    0.09    
+Test time         2.21    2.37    2.39    2.18    2.39    2.31    0.09    
+ 
+SGD with n_epochs 1 and learning rate 0.001 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0624  1.0578  1.0606  1.0593  1.0598  1.0600  0.0015  
+Fit time          0.74    0.97    1.00    0.99    1.03    0.95    0.11    
+Test time         2.53    2.32    2.43    2.50    2.43    2.44    0.07    
+ 
+SGD with n_epochs 1 and learning rate 0.001 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1051  1.1002  1.1031  1.1019  1.1025  1.1025  0.0016  
+Fit time          0.70    0.98    0.98    0.97    0.99    0.92    0.11    
+Test time         2.26    2.54    2.27    2.45    2.29    2.36    0.11    
+ 
+SGD with n_epochs 1 and learning rate 0.003 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0237  1.0204  1.0230  1.0214  1.0218  1.0221  0.0012  
+Fit time          0.72    0.97    0.95    0.94    0.94    0.90    0.09    
+Test time         2.47    2.56    2.44    2.20    2.36    2.41    0.12    
+ 
+SGD with n_epochs 1 and learning rate 0.003 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0237  1.0204  1.0230  1.0215  1.0218  1.0221  0.0012  
+Fit time          0.76    0.94    0.99    1.10    0.96    0.95    0.11    
+Test time         2.47    2.47    2.57    2.29    2.39    2.44    0.09    
+ 
+SGD with n_epochs 1 and learning rate 0.003 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0239  1.0206  1.0232  1.0216  1.0220  1.0223  0.0012  
+Fit time          0.72    0.97    0.94    0.96    0.98    0.91    0.10    
+Test time         2.41    2.12    2.37    2.60    2.50    2.40    0.16    
+ 
+SGD with n_epochs 1 and learning rate 0.003 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0242  1.0208  1.0235  1.0219  1.0223  1.0225  0.0012  
+Fit time          0.74    0.97    0.99    1.02    0.95    0.93    0.10    
+Test time         2.35    2.51    2.40    3.04    2.19    2.50    0.29    
+ 
+SGD with n_epochs 1 and learning rate 0.003 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0249  1.0215  1.0242  1.0226  1.0230  1.0232  0.0012  
+Fit time          0.69    0.94    1.25    0.99    0.98    0.97    0.18    
+Test time         2.39    2.42    2.92    2.29    2.52    2.51    0.22    
+ 
+SGD with n_epochs 1 and learning rate 0.003 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0262  1.0227  1.0254  1.0239  1.0243  1.0245  0.0012  
+Fit time          0.74    1.06    1.08    0.98    1.01    0.98    0.12    
+Test time         2.35    2.63    2.73    2.23    2.62    2.51    0.19    
+ 
+SGD with n_epochs 1 and learning rate 0.003 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0503  1.0463  1.0492  1.0479  1.0484  1.0484  0.0013  
+Fit time          0.72    0.96    0.96    0.97    0.98    0.92    0.10    
+Test time         2.60    2.28    2.48    2.54    2.56    2.49    0.11    
+ 
+SGD with n_epochs 1 and learning rate 0.003 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1045  1.0997  1.1026  1.1015  1.1020  1.1020  0.0016  
+Fit time          0.72    0.99    0.93    0.94    0.98    0.91    0.10    
+Test time         2.35    2.46    2.15    2.35    2.23    2.31    0.11    
+ 
+SGD with n_epochs 1 and learning rate 0.005 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0195  1.0168  1.0196  1.0178  1.0181  1.0183  0.0011  
+Fit time          0.79    0.96    0.98    0.98    1.01    0.94    0.08    
+Test time         2.46    2.44    2.50    2.28    2.48    2.43    0.08    
+ 
+SGD with n_epochs 1 and learning rate 0.005 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0195  1.0168  1.0196  1.0178  1.0181  1.0184  0.0011  
+Fit time          0.70    0.92    0.98    0.95    0.94    0.90    0.10    
+Test time         2.19    2.38    2.63    2.28    2.37    2.37    0.15    
+ 
+SGD with n_epochs 1 and learning rate 0.005 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0197  1.0169  1.0197  1.0180  1.0183  1.0185  0.0011  
+Fit time          0.72    0.98    1.03    1.03    0.98    0.95    0.11    
+Test time         2.58    2.26    2.65    2.75    2.42    2.53    0.18    
+ 
+SGD with n_epochs 1 and learning rate 0.005 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0199  1.0171  1.0199  1.0181  1.0185  1.0187  0.0011  
+Fit time          0.72    1.04    0.99    0.98    0.97    0.94    0.11    
+Test time         2.31    2.55    2.40    2.61    2.44    2.46    0.11    
+ 
+SGD with n_epochs 1 and learning rate 0.005 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0205  1.0177  1.0205  1.0188  1.0191  1.0193  0.0011  
+Fit time          0.78    0.95    1.01    0.95    1.00    0.94    0.08    
+Test time         2.44    2.41    2.51    2.21    2.57    2.43    0.12    
+ 
+SGD with n_epochs 1 and learning rate 0.005 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0217  1.0188  1.0216  1.0199  1.0203  1.0205  0.0011  
+Fit time          0.74    0.97    1.06    0.99    0.99    0.95    0.11    
+Test time         2.38    2.58    2.49    2.33    2.59    2.48    0.11    
+ 
+SGD with n_epochs 1 and learning rate 0.005 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0472  1.0436  1.0466  1.0453  1.0457  1.0457  0.0012  
+Fit time          0.74    0.97    1.05    0.92    1.05    0.95    0.12    
+Test time         2.55    2.20    2.62    2.39    2.58    2.47    0.15    
+ 
+SGD with n_epochs 1 and learning rate 0.005 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1048  1.0998  1.1028  1.1017  1.1022  1.1023  0.0016  
+Fit time          0.71    0.93    0.94    1.03    0.97    0.91    0.11    
+Test time         2.20    2.39    2.19    2.34    2.16    2.26    0.09    
+ 
+SGD with n_epochs 5 and learning rate 0.001 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0120  1.0083  1.0109  1.0093  1.0096  1.0100  0.0013  
+Fit time          2.04    2.18    2.16    2.30    2.31    2.20    0.10    
+Test time         2.60    2.37    2.56    2.44    2.58    2.51    0.09    
+ 
+SGD with n_epochs 5 and learning rate 0.001 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0120  1.0083  1.0109  1.0093  1.0096  1.0100  0.0013  
+Fit time          1.94    2.79    2.47    2.28    2.55    2.41    0.29    
+Test time         2.54    2.61    2.94    2.37    2.74    2.64    0.19    
+ 
+SGD with n_epochs 5 and learning rate 0.001 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0121  1.0085  1.0110  1.0095  1.0098  1.0102  0.0013  
+Fit time          2.18    2.27    2.16    2.39    2.12    2.22    0.10    
+Test time         2.75    2.17    2.60    2.46    2.59    2.52    0.19    
+ 
+SGD with n_epochs 5 and learning rate 0.001 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0123  1.0086  1.0112  1.0097  1.0099  1.0103  0.0013  
+Fit time          2.20    2.11    2.55    2.10    2.19    2.23    0.17    
+Test time         2.63    2.48    2.46    2.32    2.19    2.42    0.15    
+ 
+SGD with n_epochs 5 and learning rate 0.001 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0129  1.0092  1.0118  1.0103  1.0106  1.0109  0.0013  
+Fit time          1.84    2.09    2.10    2.07    2.25    2.07    0.13    
+Test time         2.43    2.44    2.36    2.18    2.61    2.40    0.14    
+ 
+SGD with n_epochs 5 and learning rate 0.001 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0141  1.0103  1.0130  1.0114  1.0117  1.0121  0.0013  
+Fit time          1.83    2.05    2.24    2.11    2.54    2.15    0.24    
+Test time         2.21    2.41    2.40    2.17    2.63    2.36    0.16    
+ 
+SGD with n_epochs 5 and learning rate 0.001 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0422  1.0377  1.0406  1.0392  1.0397  1.0399  0.0015  
+Fit time          2.09    2.19    2.24    2.07    2.29    2.18    0.08    
+Test time         2.60    2.17    2.66    2.35    2.77    2.51    0.22    
+ 
+SGD with n_epochs 5 and learning rate 0.001 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1036  1.0987  1.1016  1.1004  1.1010  1.1011  0.0016  
+Fit time          2.08    2.08    2.12    2.31    2.40    2.20    0.13    
+Test time         2.27    2.42    2.17    2.60    2.34    2.36    0.15    
+ 
+SGD with n_epochs 5 and learning rate 0.003 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0051  1.0019  1.0049  1.0032  1.0032  1.0036  0.0012  
+Fit time          1.98    2.26    2.23    2.29    2.33    2.22    0.12    
+Test time         2.66    2.57    2.62    2.31    2.51    2.53    0.12    
+ 
+SGD with n_epochs 5 and learning rate 0.003 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0051  1.0019  1.0049  1.0032  1.0032  1.0037  0.0012  
+Fit time          2.10    2.08    2.14    2.29    2.23    2.17    0.08    
+Test time         2.32    2.49    2.33    2.21    2.60    2.39    0.14    
+ 
+SGD with n_epochs 5 and learning rate 0.003 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0053  1.0021  1.0050  1.0034  1.0033  1.0038  0.0012  
+Fit time          2.11    2.14    2.52    2.23    2.16    2.23    0.15    
+Test time         2.52    2.22    2.62    2.38    2.48    2.45    0.14    
+ 
+SGD with n_epochs 5 and learning rate 0.003 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0055  1.0023  1.0052  1.0036  1.0036  1.0040  0.0012  
+Fit time          2.27    2.42    2.19    2.18    2.22    2.26    0.09    
+Test time         2.45    2.59    2.34    2.98    2.34    2.54    0.24    
+ 
+SGD with n_epochs 5 and learning rate 0.003 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0062  1.0030  1.0059  1.0043  1.0043  1.0047  0.0012  
+Fit time          2.11    2.09    2.12    2.14    2.11    2.11    0.02    
+Test time         2.45    2.48    2.44    2.18    2.40    2.39    0.11    
+ 
+SGD with n_epochs 5 and learning rate 0.003 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0077  1.0043  1.0073  1.0056  1.0057  1.0061  0.0012  
+Fit time          1.86    2.07    2.08    2.09    2.11    2.04    0.09    
+Test time         2.24    2.37    2.43    2.16    2.33    2.31    0.10    
+ 
+SGD with n_epochs 5 and learning rate 0.003 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0401  1.0361  1.0390  1.0376  1.0380  1.0381  0.0013  
+Fit time          1.84    2.08    2.17    2.10    2.14    2.07    0.12    
+Test time         2.47    2.16    2.37    2.31    2.36    2.33    0.10    
+ 
+SGD with n_epochs 5 and learning rate 0.003 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1042  1.0994  1.1023  1.1012  1.1017  1.1018  0.0016  
+Fit time          1.87    2.19    2.09    2.12    2.14    2.08    0.11    
+Test time         2.24    2.35    2.20    2.36    2.19    2.27    0.07    
+ 
+SGD with n_epochs 5 and learning rate 0.005 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0064  1.0035  1.0066  1.0049  1.0047  1.0052  0.0011  
+Fit time          1.83    2.08    2.14    2.10    2.09    2.05    0.11    
+Test time         11.51   2.38    2.44    2.19    2.34    4.17    3.67    
+ 
+SGD with n_epochs 5 and learning rate 0.005 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0064  1.0036  1.0066  1.0049  1.0048  1.0052  0.0011  
+Fit time          2.20    2.13    2.13    2.14    2.12    2.14    0.03    
+Test time         2.56    2.43    2.45    2.25    2.53    2.45    0.11    
+ 
+SGD with n_epochs 5 and learning rate 0.005 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0066  1.0037  1.0068  1.0050  1.0049  1.0054  0.0011  
+Fit time          2.20    2.30    2.12    2.09    2.10    2.16    0.08    
+Test time         2.47    2.23    2.41    2.34    2.45    2.38    0.09    
+ 
+SGD with n_epochs 5 and learning rate 0.005 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0068  1.0039  1.0069  1.0052  1.0051  1.0056  0.0011  
+Fit time          1.89    2.11    2.08    2.10    2.31    2.10    0.13    
+Test time         2.30    2.40    2.43    2.40    2.34    2.38    0.05    
+ 
+SGD with n_epochs 5 and learning rate 0.005 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0075  1.0045  1.0076  1.0059  1.0058  1.0062  0.0011  
+Fit time          1.86    2.06    2.10    2.11    2.10    2.05    0.10    
+Test time         2.37    2.39    2.36    2.17    2.43    2.34    0.09    
+ 
+SGD with n_epochs 5 and learning rate 0.005 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0089  1.0058  1.0089  1.0072  1.0072  1.0076  0.0012  
+Fit time          1.86    2.08    2.10    2.10    2.10    2.05    0.09    
+Test time         2.24    2.33    2.39    2.14    2.36    2.29    0.09    
+ 
+SGD with n_epochs 5 and learning rate 0.005 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0411  1.0373  1.0403  1.0389  1.0393  1.0394  0.0013  
+Fit time          1.85    2.11    2.05    2.18    2.19    2.08    0.12    
+Test time         2.41    2.19    2.41    2.37    2.49    2.37    0.10    
+ 
+SGD with n_epochs 5 and learning rate 0.005 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1047  1.0997  1.1027  1.1016  1.1021  1.1022  0.0016  
+Fit time          1.98    2.14    2.09    2.10    2.08    2.08    0.05    
+Test time         2.33    2.40    2.25    2.39    2.14    2.30    0.10    
+ 
+SGD with n_epochs 10 and learning rate 0.001 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0047  1.0011  1.0038  1.0023  1.0023  1.0029  0.0013  
+Fit time          3.70    3.99    3.54    3.90    3.74    3.77    0.16    
+Test time         2.69    2.36    2.60    2.31    2.51    2.50    0.14    
+ 
+SGD with n_epochs 10 and learning rate 0.001 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0047  1.0011  1.0039  1.0023  1.0024  1.0029  0.0013  
+Fit time          3.42    3.66    3.75    3.67    3.69    3.64    0.12    
+Test time         2.32    2.40    2.48    2.28    2.41    2.38    0.07    
+ 
+SGD with n_epochs 10 and learning rate 0.001 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0049  1.0013  1.0040  1.0024  1.0025  1.0030  0.0013  
+Fit time          3.36    3.63    3.65    3.84    3.71    3.64    0.16    
+Test time         2.54    2.20    2.45    2.59    2.53    2.46    0.14    
+ 
+SGD with n_epochs 10 and learning rate 0.001 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0050  1.0014  1.0041  1.0026  1.0026  1.0032  0.0013  
+Fit time          3.54    3.66    3.59    3.68    3.86    3.67    0.11    
+Test time         2.36    2.45    2.30    2.47    2.17    2.35    0.11    
+ 
+SGD with n_epochs 10 and learning rate 0.001 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0056  1.0019  1.0047  1.0031  1.0032  1.0037  0.0013  
+Fit time          3.33    3.67    3.79    3.68    3.68    3.63    0.16    
+Test time         2.61    2.50    2.57    2.27    2.50    2.49    0.12    
+ 
+SGD with n_epochs 10 and learning rate 0.001 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0068  1.0031  1.0058  1.0043  1.0044  1.0049  0.0013  
+Fit time          3.35    3.48    4.21    3.77    3.57    3.68    0.30    
+Test time         2.25    2.36    2.70    2.27    2.36    2.39    0.16    
+ 
+SGD with n_epochs 10 and learning rate 0.001 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0380  1.0337  1.0365  1.0352  1.0356  1.0358  0.0014  
+Fit time          3.27    3.56    3.51    3.54    3.55    3.48    0.11    
+Test time         2.40    2.12    2.36    2.33    2.42    2.32    0.11    
+ 
+SGD with n_epochs 10 and learning rate 0.001 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1035  1.0986  1.1015  1.1003  1.1009  1.1010  0.0016  
+Fit time          3.26    3.51    3.54    3.69    3.67    3.53    0.15    
+Test time         2.24    2.42    2.24    2.49    2.26    2.33    0.10    
+ 
+SGD with n_epochs 10 and learning rate 0.003 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0035  1.0003  1.0032  1.0016  1.0014  1.0020  0.0012  
+Fit time          3.45    3.76    3.59    3.52    3.69    3.60    0.11    
+Test time         2.55    2.36    2.42    2.22    2.38    2.38    0.10    
+ 
+SGD with n_epochs 10 and learning rate 0.003 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0035  1.0003  1.0033  1.0016  1.0014  1.0020  0.0012  
+Fit time          3.32    3.56    3.47    3.52    3.67    3.51    0.12    
+Test time         2.24    2.36    2.32    2.16    2.36    2.29    0.08    
+ 
+SGD with n_epochs 10 and learning rate 0.003 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0036  1.0005  1.0034  1.0017  1.0016  1.0021  0.0012  
+Fit time          3.35    3.52    3.49    3.52    3.53    3.48    0.07    
+Test time         2.44    2.17    2.34    2.30    2.35    2.32    0.09    
+ 
+SGD with n_epochs 10 and learning rate 0.003 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0038  1.0006  1.0035  1.0018  1.0017  1.0023  0.0012  
+Fit time          3.27    3.54    3.50    3.52    3.57    3.48    0.10    
+Test time         2.21    2.42    2.15    2.31    2.20    2.26    0.10    
+ 
+SGD with n_epochs 10 and learning rate 0.003 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0044  1.0011  1.0041  1.0024  1.0023  1.0029  0.0012  
+Fit time          3.49    3.68    3.56    3.76    3.83    3.66    0.13    
+Test time         2.55    2.56    2.43    2.35    2.43    2.46    0.08    
+ 
+SGD with n_epochs 10 and learning rate 0.003 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0057  1.0024  1.0053  1.0037  1.0037  1.0042  0.0012  
+Fit time          3.45    3.60    3.67    3.93    3.86    3.70    0.17    
+Test time         2.51    2.50    2.50    2.12    2.67    2.46    0.18    
+ 
+SGD with n_epochs 10 and learning rate 0.003 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0392  1.0351  1.0380  1.0367  1.0370  1.0372  0.0014  
+Fit time          3.54    3.68    3.62    3.71    3.66    3.64    0.06    
+Test time         2.44    2.30    2.53    2.47    2.47    2.44    0.08    
+ 
+SGD with n_epochs 10 and learning rate 0.003 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1042  1.0994  1.1023  1.1012  1.1017  1.1018  0.0016  
+Fit time          3.39    3.72    3.65    3.91    4.00    3.73    0.21    
+Test time         2.31    2.46    2.26    2.72    2.57    2.46    0.17    
+ 
+SGD with n_epochs 10 and learning rate 0.005 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0053  1.0023  1.0054  1.0036  1.0034  1.0040  0.0012  
+Fit time          3.76    3.51    3.51    3.80    3.57    3.63    0.13    
+Test time         2.75    2.45    2.39    2.31    2.36    2.45    0.16    
+ 
+SGD with n_epochs 10 and learning rate 0.005 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0054  1.0023  1.0054  1.0036  1.0035  1.0040  0.0012  
+Fit time          3.31    3.68    3.74    3.66    3.69    3.62    0.15    
+Test time         2.18    2.51    2.51    2.28    2.44    2.38    0.13    
+ 
+SGD with n_epochs 10 and learning rate 0.005 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0055  1.0025  1.0055  1.0038  1.0036  1.0042  0.0012  
+Fit time          3.71    3.63    3.66    3.64    3.56    3.64    0.05    
+Test time         2.76    2.16    2.44    2.33    2.37    2.41    0.20    
+ 
+SGD with n_epochs 10 and learning rate 0.005 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0057  1.0026  1.0057  1.0039  1.0038  1.0044  0.0012  
+Fit time          3.34    3.53    3.58    3.59    3.75    3.56    0.13    
+Test time         2.24    2.33    2.21    2.35    2.40    2.30    0.07    
+ 
+SGD with n_epochs 10 and learning rate 0.005 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0064  1.0033  1.0063  1.0046  1.0045  1.0050  0.0012  
+Fit time          3.27    3.60    3.76    3.74    3.54    3.58    0.18    
+Test time         2.47    2.36    2.74    2.18    2.37    2.42    0.18    
+ 
+SGD with n_epochs 10 and learning rate 0.005 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0078  1.0046  1.0077  1.0060  1.0059  1.0064  0.0012  
+Fit time          3.34    3.99    3.89    3.65    3.67    3.71    0.23    
+Test time         2.26    2.66    2.52    2.21    2.49    2.43    0.17    
+ 
+SGD with n_epochs 10 and learning rate 0.005 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0408  1.0369  1.0398  1.0385  1.0388  1.0390  0.0013  
+Fit time          3.46    4.05    3.51    3.69    3.56    3.65    0.21    
+Test time         2.54    2.16    2.36    2.43    2.45    2.39    0.13    
+ 
+SGD with n_epochs 10 and learning rate 0.005 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1047  1.0997  1.1027  1.1016  1.1021  1.1022  0.0016  
+Fit time          3.31    3.71    3.79    4.19    4.45    3.89    0.39    
+Test time         2.21    2.62    2.32    2.97    2.42    2.51    0.27    
+ 
+SGD with n_epochs 15 and learning rate 0.001 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0026  0.9991  1.0018  1.0003  1.0003  1.0008  0.0012  
+Fit time          5.00    5.16    5.21    5.04    5.03    5.09    0.08    
+Test time         2.43    2.47    2.54    2.23    2.41    2.42    0.10    
+ 
+SGD with n_epochs 15 and learning rate 0.001 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0026  0.9991  1.0018  1.0003  1.0003  1.0008  0.0012  
+Fit time          4.82    4.97    4.96    4.96    4.95    4.93    0.06    
+Test time         2.18    2.34    2.36    2.10    2.34    2.27    0.10    
+ 
+SGD with n_epochs 15 and learning rate 0.001 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0027  0.9992  1.0019  1.0004  1.0004  1.0009  0.0013  
+Fit time          4.79    4.90    4.96    5.15    5.01    4.96    0.12    
+Test time         2.49    2.17    2.60    2.36    2.36    2.40    0.14    
+ 
+SGD with n_epochs 15 and learning rate 0.001 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0029  0.9993  1.0021  1.0005  1.0005  1.0011  0.0013  
+Fit time          4.68    4.95    4.99    5.34    5.07    5.01    0.21    
+Test time         2.23    2.40    2.18    2.34    2.13    2.26    0.10    
+ 
+SGD with n_epochs 15 and learning rate 0.001 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0034  0.9998  1.0025  1.0010  1.0010  1.0015  0.0013  
+Fit time          4.69    4.92    4.94    5.36    4.97    4.98    0.22    
+Test time         2.39    2.39    2.43    2.16    2.39    2.35    0.10    
+ 
+SGD with n_epochs 15 and learning rate 0.001 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0045  1.0009  1.0036  1.0021  1.0022  1.0027  0.0013  
+Fit time          4.69    4.96    4.91    4.99    5.04    4.92    0.12    
+Test time         2.21    2.37    2.37    2.13    2.31    2.28    0.09    
+ 
+SGD with n_epochs 15 and learning rate 0.001 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0368  1.0325  1.0353  1.0339  1.0343  1.0346  0.0014  
+Fit time          4.81    4.94    4.98    4.94    4.90    4.92    0.06    
+Test time         2.42    2.16    2.32    2.30    2.36    2.31    0.09    
+ 
+SGD with n_epochs 15 and learning rate 0.001 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1035  1.0986  1.1015  1.1003  1.1009  1.1010  0.0016  
+Fit time          4.70    5.11    5.06    5.33    5.29    5.10    0.22    
+Test time         2.23    2.41    2.22    2.34    2.16    2.27    0.09    
+ 
+SGD with n_epochs 15 and learning rate 0.003 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0034  1.0002  1.0031  1.0014  1.0012  1.0018  0.0012  
+Fit time          4.74    5.12    4.95    5.04    5.61    5.09    0.29    
+Test time         2.39    2.37    2.41    2.26    2.34    2.35    0.05    
+ 
+SGD with n_epochs 15 and learning rate 0.003 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0034  1.0002  1.0031  1.0014  1.0012  1.0018  0.0012  
+Fit time          4.89    4.94    4.99    5.47    5.20    5.10    0.21    
+Test time         2.21    2.43    2.77    2.26    2.44    2.42    0.20    
+ 
+SGD with n_epochs 15 and learning rate 0.003 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0035  1.0002  1.0032  1.0014  1.0013  1.0019  0.0012  
+Fit time          4.91    5.18    5.03    5.02    4.98    5.02    0.09    
+Test time         2.54    2.27    2.34    2.35    2.35    2.37    0.09    
+ 
+SGD with n_epochs 15 and learning rate 0.003 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0036  1.0004  1.0033  1.0016  1.0014  1.0020  0.0012  
+Fit time          4.67    4.94    4.93    5.03    5.90    5.09    0.42    
+Test time         2.29    2.44    2.20    2.37    2.53    2.37    0.12    
+ 
+SGD with n_epochs 15 and learning rate 0.003 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0041  1.0008  1.0038  1.0021  1.0020  1.0026  0.0012  
+Fit time          4.95    5.18    5.05    5.05    5.01    5.05    0.08    
+Test time         2.52    2.44    2.49    2.21    2.39    2.41    0.11    
+ 
+SGD with n_epochs 15 and learning rate 0.003 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0054  1.0020  1.0050  1.0033  1.0033  1.0038  0.0012  
+Fit time          4.77    5.05    5.10    4.97    5.01    4.98    0.12    
+Test time         2.30    2.38    2.48    2.14    2.40    2.34    0.12    
+ 
+SGD with n_epochs 15 and learning rate 0.003 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0391  1.0349  1.0378  1.0365  1.0368  1.0370  0.0014  
+Fit time          4.73    5.03    4.98    5.11    5.51    5.07    0.25    
+Test time         2.47    2.18    2.33    2.36    3.12    2.49    0.33    
+ 
+SGD with n_epochs 15 and learning rate 0.003 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1042  1.0994  1.1023  1.1012  1.1017  1.1018  0.0016  
+Fit time          5.03    4.99    5.02    5.21    5.09    5.07    0.08    
+Test time         2.28    2.47    2.29    2.34    2.40    2.36    0.07    
+ 
+SGD with n_epochs 15 and learning rate 0.005 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0051  1.0020  1.0051  1.0033  1.0031  1.0037  0.0012  
+Fit time          5.47    5.41    5.13    6.07    5.30    5.48    0.32    
+Test time         2.66    2.72    2.80    2.66    2.61    2.69    0.07    
+ 
+SGD with n_epochs 15 and learning rate 0.005 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0051  1.0020  1.0051  1.0033  1.0031  1.0038  0.0012  
+Fit time          5.10    5.81    5.21    5.02    4.94    5.22    0.31    
+Test time         2.33    2.70    2.51    2.17    2.33    2.41    0.18    
+ 
+SGD with n_epochs 15 and learning rate 0.005 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0053  1.0022  1.0052  1.0035  1.0033  1.0039  0.0012  
+Fit time          5.05    5.67    5.07    4.99    5.02    5.16    0.26    
+Test time         2.88    2.39    2.46    2.41    2.43    2.51    0.18    
+ 
+SGD with n_epochs 15 and learning rate 0.005 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0055  1.0023  1.0054  1.0036  1.0035  1.0041  0.0012  
+Fit time          4.68    4.99    4.91    5.26    5.28    5.02    0.23    
+Test time         2.29    2.37    2.20    2.59    2.32    2.35    0.13    
+ 
+SGD with n_epochs 15 and learning rate 0.005 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0061  1.0029  1.0060  1.0042  1.0041  1.0047  0.0012  
+Fit time          5.06    5.19    4.99    4.97    5.07    5.06    0.08    
+Test time         2.55    2.39    2.45    2.19    2.45    2.41    0.12    
+ 
+SGD with n_epochs 15 and learning rate 0.005 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0076  1.0043  1.0074  1.0056  1.0056  1.0061  0.0012  
+Fit time          4.87    5.09    4.97    4.96    5.13    5.00    0.09    
+Test time         2.19    2.34    2.38    2.10    2.43    2.29    0.12    
+ 
+SGD with n_epochs 15 and learning rate 0.005 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0408  1.0368  1.0397  1.0384  1.0387  1.0389  0.0013  
+Fit time          4.72    5.04    5.12    5.04    4.96    4.97    0.14    
+Test time         2.46    2.13    2.41    2.33    2.43    2.35    0.12    
+ 
+SGD with n_epochs 15 and learning rate 0.005 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1047  1.0997  1.1027  1.1016  1.1021  1.1022  0.0016  
+Fit time          4.70    5.06    5.03    5.01    5.05    4.97    0.14    
+Test time         2.28    2.34    2.19    2.37    2.13    2.26    0.09    
+ 
+SGD with n_epochs 20 and learning rate 0.001 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0019  0.9985  1.0012  0.9996  0.9996  1.0002  0.0012  
+Fit time          6.63    6.68    7.62    8.69    6.97    7.32    0.77    
+Test time         2.63    2.62    3.15    2.33    2.51    2.65    0.27    
+ 
+SGD with n_epochs 20 and learning rate 0.001 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0019  0.9985  1.0012  0.9996  0.9996  1.0002  0.0012  
+Fit time          6.82    7.91    6.94    6.85    6.91    7.09    0.42    
+Test time         2.44    2.49    2.59    2.34    2.55    2.48    0.09    
+ 
+SGD with n_epochs 20 and learning rate 0.001 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0020  0.9986  1.0013  0.9997  0.9996  1.0002  0.0012  
+Fit time          6.72    6.97    6.87    6.66    6.59    6.76    0.14    
+Test time         2.92    2.40    2.51    2.44    2.56    2.57    0.19    
+ 
+SGD with n_epochs 20 and learning rate 0.001 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0021  0.9986  1.0014  0.9998  0.9998  1.0003  0.0012  
+Fit time          7.24    6.97    6.55    6.58    6.77    6.82    0.26    
+Test time         2.34    2.55    2.21    2.44    2.24    2.36    0.13    
+ 
+SGD with n_epochs 20 and learning rate 0.001 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0026  0.9990  1.0018  1.0002  1.0002  1.0008  0.0013  
+Fit time          6.38    8.24    6.62    6.79    6.77    6.96    0.66    
+Test time         2.78    2.50    2.52    2.49    2.93    2.64    0.18    
+ 
+SGD with n_epochs 20 and learning rate 0.001 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0037  1.0000  1.0028  1.0012  1.0013  1.0018  0.0013  
+Fit time          7.60    7.24    6.93    7.18    7.24    7.24    0.21    
+Test time         2.59    2.68    2.63    2.31    2.76    2.59    0.15    
+ 
+SGD with n_epochs 20 and learning rate 0.001 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0363  1.0320  1.0348  1.0334  1.0338  1.0341  0.0014  
+Fit time          7.49    6.84    6.85    6.80    7.00    7.00    0.25    
+Test time         3.06    2.47    2.67    2.76    2.44    2.68    0.23    
+ 
+SGD with n_epochs 20 and learning rate 0.001 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1035  1.0986  1.1015  1.1003  1.1009  1.1010  0.0016  
+Fit time          6.27    6.42    6.42    6.66    6.50    6.45    0.13    
+Test time         2.27    2.37    2.20    2.32    2.15    2.26    0.08    
+ 
+SGD with n_epochs 20 and learning rate 0.003 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0034  1.0002  1.0031  1.0013  1.0012  1.0018  0.0012  
+Fit time          6.30    6.64    6.63    6.45    7.29    6.66    0.34    
+Test time         2.44    2.39    2.38    2.19    2.67    2.41    0.15    
+ 
+SGD with n_epochs 20 and learning rate 0.003 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0034  1.0002  1.0031  1.0013  1.0012  1.0018  0.0012  
+Fit time          7.06    7.35    6.42    6.72    6.80    6.87    0.31    
+Test time         2.57    2.39    2.42    2.24    2.44    2.41    0.10    
+ 
+SGD with n_epochs 20 and learning rate 0.003 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0035  1.0002  1.0031  1.0014  1.0013  1.0019  0.0012  
+Fit time          6.66    6.46    6.46    6.68    6.69    6.59    0.11    
+Test time         2.38    2.18    2.34    2.47    2.61    2.40    0.14    
+ 
+SGD with n_epochs 20 and learning rate 0.003 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0036  1.0003  1.0032  1.0015  1.0014  1.0020  0.0012  
+Fit time          6.67    6.54    6.47    6.57    6.69    6.59    0.08    
+Test time         2.33    2.39    2.16    2.51    2.32    2.34    0.11    
+ 
+SGD with n_epochs 20 and learning rate 0.003 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0041  1.0008  1.0037  1.0020  1.0019  1.0025  0.0012  
+Fit time          6.74    6.80    6.51    6.66    7.21    6.79    0.23    
+Test time         2.53    2.32    2.39    2.27    2.41    2.38    0.09    
+ 
+SGD with n_epochs 20 and learning rate 0.003 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0053  1.0019  1.0049  1.0031  1.0031  1.0037  0.0012  
+Fit time          7.36    7.67    7.21    6.57    6.80    7.12    0.39    
+Test time         2.30    2.78    2.44    2.14    2.58    2.45    0.22    
+ 
+SGD with n_epochs 20 and learning rate 0.003 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0390  1.0349  1.0378  1.0364  1.0367  1.0370  0.0014  
+Fit time          6.39    6.61    6.68    6.68    6.54    6.58    0.11    
+Test time         2.51    2.23    2.45    2.46    2.37    2.41    0.10    
+ 
+SGD with n_epochs 20 and learning rate 0.003 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1042  1.0994  1.1023  1.1012  1.1017  1.1018  0.0016  
+Fit time          6.24    6.50    6.49    7.15    7.79    6.84    0.57    
+Test time         2.27    2.35    2.30    2.54    2.71    2.43    0.16    
+ 
+SGD with n_epochs 20 and learning rate 0.005 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0051  1.0019  1.0050  1.0032  1.0030  1.0037  0.0012  
+Fit time          6.31    6.47    6.53    6.62    6.44    6.47    0.10    
+Test time         2.44    2.40    2.37    2.15    2.31    2.33    0.10    
+ 
+SGD with n_epochs 20 and learning rate 0.005 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0051  1.0020  1.0050  1.0032  1.0030  1.0037  0.0012  
+Fit time          6.15    6.48    6.41    6.39    6.73    6.43    0.19    
+Test time         2.22    2.36    2.39    2.27    2.43    2.33    0.08    
+ 
+SGD with n_epochs 20 and learning rate 0.005 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0052  1.0021  1.0052  1.0034  1.0032  1.0038  0.0012  
+Fit time          6.46    6.37    6.49    6.54    6.44    6.46    0.06    
+Test time         2.50    2.18    2.46    2.39    2.35    2.38    0.11    
+ 
+SGD with n_epochs 20 and learning rate 0.005 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0054  1.0022  1.0053  1.0035  1.0034  1.0040  0.0012  
+Fit time          6.48    6.45    6.42    6.50    6.58    6.49    0.05    
+Test time         2.25    2.38    2.17    2.32    2.26    2.28    0.07    
+ 
+SGD with n_epochs 20 and learning rate 0.005 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0060  1.0028  1.0059  1.0041  1.0040  1.0046  0.0012  
+Fit time          6.51    6.69    6.39    7.22    7.21    6.80    0.35    
+Test time         2.58    2.40    2.36    2.33    3.28    2.59    0.36    
+ 
+SGD with n_epochs 20 and learning rate 0.005 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0075  1.0042  1.0072  1.0055  1.0054  1.0060  0.0012  
+Fit time          6.58    7.47    6.91    6.74    6.67    6.87    0.32    
+Test time         2.64    2.51    2.68    2.24    2.38    2.49    0.16    
+ 
+SGD with n_epochs 20 and learning rate 0.005 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0407  1.0368  1.0397  1.0384  1.0387  1.0389  0.0013  
+Fit time          6.23    6.59    6.50    6.51    6.51    6.47    0.12    
+Test time         2.47    2.23    2.36    2.40    2.40    2.37    0.08    
+ 
+SGD with n_epochs 20 and learning rate 0.005 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1047  1.0997  1.1027  1.1016  1.1021  1.1022  0.0016  
+Fit time          6.41    6.87    6.60    6.33    6.45    6.53    0.19    
+Test time         2.37    2.47    2.19    2.39    2.17    2.32    0.12    
+ 
+SGD with n_epochs 25 and learning rate 0.001 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0017  0.9983  1.0010  0.9994  0.9993  0.9999  0.0012  
+Fit time          8.49    7.94    7.95    7.86    7.97    8.04    0.23    
+Test time         2.63    2.39    2.35    2.18    2.43    2.40    0.15    
+ 
+SGD with n_epochs 25 and learning rate 0.001 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0017  0.9983  1.0010  0.9994  0.9993  0.9999  0.0012  
+Fit time          7.74    8.52    8.66    8.04    8.06    8.20    0.34    
+Test time         2.16    2.51    2.46    2.25    2.42    2.36    0.13    
+ 
+SGD with n_epochs 25 and learning rate 0.001 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0018  0.9983  1.0010  0.9995  0.9994  1.0000  0.0012  
+Fit time          7.80    8.13    8.00    8.01    8.08    8.01    0.11    
+Test time         2.52    2.20    2.39    2.39    2.39    2.38    0.10    
+ 
+SGD with n_epochs 25 and learning rate 0.001 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0019  0.9984  1.0011  0.9995  0.9995  1.0001  0.0012  
+Fit time          7.79    8.01    7.98    7.99    8.23    8.00    0.14    
+Test time         2.29    2.48    2.25    2.44    2.24    2.34    0.10    
+ 
+SGD with n_epochs 25 and learning rate 0.001 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0023  0.9988  1.0015  0.9999  0.9999  1.0005  0.0013  
+Fit time          7.83    7.95    8.63    8.14    7.94    8.10    0.28    
+Test time         2.48    2.40    2.60    2.21    2.82    2.50    0.20    
+ 
+SGD with n_epochs 25 and learning rate 0.001 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0033  0.9997  1.0024  1.0009  1.0009  1.0014  0.0013  
+Fit time          8.38    8.70    8.47    8.55    7.89    8.40    0.28    
+Test time         2.37    2.37    2.41    2.17    2.46    2.36    0.10    
+ 
+SGD with n_epochs 25 and learning rate 0.001 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0361  1.0317  1.0346  1.0332  1.0336  1.0338  0.0014  
+Fit time          7.64    7.92    8.50    7.81    7.83    7.94    0.29    
+Test time         2.50    2.39    2.38    2.29    2.34    2.38    0.07    
+ 
+SGD with n_epochs 25 and learning rate 0.001 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1035  1.0986  1.1015  1.1003  1.1009  1.1010  0.0016  
+Fit time          7.53    8.93    8.39    8.50    8.12    8.30    0.46    
+Test time         2.44    2.48    2.32    2.53    2.27    2.41    0.10    
+ 
+SGD with n_epochs 25 and learning rate 0.003 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0034  1.0002  1.0031  1.0013  1.0012  1.0018  0.0012  
+Fit time          7.92    8.11    8.18    8.17    8.13    8.10    0.09    
+Test time         2.49    2.46    2.52    2.30    2.47    2.45    0.08    
+ 
+SGD with n_epochs 25 and learning rate 0.003 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0034  1.0002  1.0031  1.0014  1.0012  1.0018  0.0012  
+Fit time          7.81    8.12    8.16    8.17    8.13    8.08    0.14    
+Test time         2.28    2.52    2.42    2.31    2.48    2.40    0.09    
+ 
+SGD with n_epochs 25 and learning rate 0.003 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0035  1.0002  1.0032  1.0014  1.0013  1.0019  0.0012  
+Fit time          7.94    8.02    8.70    8.68    8.21    8.31    0.32    
+Test time         2.43    2.42    2.51    2.40    2.83    2.52    0.16    
+ 
+SGD with n_epochs 25 and learning rate 0.003 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0036  1.0003  1.0033  1.0015  1.0014  1.0020  0.0012  
+Fit time          8.76    8.66    7.95    8.15    8.05    8.31    0.33    
+Test time         2.39    2.45    2.26    2.48    2.24    2.36    0.10    
+ 
+SGD with n_epochs 25 and learning rate 0.003 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0041  1.0008  1.0037  1.0019  1.0019  1.0025  0.0012  
+Fit time          7.77    8.08    7.98    8.84    8.36    8.21    0.37    
+Test time         2.38    2.46    2.43    2.26    2.38    2.38    0.07    
+ 
+SGD with n_epochs 25 and learning rate 0.003 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0053  1.0019  1.0048  1.0031  1.0031  1.0036  0.0012  
+Fit time          7.84    8.19    8.39    8.40    9.05    8.37    0.39    
+Test time         2.49    2.57    2.87    2.26    2.69    2.58    0.20    
+ 
+SGD with n_epochs 25 and learning rate 0.003 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0390  1.0348  1.0377  1.0364  1.0367  1.0369  0.0014  
+Fit time          8.18    8.51    8.27    8.51    8.96    8.48    0.27    
+Test time         2.90    2.30    2.45    2.51    2.86    2.60    0.24    
+ 
+SGD with n_epochs 25 and learning rate 0.003 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1042  1.0994  1.1023  1.1012  1.1017  1.1018  0.0016  
+Fit time          8.73    8.57    8.92    8.33    8.45    8.60    0.21    
+Test time         2.38    2.61    2.31    2.47    2.31    2.42    0.11    
+ 
+SGD with n_epochs 25 and learning rate 0.005 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0051  1.0019  1.0050  1.0032  1.0030  1.0036  0.0012  
+Fit time          8.94    8.82    8.25    8.73    8.24    8.60    0.29    
+Test time         2.70    2.52    2.67    2.36    2.44    2.54    0.13    
+ 
+SGD with n_epochs 25 and learning rate 0.005 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0051  1.0019  1.0050  1.0032  1.0030  1.0037  0.0012  
+Fit time          8.66    8.85    9.21    7.86    8.52    8.62    0.45    
+Test time         2.31    2.66    2.45    2.17    2.75    2.47    0.22    
+ 
+SGD with n_epochs 25 and learning rate 0.005 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0052  1.0021  1.0051  1.0033  1.0032  1.0038  0.0012  
+Fit time          8.84    8.00    8.16    8.16    7.92    8.22    0.32    
+Test time         2.71    2.21    2.47    2.40    2.37    2.43    0.16    
+ 
+SGD with n_epochs 25 and learning rate 0.005 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0054  1.0022  1.0053  1.0035  1.0033  1.0039  0.0012  
+Fit time          8.10    9.15    8.55    8.40    8.57    8.55    0.34    
+Test time         2.66    2.62    2.31    2.70    2.59    2.58    0.14    
+ 
+SGD with n_epochs 25 and learning rate 0.005 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0060  1.0028  1.0059  1.0041  1.0040  1.0046  0.0012  
+Fit time          8.76    8.32    8.10    8.46    8.55    8.44    0.22    
+Test time         2.74    2.42    2.46    2.12    2.52    2.45    0.20    
+ 
+SGD with n_epochs 25 and learning rate 0.005 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0074  1.0041  1.0072  1.0054  1.0054  1.0059  0.0012  
+Fit time          8.17    8.61    9.40    8.49    8.92    8.72    0.42    
+Test time         2.28    2.58    3.06    2.21    2.50    2.52    0.30    
+ 
+SGD with n_epochs 25 and learning rate 0.005 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0407  1.0368  1.0397  1.0384  1.0387  1.0388  0.0013  
+Fit time          9.15    9.38    9.38    8.68    8.74    9.06    0.30    
+Test time         2.84    2.57    2.75    2.70    2.78    2.73    0.09    
+ 
+SGD with n_epochs 25 and learning rate 0.005 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1047  1.0997  1.1027  1.1016  1.1021  1.1022  0.0016  
+Fit time          7.70    9.15    8.06    8.29    8.35    8.31    0.48    
+Test time         2.27    2.56    2.20    2.51    2.18    2.34    0.16    
+ 
+SGD with n_epochs 30 and learning rate 0.001 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0017  0.9983  1.0010  0.9994  0.9993  0.9999  0.0012  
+Fit time          9.63    10.02   9.29    9.37    10.34   9.73    0.40    
+Test time         2.44    2.46    2.43    2.17    2.45    2.39    0.11    
+ 
+SGD with n_epochs 30 and learning rate 0.001 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0017  0.9983  1.0010  0.9994  0.9993  0.9999  0.0012  
+Fit time          9.09    10.19   9.61    9.81    10.54   9.85    0.50    
+Test time         2.33    2.38    2.45    2.22    2.47    2.37    0.09    
+ 
+SGD with n_epochs 30 and learning rate 0.001 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0017  0.9983  1.0010  0.9994  0.9993  0.9999  0.0012  
+Fit time          10.12   9.79    9.64    9.67    9.65    9.77    0.18    
+Test time         2.58    2.27    2.45    2.40    2.47    2.43    0.10    
+ 
+SGD with n_epochs 30 and learning rate 0.001 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0018  0.9983  1.0011  0.9994  0.9994  1.0000  0.0012  
+Fit time          9.26    9.51    9.64    9.65    9.75    9.56    0.17    
+Test time         2.32    2.44    2.29    2.43    2.28    2.35    0.07    
+ 
+SGD with n_epochs 30 and learning rate 0.001 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0021  0.9986  1.0014  0.9998  0.9997  1.0003  0.0013  
+Fit time          9.29    10.32   10.48   10.32   10.76   10.23   0.50    
+Test time         2.53    2.54    2.84    2.28    2.70    2.58    0.19    
+ 
+SGD with n_epochs 30 and learning rate 0.001 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0031  0.9995  1.0023  1.0007  1.0007  1.0013  0.0013  
+Fit time          10.39   10.09   10.54   9.93    9.64    10.12   0.32    
+Test time         2.41    2.77    2.68    2.44    2.47    2.56    0.14    
+ 
+SGD with n_epochs 30 and learning rate 0.001 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0360  1.0316  1.0344  1.0330  1.0335  1.0337  0.0015  
+Fit time          9.57    9.61    9.82    9.78    9.80    9.72    0.10    
+Test time         3.09    2.23    2.49    2.46    2.51    2.56    0.28    
+ 
+SGD with n_epochs 30 and learning rate 0.001 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1035  1.0986  1.1015  1.1003  1.1009  1.1010  0.0016  
+Fit time          9.40    9.95    10.45   9.32    9.41    9.70    0.43    
+Test time         2.29    2.59    2.35    2.36    2.20    2.36    0.13    
+ 
+SGD with n_epochs 30 and learning rate 0.003 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0034  1.0002  1.0031  1.0014  1.0012  1.0019  0.0012  
+Fit time          9.02    9.24    10.46   9.86    9.77    9.67    0.51    
+Test time         2.48    2.35    2.64    2.20    2.47    2.43    0.15    
+ 
+SGD with n_epochs 30 and learning rate 0.003 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0034  1.0002  1.0031  1.0014  1.0012  1.0019  0.0012  
+Fit time          9.45    9.66    10.74   10.03   10.03   9.98    0.44    
+Test time         2.32    2.45    2.71    2.22    2.48    2.44    0.17    
+ 
+SGD with n_epochs 30 and learning rate 0.003 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0035  1.0003  1.0032  1.0014  1.0013  1.0019  0.0012  
+Fit time          9.41    9.65    9.69    9.80    10.63   9.84    0.42    
+Test time         2.60    2.22    2.41    2.34    2.42    2.40    0.12    
+ 
+SGD with n_epochs 30 and learning rate 0.003 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0036  1.0003  1.0033  1.0015  1.0014  1.0020  0.0012  
+Fit time          9.62    10.44   10.34   9.96    9.66    10.00   0.34    
+Test time         2.23    2.75    2.39    2.43    2.22    2.40    0.19    
+ 
+SGD with n_epochs 30 and learning rate 0.003 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0041  1.0008  1.0037  1.0019  1.0019  1.0025  0.0012  
+Fit time          9.79    10.52   10.19   9.67    9.68    9.97    0.33    
+Test time         2.57    2.74    2.58    2.29    2.46    2.53    0.15    
+ 
+SGD with n_epochs 30 and learning rate 0.003 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0053  1.0019  1.0048  1.0031  1.0031  1.0036  0.0012  
+Fit time          9.52    10.06   10.26   9.68    9.41    9.78    0.32    
+Test time         2.64    2.52    2.90    2.22    2.34    2.52    0.24    
+ 
+SGD with n_epochs 30 and learning rate 0.003 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0390  1.0348  1.0377  1.0363  1.0367  1.0369  0.0014  
+Fit time          9.73    9.81    9.26    9.39    9.72    9.58    0.22    
+Test time         2.56    2.23    2.32    2.39    2.35    2.37    0.11    
+ 
+SGD with n_epochs 30 and learning rate 0.003 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1042  1.0994  1.1023  1.1012  1.1017  1.1018  0.0016  
+Fit time          9.88    10.03   9.62    9.36    9.91    9.76    0.24    
+Test time         2.66    2.38    2.43    2.41    2.56    2.49    0.11    
+ 
+SGD with n_epochs 30 and learning rate 0.005 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0051  1.0019  1.0050  1.0032  1.0030  1.0036  0.0012  
+Fit time          10.88   10.86   9.33    10.79   11.46   10.67   0.71    
+Test time         2.95    2.86    2.38    2.55    2.84    2.72    0.22    
+ 
+SGD with n_epochs 30 and learning rate 0.005 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0051  1.0019  1.0050  1.0032  1.0030  1.0037  0.0012  
+Fit time          10.36   10.86   9.34    9.40    9.42    9.88    0.62    
+Test time         2.61    2.82    2.44    2.16    2.42    2.49    0.22    
+ 
+SGD with n_epochs 30 and learning rate 0.005 and reg 0.01
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0052  1.0021  1.0051  1.0033  1.0031  1.0038  0.0012  
+Fit time          9.46    9.52    9.27    9.45    10.19   9.58    0.32    
+Test time         2.46    2.29    2.37    2.32    2.77    2.44    0.17    
+ 
+SGD with n_epochs 30 and learning rate 0.005 and reg 0.02
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0054  1.0022  1.0053  1.0035  1.0033  1.0039  0.0012  
+Fit time          9.99    10.75   9.42    9.30    10.81   10.05   0.64    
+Test time         2.41    2.64    2.16    2.34    2.26    2.36    0.16    
+ 
+SGD with n_epochs 30 and learning rate 0.005 and reg 0.05
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0060  1.0028  1.0058  1.0041  1.0040  1.0045  0.0012  
+Fit time          9.93    9.48    9.41    9.46    9.41    9.54    0.20    
+Test time         2.67    2.43    2.48    2.18    2.36    2.43    0.16    
+ 
+SGD with n_epochs 30 and learning rate 0.005 and reg 0.1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0074  1.0041  1.0071  1.0054  1.0054  1.0059  0.0012  
+Fit time          9.09    9.34    10.37   10.99   10.01   9.96    0.69    
+Test time         2.17    2.40    2.50    2.48    2.39    2.39    0.12    
+ 
+SGD with n_epochs 30 and learning rate 0.005 and reg 1
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0407  1.0368  1.0397  1.0384  1.0387  1.0388  0.0013  
+Fit time          9.03    9.44    9.38    10.64   10.39   9.78    0.63    
+Test time         2.40    2.18    2.55    2.81    2.46    2.48    0.20    
+ 
+SGD with n_epochs 30 and learning rate 0.005 and reg 10
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.1047  1.0997  1.1027  1.1016  1.1021  1.1022  0.0016  
+Fit time          9.56    9.71    9.70    10.56   9.59    9.82    0.37    
+Test time         2.30    2.44    2.18    2.61    2.21    2.34    0.16    
+ 
+############################################################################
+More epochs and lower learning rates:
+
+
+SGD with n_epochs 30 and learning rate 0.0001 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0193  1.0155  1.0179  1.0165  1.0169  1.0172  0.0013  
+Fit time          10.06   9.60    10.16   10.18   10.74   10.15   0.36    
+Test time         2.48    2.46    2.30    2.44    2.60    2.46    0.10    
+ 
+SGD with n_epochs 30 and learning rate 0.0001 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0193  1.0155  1.0179  1.0165  1.0169  1.0172  0.0013  
+Fit time          10.46   10.42   10.00   10.03   9.36    10.06   0.40    
+Test time         2.76    2.53    2.62    2.59    2.14    2.53    0.21    
+ 
+SGD with n_epochs 30 and learning rate 0.0005 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0023  0.9988  1.0015  0.9999  0.9999  1.0005  0.0013  
+Fit time          9.20    9.45    9.66    9.32    9.32    9.39    0.16    
+Test time         2.45    2.50    2.34    2.17    2.33    2.36    0.11    
+ 
+SGD with n_epochs 30 and learning rate 0.0005 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0023  0.9988  1.0015  0.9999  0.9999  1.0005  0.0013  
+Fit time          9.85    9.74    9.57    10.15   10.08   9.88    0.21    
+Test time         2.48    2.39    2.23    2.81    2.11    2.41    0.24    
+ 
+SGD with n_epochs 30 and learning rate 0.001 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0017  0.9983  1.0010  0.9994  0.9993  0.9999  0.0012  
+Fit time          9.38    9.29    10.43   9.42    9.31    9.57    0.44    
+Test time         2.39    2.32    2.34    2.21    2.31    2.31    0.06    
+ 
+SGD with n_epochs 30 and learning rate 0.001 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0017  0.9983  1.0010  0.9994  0.9993  0.9999  0.0012  
+Fit time          9.00    9.76    9.31    9.73    9.38    9.44    0.28    
+Test time         2.14    2.27    2.30    2.43    2.26    2.28    0.09    
+ 
+SGD with n_epochs 50 and learning rate 0.0001 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0113  1.0076  1.0101  1.0087  1.0089  1.0093  0.0013  
+Fit time          17.31   17.16   15.08   17.32   17.50   16.88   0.90    
+Test time         2.88    2.13    2.33    2.76    2.36    2.49    0.28    
+ 
+SGD with n_epochs 50 and learning rate 0.0001 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0114  1.0076  1.0101  1.0087  1.0089  1.0093  0.0013  
+Fit time          14.99   16.20   15.22   15.26   15.54   15.44   0.41    
+Test time         2.19    2.77    2.15    2.37    2.46    2.39    0.22    
+ 
+SGD with n_epochs 50 and learning rate 0.0005 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0015  0.9980  1.0007  0.9991  0.9991  0.9997  0.0012  
+Fit time          15.57   16.82   15.16   15.45   15.45   15.69   0.58    
+Test time         2.37    2.37    2.50    2.45    2.52    2.44    0.06    
+ 
+SGD with n_epochs 50 and learning rate 0.0005 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0015  0.9980  1.0007  0.9991  0.9991  0.9997  0.0012  
+Fit time          14.88   15.10   15.06   15.06   17.84   15.59   1.13    
+Test time         2.25    2.34    2.58    2.13    2.68    2.40    0.20    
+ 
+SGD with n_epochs 50 and learning rate 0.001 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0018  0.9984  1.0012  0.9995  0.9994  1.0001  0.0012  
+Fit time          15.54   16.77   16.60   16.28   16.64   16.37   0.44    
+Test time         2.50    2.42    2.42    2.65    2.36    2.47    0.10    
+ 
+SGD with n_epochs 50 and learning rate 0.001 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0018  0.9984  1.0012  0.9995  0.9994  1.0001  0.0012  
+Fit time          15.08   15.98   16.23   17.76   17.72   16.55   1.04    
+Test time         2.26    2.82    2.49    2.75    2.49    2.56    0.20    
+ 
+SGD with n_epochs 70 and learning rate 0.0001 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0073  1.0036  1.0062  1.0047  1.0049  1.0054  0.0013  
+Fit time          23.99   22.69   24.41   24.11   22.28   23.50   0.84    
+Test time         2.80    2.75    2.70    2.43    2.76    2.69    0.13    
+ 
+SGD with n_epochs 70 and learning rate 0.0001 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0073  1.0036  1.0062  1.0047  1.0049  1.0054  0.0013  
+Fit time          23.37   23.75   24.18   24.09   23.45   23.77   0.33    
+Test time         2.48    2.49    2.77    2.50    2.70    2.59    0.12    
+ 
+SGD with n_epochs 70 and learning rate 0.0005 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0015  0.9980  1.0007  0.9991  0.9990  0.9997  0.0012  
+Fit time          21.36   21.50   22.99   23.01   24.58   22.69   1.18    
+Test time         2.51    2.50    2.68    2.69    2.76    2.63    0.10    
+ 
+SGD with n_epochs 70 and learning rate 0.0005 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0015  0.9980  1.0007  0.9991  0.9990  0.9997  0.0012  
+Fit time          20.92   22.89   21.38   22.58   20.76   21.71   0.87    
+Test time         2.17    2.45    2.23    2.52    2.12    2.30    0.16    
+ 
+SGD with n_epochs 70 and learning rate 0.001 and reg 0.0001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0020  0.9986  1.0013  0.9996  0.9995  1.0002  0.0012  
+Fit time          21.40   21.04   20.85   20.90   20.79   21.00   0.22    
+Test time         2.31    2.29    2.88    2.13    2.36    2.39    0.25    
+ 
+SGD with n_epochs 70 and learning rate 0.001 and reg 0.001
+Evaluating RMSE of algorithm BaselineOnly on 5 split(s).
+
+                  Fold 1  Fold 2  Fold 3  Fold 4  Fold 5  Mean    Std     
+RMSE (testset)    1.0020  0.9986  1.0013  0.9996  0.9995  1.0002  0.0012  
+Fit time          20.70   21.04   22.28   22.91   21.76   21.74   0.80    
+Test time         2.16    2.27    2.46    2.25    2.44    2.32    0.11    
+ 
+
+   
