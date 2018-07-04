@@ -1,11 +1,11 @@
-
+from config import general_params
 import re
 import os
 import numpy as np
-import math
-MAX_ROW = 10000
-MAX_COL = 1000
-datapath = 'data/data_train.csv'
+
+MAX_ROW = general_params['n_users']
+MAX_COL = general_params['n_movies']
+datapath = general_params['train_data_path']
 
 def load_data(datapath):
     """
@@ -20,80 +20,40 @@ def load_data(datapath):
     row_col_search = re.compile('r([0-9]+)_c([0-9]+)')
     return data, row_col_search
 
-def extract_training_scores(train_data_path, verbose=False):
-
-    X = []
-    y = []
-
-    if verbose: print("Loading data... ")
-    data, row_col_search = load_data(datapath=train_data_path)
-    if verbose: print("data loaded")
-    if verbose: print("Extracting data...")
-    for i in range(len(data)):
-        pos_string, score = data[i]
-        row_col = row_col_search.search(pos_string)
-        d = int(row_col.group(1)) - 1
-        n = int(row_col.group(2)) - 1
-        X += [(d, n)]
-        y += [int(score)]
-    if verbose: print("data extracted")
-    return X, y
-
-"""
-Same as extract_training_scores but returns a numpy array of shape
-(users*items, 3). Each element is a array of (user_id, item_id, score)
-"""
 def numpy_training_data(train_data_path, verbose=False):
-
+    """
+    Extract training data from the file.
+    :param train_data_path: name of the file to open.
+    :param verbose: boolean; if true, it prints information about
+    the status of the program.
+    :return: a numpy array of shape (users*items, 3).
+    Each element is a array of (user_id, item_id, score).
+    """
     if verbose: print("Loading data... ")
     data, row_col_search = load_data(datapath=train_data_path)
     if verbose: print("data loaded")
     if verbose: print("Extracting data...")
     train = np.zeros([len(data), 3], np.int64)
+    # Go through the data and extract the user_id, movie_id and its score
+    # NOTE: user_id and movie_id is substracted by 1 to start from 0
     for i in range(len(data)):
         pos_string, score = data[i]
         row_col = row_col_search.search(pos_string)
         d = int(row_col.group(1)) - 1
         n = int(row_col.group(2)) - 1
         train[i] = np.array([d, n, int(score)])
-
     if verbose: print("data extracted")
     return train
 
-def output_submission(matrix, filename, verbose=False):
-    # read sample submission
-    sample_submission_file_path = "data/sampleSubmission.csv"
-    if verbose: print("Opening submission file...")
-    sample_submission_lines = open(sample_submission_file_path, 'r').readlines()
-    if verbose: print("Submission file opened.")
-    if verbose: print("Writing the data...")
-    # other settings
-    row_col_search = re.compile('r([0-9]+)_c([0-9]+)')
-    submission_path = os.path.join("submission", filename)
-    header = "Id,Prediction\n"
-
-    with open(submission_path, 'w') as w:
-        w.write(header)
-
-        # iterate through sample file, fetch the correspnding matrix element
-        for line in sample_submission_lines[1:]:
-            row_col = row_col_search.search(line)
-            r = int(row_col.group(1))
-            c = int(row_col.group(2))
-            prediction = str(matrix[r - 1][c - 1])
-            new_line = "r{}_c{},{}\n".format(r, c, prediction)
-            w.write(new_line)
-    if verbose: print("Finished.")
-
 def numpy_output_submission(preds, filename, implicit_data, verbose=False):
-    # read sample submission
+
     """
     sample_submission_file_path = "data/sampleSubmission.csv"
     if verbose: print("Opening submission file...")
     sample_submission_lines = open(sample_submission_file_path, 'r').readlines()
     if verbose: print("Submission file opened.")
     """
-
+    # read sample submission
     if verbose: print("Writing the data...")
     # other settings
     row_col_search = re.compile('r([0-9]+)_c([0-9]+)')
@@ -109,36 +69,3 @@ def numpy_output_submission(preds, filename, implicit_data, verbose=False):
             w.write(new_line)
     if verbose: print("Finished.")
 
-# Surprise output submission
-def surprise_output_submission(algo, filename, verbose=False):
-    # read sample submission
-    sample_submission_file_path = "data/sampleSubmission.csv"
-    if verbose: print("Opening submission file...")
-    sample_submission_lines = open(sample_submission_file_path, 'r').readlines()
-    if verbose: print("Submission file opened.")
-    if verbose: print("Writing the data...")
-    # other settings
-    row_col_search = re.compile('r([0-9]+)_c([0-9]+)')
-    submission_path = os.path.join("submission", filename)
-    header = "Id,Prediction\n"
-
-    with open(submission_path, 'w') as w:
-        w.write(header)
-
-        # iterate through sample file, fetch the correspnding matrix element
-        for line in sample_submission_lines[1:]:
-            row_col = row_col_search.search(line)
-            r = int(row_col.group(1))
-            c = int(row_col.group(2))
-            prediction = algo.predict(uid = str(r-1), iid=str(c-1)).est
-            new_line = "r{}_c{},{}\n".format(r, c, prediction)
-            w.write(new_line)
-    if verbose: print("Finished.")
-
-def main():
-
-    b = load_data(datapath)
-    print("Hello")
-
-if __name__=='__main__':
-    main()

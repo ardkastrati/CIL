@@ -6,7 +6,6 @@ Reference papers: "Bayesian Probabilistic Matrix Factorization using MCMC"
                  "Advances in Neural Information Processing Systems. 2017.
 Implementation of bpmf borrowed from: https://github.com/chyikwei/recommend
 """
-
 import logging
 from six.moves import xrange
 import numpy as np
@@ -77,7 +76,7 @@ class BPMRMF(ModelBase):
         self.user_features_ = [0.3 * self.rand_state.rand(n_user, n_feature[k]) for k in range(self.K)]
         self.item_features_ = [0.3 * self.rand_state.rand(n_item, n_feature[k]) for k in range(self.K)]
 
-        # data state
+        # data states
         self.iter_ = 0
         self.mean_rating_ = None
         self.ratings_csr_ = None
@@ -132,6 +131,7 @@ class BPMRMF(ModelBase):
 
         self.mean_rating_ = np.mean(ratings[:, 2])
 
+        # Perform gibbs sampling for n_iters
         for iteration in xrange(n_iters):
 
             # Gibbs Sampling
@@ -162,7 +162,7 @@ class BPMRMF(ModelBase):
             raise NotFittedError()
 
         preds = 0
-
+        # Get the weights for each model used
         class_probabilities = self.user_class_probability_.take(data.take(0, axis=1), axis=1) * \
                               self.item_class_probability_.take(data.take(1, axis=1), axis=1)
 
@@ -170,6 +170,7 @@ class BPMRMF(ModelBase):
         class_probabilities[:, sum == 0] = 0.5
         class_probabilities /= class_probabilities.sum(axis=0)
 
+        # Get features for each model and weighted prediction
         for k in range(self.K):
             u_features = self.user_features_[k].take(data.take(0, axis=1), axis=0)
             i_features = self.item_features_[k].take(data.take(1, axis=1), axis=0)
@@ -178,8 +179,8 @@ class BPMRMF(ModelBase):
             preds += val*class_probabilities[k, :]
 
         preds += self.mean_rating_
-
-        if self.max_rating:  # cut the prediction rate. 
+        # Clip the prediction
+        if self.max_rating:
             preds[preds > self.max_rating] = self.max_rating
 
         if self.min_rating:
@@ -197,6 +198,7 @@ class BPMRMF(ModelBase):
         val_rmse = RMSE(val_preds, val[:, 2])
         print("val RMSE: {}".format(val_rmse))
 
+    # Sample user class probabilities (beta in the report) from the Dirichlet distribution
     def sample_user_class_probability(self):
 
         occurences = np.array([self.ratings_csr_[k].getnnz(axis=1) for k in range(self.K)], dtype=float)
@@ -205,6 +207,7 @@ class BPMRMF(ModelBase):
         user_class_probabilities = np.array([self.rand_state.dirichlet(occurences[:, user_id]) for user_id in range(self.n_user)]).T
         return user_class_probabilities
 
+        # Sample user class probabilities (alpha in the report) from the Dirichlet distribution
     def sample_item_class_probability(self):
         occurences = np.array([self.ratings_csr_[k].getnnz(axis=0) for k in range(self.K)], dtype=float)
         occurences += self.alpha / self.K
@@ -212,6 +215,7 @@ class BPMRMF(ModelBase):
         item_class_probabilities = np.array([self.rand_state.dirichlet(occurences[:, item_id]) for item_id in range(self.n_item)]).T
         return item_class_probabilities
 
+    # Sample classes probabilities (c_ij from the report)
     def sample_user_item_classes(self, ratings):
         classes = np.zeros(len(ratings))
         discrete_probability = np.zeros((self.K, len(ratings)))
@@ -238,9 +242,11 @@ class BPMRMF(ModelBase):
         classes = np.array([self.rand_state.multinomial(n=1, pvals=discrete_probability[:, i]).argmax() for i in range(len(ratings))])
         return classes
 
+    # Sample user hyperparameters using Gaussian-Wishart as defined in R. Salakhutdinov and A.Mnih, 2008
     def sample_user_params(self):
         alpha_user = []
         mu_user = []
+        # Sample for every model
         for k in range(self.K):
             mu0_star, beta0_star, nu0_star, W0_star = \
                 self.bayesian_update(self.n_user, self.mu0_user[k], self.beta0_user[k], self.nu0_user[k], self.W0_user[k], self.user_features_[k], self.n_feature[k])
@@ -249,9 +255,11 @@ class BPMRMF(ModelBase):
             mu_user.append(self.sample_Gaussian(mu0_star, inv(np.dot(beta0_star, alpha_user[k]))))
         return mu_user, alpha_user
 
+    # Sample movies hyperparameters using Gaussian-Wishart as defined in R. Salakhutdinov and A.Mnih, 2008
     def sample_item_params(self):
         alpha_item = []
         mu_item = []
+        # Sample for every model
         for k in range(self.K):
             mu0_star, beta0_star, nu0_star, W0_star = \
                 self.bayesian_update(self.n_item, self.mu0_item[k], self.beta0_item[k], self.nu0_item[k], self.W0_item[k], self.item_features_[k], self.n_feature[k])
@@ -260,10 +268,12 @@ class BPMRMF(ModelBase):
             mu_item.append(self.sample_Gaussian(mu0_star, inv(np.dot(beta0_star, alpha_item[k]))))
         return mu_item, alpha_item
 
+    # Sample user features
     def sample_user_features(self):
         user_features_ = []
         for k in range(self.K):
             curr_user_features_ = np.zeros((self.n_user, self.n_feature[k]), dtype='float64')
+            # Sample parameters for every user
             for user_id in xrange(self.n_user):
                 indices = self.ratings_csr_[k][user_id, :].indices
                 features = self.item_features_[k][indices, :]
@@ -272,6 +282,7 @@ class BPMRMF(ModelBase):
                 rating = np.reshape(rating, (rating.shape[0], 1))
 
                 mu_star, alpha_star_inv = self.conjugate_prior(self.mu_user[k], self.alpha_user[k], features, rating)
+                # Sample user features from a gaussian distribution
                 curr_user_features_[user_id] = self.sample_Gaussian(mu_star, alpha_star_inv)
 
             user_features_.append(curr_user_features_)
@@ -282,7 +293,7 @@ class BPMRMF(ModelBase):
         item_features_ = []
         for k in range(self.K):
             curr_item_features_ = np.zeros((self.n_item, self.n_feature[k]), dtype='float64')
-
+            # Sample parameters for every movie
             for item_id in xrange(self.n_item):
                 indices = self.ratings_csc_[k][:, item_id].indices
                 features = self.user_features_[k][indices, :]
@@ -291,20 +302,20 @@ class BPMRMF(ModelBase):
                 rating = np.reshape(rating, (rating.shape[0], 1))
 
                 mu_star, alpha_star_inv = self.conjugate_prior(self.mu_item[k], self.alpha_item[k], features, rating)
+                # Sample movie features from a gaussian distribution
                 curr_item_features_[item_id] = self.sample_Gaussian(mu_star, alpha_star_inv)
 
             item_features_.append(curr_item_features_)
 
         return item_features_
 
+    # Update the conditional parameters of the Gaussian-Wishart distribution
     def bayesian_update(self, N, mu0, beta0, nu0, W0, evidence, evidence_n_feature):
         X_bar = np.mean(evidence, 0).reshape((evidence_n_feature, 1))
         S_bar = np.cov(evidence.T)
         diff_X_bar = mu0 - X_bar
         W0_star = inv(inv(W0) +  N * S_bar + np.dot(diff_X_bar, diff_X_bar.T) * (N * beta0) / (beta0 + N))
 
-        # Note: WI_post and WI_post.T should be the same.
-        #       Just make sure it is symmetric here
         W0_star = (W0_star + W0_star.T) / 2.0
 
         nu0_star = nu0 + N
@@ -313,6 +324,7 @@ class BPMRMF(ModelBase):
 
         return mu0_star, beta0_star, nu0_star, W0_star
 
+    # Calculate conjugate prior for the parameters
     def conjugate_prior(self, mu, alpha, features, rating):
         alpha_star = alpha + self.beta * np.dot(features.T, features)
         alpha_star_inv = inv(alpha_star)
@@ -320,9 +332,11 @@ class BPMRMF(ModelBase):
         mu_star = np.dot(alpha_star_inv, temp.T)
         return mu_star, alpha_star_inv
 
+    # Sample from Wishart distribution
     def sample_Wishart(self, W0, nu0):
         return wishart.rvs(nu0, W0, 1, self.rand_state)
 
+    # Sample from Gaussian distribution
     def sample_Gaussian(self, mu, sigma):
         var = cholesky(sigma)
         return (mu + np.dot(var, self.rand_state.randn(mu.shape[0], 1))).ravel()
@@ -330,3 +344,4 @@ class BPMRMF(ModelBase):
     def build_rating_matrices(self, ratings, classes):
         self.ratings_csr_ = [build_user_item_matrix(self.n_user, self.n_item, ratings, classes, the_class) for the_class in range(self.K)]
         self.ratings_csc_ = [ratings_csr_.tocsc() for ratings_csr_ in self.ratings_csr_]
+

@@ -23,7 +23,7 @@ general_params['n_users'] = 10000
 general_params['n_movies'] = 1000
 
 # bpmrmf and bpmf common parameters
-bpmrmf_params['eval_iters'] = 21
+bpmrmf_params['eval_iters'] = 2
 bpmrmf_params['train_pct'] = 1.0
 bpmrmf_params['beta'] = 2.0
 bpmrmf_params['beta0_user'] = 2.0
@@ -39,7 +39,7 @@ bpmrmf_params['n_features'] = [8,9,10,50] #ranks used in bpmrmf
 bpmrmf_params['bpmrmf_alpha'] = 1.
 
 # bpmf parameters
-bpmf_params['eval_iters'] = 21
+bpmf_params['eval_iters'] = 2
 bpmf_params['train_pct'] = 1.0
 bpmf_params['beta'] = 2.0
 bpmf_params['beta0_user'] = 2.0
