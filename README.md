@@ -44,7 +44,7 @@ as desired. The options are: 'bpmrmf' (default), 'sgd', 'nmf', 'svd', 'svdpp'.
 ### Setting the General Parameters
 The other general parameters (i.e., except for the model, which was described previously) are as follows:
 
-Parameter &nbsp; &nbsp; &nbsp; | Default | Description
+Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Default | Description
 ------------ | ------------- | -------------
 `general_params['train_data_path']` | "data/data_train.csv" | Path to the training data
 `general_params['test_data_path']` | "data/sampleSubmission.csv" | Path to the test data
@@ -57,7 +57,7 @@ Parameter &nbsp; &nbsp; &nbsp; | Default | Description
 ### Setting the Parameters for BPMRMF
 The parameters of BPMRMF (i.e., our method) are as follows:
 
-Parameter &nbsp; &nbsp; &nbsp; | Default | Description
+Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Default | Description
 ------------ | ------------- | -------------
 `bpmrmf_params['n_features']` | [8,9,10,50] | `list` of ranks of BPMRMF; if the list contains only one rank, it is equivalent to BPMF
 `bpmrmf_params['eval_iters']` | 21 | number of MCMC iterations
