@@ -108,14 +108,13 @@ def training_error(X_predict, X, y, verbose=False):
 
 def sgd():
     """
-    Trains the SGD model and creates an output submission
-    :return:
+    Trains the SGD model and creates an output submission.
     """
     X, y = extract_training_scores(train_data_path, verbose=False)
     eta = sgd_params['sgd_eta']
     k = sgd_params['sgd_k']
     reg_factor = sgd_params['sgd_reg']
-    num_samples = sgd_params['std_n_samples']
+    num_samples = sgd_params['sgd_n_samples']
     reg = SGD(eta=eta, k=k, reg_factor=reg_factor, num_of_samples=num_samples)
     reg.fit(X, y, verbose=False)
     # print(training_error(reg.X_predict, X, y, verbose=False))
@@ -135,7 +134,7 @@ def validate():
     eta = sgd_params['sgd_eta']
     k = sgd_params['sgd_k']
     reg_factor = sgd_params['sgd_reg']
-    num_samples = sgd_params['std_n_samples']
+    num_samples = sgd_params['sgd_n_samples']
     reg = SGD(eta=eta, k=k, reg_factor=reg_factor, num_of_samples=num_samples)
     reg.fit(X_train, y_train, verbose=False)
     predictions = reg.predict(X_val)

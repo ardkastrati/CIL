@@ -69,7 +69,7 @@ def bpmrmf():
     IOHelper.numpy_output_submission(bpmrmf.predictions, filename, test_data, verbose=True)
 
 def main():
-    sgd()
+    validate()
     """
         if params['model'] == 'bpmrmf':
         bpmrmf()

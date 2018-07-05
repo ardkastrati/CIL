@@ -40,7 +40,7 @@ bpmrmf_params['alpha'] = 1.
 sgd_params['sgd_eta'] = 0.001
 sgd_params['sgd_k'] = 114
 sgd_params['sgd_reg'] = 1e-06
-sgd_params['std_n_samples'] = 10000000
+sgd_params['sgd_n_samples'] = 10000000
 
 # nmf parameters
 nmf_params['verbose'] = True

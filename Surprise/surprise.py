@@ -6,6 +6,7 @@ from surprise import Dataset
 from surprise import Reader
 from surprise import NMF
 from surprise import SVD
+from surprise import SVDpp
 from surprise import accuracy
 from surprise.model_selection import KFold
 from surprise.model_selection.split import train_test_split
@@ -94,6 +95,16 @@ def svd():
 
     surprise_output_submission(algo, 'svd.csv', general_params['test_data_path'], verbose=True)
 
+def svdpp():
+    """
+    Train SVD model and creates an output submission for the Kaggle competition.
+    """
+
+    train_data = get_training_data()
+    algo = SVDpp()
+    algo.fit(train_data)
+
+    surprise_output_submission(algo, 'svd.csv', general_params['test_data_path'], verbose=True)
 def train():
     train, val = get_train_val()
     algo = NMF(verbose=nmf_params['verbose'],
