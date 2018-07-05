@@ -52,7 +52,6 @@ def bpmrmf():
     nu0_item = bpmrmf_params['nu0_item']
     mu0_user = bpmrmf_params['mu0_user']
     mu0_item = bpmrmf_params['mu0_item']
-    converge = bpmrmf_params['converge']
     max_rating = bpmrmf_params['max_rating']
     min_rating = bpmrmf_params['min_rating']
     rand_state.shuffle(data)
@@ -68,22 +67,27 @@ def bpmrmf():
     tau=tau, max_rating = max_rating, min_rating=min_rating)
     bpmrmf.fit(train, val, test_data, n_iters=eval_iters)
     # Create submission file
-    IOHelper.numpy_output_submission(bpmrmf.predictions, filename, test_data, verbose=True)
+    IOHelper.numpy_output_submission(bpmrmf.predict(), filename, test_data, verbose=True)
 
 def main():
     start_time = time.time()
     if params['model'] == 'bpmrmf':
+        print("Started running BPMRMF. If you want to run other methods please choose another model in the config.py file.")
         bpmrmf()
     elif params['model'] == 'sgd':
+        print("Started running SGD. If you want to run other methods please choose another model in the config.py file.")
         sgd()
     elif params['model'] == 'nmf':
+        print("Started running NMF. If you want to run other methods please choose another model in the config.py file.")
         nmf()
     elif params['model'] == 'svd':
+        print("Started running SVD. If you want to run other methods please choose another model in the config.py file.")
         svd()
     elif params['model'] == 'svdpp':
+        print("Started running SVD++. If you want to run other methods please choose another model in the config.py file.")
         train()
     else:
-        raise Exception('Please choose one of the following models: '
+        raise Exception('Please choose one of the following models in the config.py file: '
                         'bpmrmf, sgd, nmf, svd')
     print("--- %s seconds ---" % (time.time() - start_time))
 

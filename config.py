@@ -13,17 +13,20 @@ svd: Singular Value Decomposition
 """
 # general parameters
 general_params['model'] = "bpmrmf" # bpmrmf, sgd, nmf, svd, svdpp
+
 general_params['train_data_path'] = "data/data_train.csv"
 general_params['test_data_path']= "data/sampleSubmission.csv"
 general_params['surprise_train_path'] = "data/data_train_surprise.csv"
 general_params['output_file'] = "bpmrmf.csv"
 general_params['n_users'] = 10000
 general_params['n_movies'] = 1000
-general_params['train_pct'] = 0.9
+general_params['train_pct'] = 1
+
+
 # bpmrmf
 bpmrmf_params['n_features'] = [8,9,10,50] #ranks used in bpmrmf
-# NOTE: if n_features is just a scalar, it is equivalent to bpmf
-bpmrmf_params['eval_iters'] = 2
+# NOTE: if n_features is a vector with just one scalar, it is equivalent to bpmf
+bpmrmf_params['eval_iters'] = 21
 bpmrmf_params['beta'] = 2.0
 bpmrmf_params['beta0_user'] = 2.0
 bpmrmf_params['beta0_item'] = 2.0
@@ -31,7 +34,6 @@ bpmrmf_params['nu0_user'] = None
 bpmrmf_params['nu0_item'] = None
 bpmrmf_params['mu0_user'] = 0
 bpmrmf_params['mu0_item'] = 0
-bpmrmf_params['converge'] = 1e-5
 bpmrmf_params['max_rating'] = 5.
 bpmrmf_params['min_rating'] = 1.
 bpmrmf_params['tau'] = 1.
@@ -53,6 +55,7 @@ nmf_params['reg_bu'] = 0.02
 nmf_params['reg_bi'] = 0.02
 nmf_params['lr_bu'] = 0.005
 nmf_params['lr_bi'] = 0.005
+
 # svd parameters
 svd_params['n_factors'] = 1
 svd_params['reg_all'] = 0.001
