@@ -8,7 +8,6 @@ from surprise import NMF
 from surprise import SVD
 from surprise import SVDpp
 from surprise import accuracy
-from surprise.model_selection import KFold
 from surprise.model_selection.split import train_test_split
 import os
 from config import svd_params
@@ -68,7 +67,13 @@ def nmf():
     """
     Train Non-Negative Matrix Factorization model and creates an output submission for the Kaggle competition.
     """
-    train_data = get_training_data()
+    # Percentage of training data
+    train_pct = general_params['train_pct']
+    # Check if the model has validation data
+    if train_pct < 1:
+        train_data, val_data = get_train_val()
+    else:
+        train_data = get_training_data()
     algo = NMF(verbose=nmf_params['verbose'],
                biased=nmf_params['biased'],
                n_epochs=nmf_params['n_epochs'],
@@ -80,6 +85,10 @@ def nmf():
                lr_bu=nmf_params['lr_bu'],
                lr_bi=nmf_params['lr_bi'])
     algo.fit(train_data)
+    # If there is validation data, print RMSE for it
+    if train_pct<1:
+        error = accuracy.rmse(algo.test(val_data), verbose=False)
+        print("NMF RMSE: {}".format(error))
     surprise_output_submission(algo, 'nmf.csv', general_params['test_data_path'], verbose=True)
 
 # Fit SVD model and create output submission
@@ -87,22 +96,41 @@ def svd():
     """
     Train SVD model and creates an output submission for the Kaggle competition.
     """
-
-    train_data = get_training_data()
+    # Percentage of training data
+    train_pct = general_params['train_pct']
+    # Check if the model has validation data
+    if train_pct < 1:
+        train_data, val_data = get_train_val()
+    else:
+        train_data = get_training_data()
     algo = SVD(n_factors=svd_params['n_factors'], reg_all=svd_params['reg_all'],
                lr_all=svd_params['lr_all'])
     algo.fit(train_data)
-
+    # If there is validation data, print RMSE for it
+    if train_pct<1:
+        error = accuracy.rmse(algo.test(val_data), verbose=False)
+        print("SVD RMSE: {}".format(error))
     surprise_output_submission(algo, 'svd.csv', general_params['test_data_path'], verbose=True)
 
 def svdpp():
     """
     Train SVD++ model and creates an output submission for the Kaggle competition.
     """
-    train_data = get_training_data()
+    # Percentage of training data
+    train_pct = general_params['train_pct']
+    # Check if the model has validation data
+    if train_pct < 1:
+        train_data, val_data = get_train_val()
+    else:
+        train_data = get_training_data()
     algo = SVDpp()
     algo.fit(train_data)
-    surprise_output_submission(algo, 'svd.csv', general_params['test_data_path'], verbose=True)
+    # If there is validation data, print RMSE for it
+    if train_pct<1:
+        error = accuracy.rmse(algo.test(val_data), verbose=False)
+        print("SVD++ RMSE: {}".format(error))
+    surprise_output_submission(algo, 'svdpp.csv', general_params['test_data_path'], verbose=True)
+
 def train():
     train, val = get_train_val()
     algo = SVDpp()
@@ -123,22 +151,3 @@ def train():
     error = accuracy.rmse(algo.test(val), verbose=True)
     print(error)
 
-
-"""
-# Load the movielens-100k dataset
-data = Dataset.load_builtin('ml-100k')
-
-# define a cross-validation iterator
-kf = KFold(n_splits=10)
-
-algo = SVD()
-
-for trainset, testset in kf.split(data):
-
-    # train and test algorithm.
-    algo.fit(trainset)
-    predictions = algo.test(testset)
-
-    # Compute and print Root Mean Squared Error
-    accuracy.rmse(predictions, verbose=True)
-"""
