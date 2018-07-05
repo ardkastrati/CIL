@@ -57,8 +57,6 @@ Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Defau
 ### Setting the Parameters for BPMRMF
 The parameters of BPMRMF (i.e., our method) are as follows:
 
-<div class="foo">
-
 Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Default | Description
 ------------ | ------------- | -------------
 `n_features` | [8,9,10,50] | `list` of ranks of BPMRMF; if the list contains only one rank, it is equivalent to BPMF
@@ -73,8 +71,6 @@ Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Defau
 `max_rating` | 5. | The maximum rating number.
 `min_rating` | 1. | The minimum rating number.
 `tau` | 1. | The concetration hyperparameter of the Dirichlet distribution. If less then :math:`K` (the number of different ranks) the mass will be highly concentrated in a few components, leaving the rest with almost no mass, meaning for each rating only a few ranks (or even only one rank) will be considered for the prediction.
-
-</div>
 
 
 ## Authors
