@@ -9,7 +9,7 @@ We tried several models:
 3. Bayesian Probabilistic Matrix Factorization (BPMF).
 4. Bayesian Probabilistic Matrix Factorization with Mixture Rank (BPMFMR).
 
-Our best model is BPMFMR, in which we perform a fully Bayesian treatment of the (hyper-)parameters of a Gaussian mixture model (GMM) to characterize user-item ratings as a mixture of LRMA models of different ranks and propose a . 
+Our best model is BPMFMR, in which we do a fully Bayesian treatment of the (hyper-)parameters of a Gaussian mixture model (GMM) to characterize user-item ratings as a mixture of LRMA models of different ranks. Please refer to our project report for more details.
 
 ## Installation
 You can conveniently set up the environment using `conda` by running the following commands:
