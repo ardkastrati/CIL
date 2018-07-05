@@ -189,7 +189,6 @@ class BPMRMF(ModelBase):
             self.MCMC(ratings, validation, test)
 
             self.iter_ += 1
-            print("Timestamp: {}".format(time.time()))
         return self
 
     def __predict_in_current_iteration(self, data):
