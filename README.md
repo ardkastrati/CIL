@@ -9,6 +9,21 @@ RMSE: 1.0007093783240044
 SGD:
 RMSE: 1.134257549370751
 
+BPMF rank 8
+36, train RMSE: 0.919386932791069 , val RMSE: 0.9812739446454559 
+
+BPMF rank 9
+iteration: 32, train RMSE: 0.9139997315475626 , val RMSE: 0.9808997873891879 
+
+BPMF rank 10
+iteration: 21, train RMSE: 0.9143092772462968 , val RMSE: 0.9818038027800366 
+
+BPMF rank 50
+iteration: 9, train RMSE: 0.8898841032499164 , val RMSE: 0.985430114045738 
+
+BPMFMR
+[8,9,10,50] 0.978407647369278
+
 Project of team make for the Collaborative Filtering project from the Computational Intelligence Lab at ETH Zürich.
 
 # Overview 
