@@ -29,10 +29,49 @@ After creating and activating the `conda` environment, you can reproduce our res
 This will produce a file called `bpmrmf.csv` in the `submission` folder containing the test predictions of our model, which can then be submitted directly to the [Kaggle competition][2] to achieve the same score as we did with our selected submission.
 
 ## Configuration
-You can conveniently change the type of model used and its configuration by altering the `config.py` file. In the following we will describe the details of this.
+You can conveniently change the type of model used and its configuration by altering the `config.py` file. In the following we will describe the details of this. The default parameters in the file will reproduce our final submission as well as the results reported in our paper (i.e., for each model).
 
 ### Structure of `config.py`
 The configuration file contains five different `Python` dictionaries, one containing general parameters and one for the parameters of each model (i.e., NMF, SVD, SGD and BPMRMF).
+
+### Choosing the Model
+To choose the model, you can just set the dictionary entry
+```python
+general_params['model'] = "bpmrmf"
+```
+as desired. The options are: 'bpmrmf' (default), 'sgd', 'nmf', 'svd', 'svdpp'.
+
+### Setting the General Parameters
+The other general parameters (i.e., except for the model, which was described previously) are as follows:
+
+Parameter | Default | Description
+------------ | ------------- | -------------
+`general_params['train_data_path']` | "data/data_train.csv" | Path to the training data
+`general_params['test_data_path']` | "data/sampleSubmission.csv" | Path to the test data
+`general_params['surprise_train_path']` | "data/data_train_surprise.csv" | Path to the training data in the format as required by the `Surprise` library
+# general_params['output_file'] | "bpmrmf.csv" |
+`general_params['n_users']` | 10000 | The number of users that are rating the items (The number of rows in the rating matrix)
+`general_params['n_movies']` | 1000 | The number of items that are rated from the users (The number of columns in the rating matrix)
+`general_params['train_pct']` | 1.0 | Percentage of the data to be used for training; the remaining data will be used for validation; thus, if set to 1.0, all the data will be usd for training
+
+
+### Setting the Parameters for BPMRMF
+The parameters of BPMRMF (i.e., our method) are as follows:
+
+Parameter | Default | Description
+------------ | ------------- | -------------
+`bpmrmf_params['n_features']` | [8,9,10,50] | `list` of ranks of BPMRMF; if the list contains only one rank, it is equivalent to BPMF
+`bpmrmf_params['eval_iters']` | 21 | number of MCMC iterations
+`bpmrmf_params['beta']` | 2.0 | The precision of the gaussian distribution of the ratings
+`bpmrmf_params['beta0_user']` | 2.0 | The hyperparameter of the Gaussian-Wishart distribution for the users. A multiplicative factor of the precision (the inverse of Gaussian) in the Gaussian that is sampled from the Wishart distribution.  
+`bpmrmf_params['beta0_item']` | 2.0 | The hyperparameter of the Gaussian-Wishart distribution for the items. A multiplicative factor of the precision (the inverse of Gaussian) in the Gaussian that is sampled from the Wishart distribution.  
+`bpmrmf_params['nu0_user']` | None | Degrees of freedom in the Wishart distribution for the users.
+`bpmrmf_params['nu0_item']` | None | Degrees of freedom in the Wishart distribution for the items.
+`bpmrmf_params['mu0_user']` | 0 | The mean of all the random means (for each user) of normally distributed U. If there is no prior information for this parameter, it is recommended to set it to 0, based on the symmetry argument.
+`bpmrmf_params['mu0_item']` | 0 | he mean of all the random means (for each item) of normally distributed V. If there is no prior information for this parameter, it is recommended to set it to 0, based on the symmetry argument.
+`bpmrmf_params['max_rating']` | 5. | The maximum rating number.
+`bpmrmf_params['min_rating']` | 1. | The minimum rating number.
+`bpmrmf_params['tau']` | 1. | The concetration hyperparameter of the Dirichlet distribution. If less then :math:`K` (the number of different ranks) the mass will be highly concentrated in a few components, leaving the rest with almost no mass, meaning for each rating only a few ranks (or even only one rank) will be considered for the prediction.
 
 
 ## Authors
