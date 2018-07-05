@@ -23,7 +23,7 @@ general_params['train_pct'] = 0.9
 # bpmrmf
 bpmrmf_params['n_features'] = [8,9,10,50] #ranks used in bpmrmf
 # NOTE: if n_features is just a scalar, it is equivalent to bpmf
-bpmrmf_params['eval_iters'] = 2
+bpmrmf_params['eval_iters'] = 21
 bpmrmf_params['beta'] = 2.0
 bpmrmf_params['beta0_user'] = 2.0
 bpmrmf_params['beta0_item'] = 2.0

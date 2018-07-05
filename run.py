@@ -72,6 +72,7 @@ def bpmrmf():
 
 def main():
     start_time = time.time()
+    print("Start time: {}".format(start_time))
     if params['model'] == 'bpmrmf':
         bpmrmf()
     elif params['model'] == 'sgd':
