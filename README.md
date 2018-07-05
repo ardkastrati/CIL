@@ -20,6 +20,7 @@ $ cd make
 $ conda env create
 $ source activate make-env
 ```
+(For details on how to install `conda`, please refer to the [official documentation][5].)
 
 ## Running
 After creating and activating the `conda` environment, you can reproduce our results by simply running
@@ -86,3 +87,4 @@ Ming-Da Liu Zhang, Ard Kastrati and Erik Alexander Daxberger
 [2]: http://da.inf.ethz.ch/teaching/2018/CIL/
 [3]: http://ethz.ch
 [4]: http://surpriselib.com
+[5]: https://conda.io/docs/user-guide/install/index.html
