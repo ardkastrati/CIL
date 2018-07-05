@@ -56,7 +56,7 @@ def get_training_data():
 def get_train_val():
     """
     Get training and validation data with Surprise format.
-    :return: Training and validation data with Surprise format.
+    :returns: Training and validation data with Surprise format.
     """
     reader = Reader(line_format='user item rating', sep=',')
     data = Dataset.load_from_file(general_params['surprise_train_path'], reader=reader)
