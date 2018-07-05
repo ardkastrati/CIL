@@ -3,6 +3,5 @@ dependencies:
     - python
     - numpy
     - scikit-learn
-    - sphinx
     - pip: 
         - scikit-surprise

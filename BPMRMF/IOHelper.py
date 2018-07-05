@@ -1,6 +1,6 @@
 from config import general_params as params
 from config import bpmrmf_params
-from MRMF_BPMF.bpmrmf import BPMRMF
+from BPMRMF.bpmrmf import BPMRMF
 import re
 import os
 import numpy as np

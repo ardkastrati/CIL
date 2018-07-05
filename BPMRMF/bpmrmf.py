@@ -13,11 +13,11 @@ from numpy.linalg import inv, cholesky
 from numpy.random import RandomState
 from scipy.stats import wishart, norm
 
-from MRMF_BPMF.utils.base import ModelBase
-from MRMF_BPMF.utils.exceptions import NotFittedError
-from MRMF_BPMF.utils.datasets import build_user_item_matrix
-from MRMF_BPMF.utils.validation import check_ratings
-from MRMF_BPMF.utils.evaluation import RMSE
+from BPMRMF.utils.base import ModelBase
+from BPMRMF.utils.exceptions import NotFittedError
+from BPMRMF.utils.datasets import build_user_item_matrix
+from BPMRMF.utils.validation import check_ratings
+from BPMRMF.utils.evaluation import RMSE
 import time
 logger = logging.getLogger(__name__)
 

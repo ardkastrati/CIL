@@ -3,7 +3,7 @@ from Surprise.surprise import svd
 from Surprise.surprise import svdpp
 from Surprise.surprise import nmf
 from SGD.SGD_utils import sgd
-from MRMF_BPMF.IOHelper import bpmrmf
+from BPMRMF.IOHelper import bpmrmf
 import time
 
 def main():
