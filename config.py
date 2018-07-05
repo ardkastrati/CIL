@@ -4,27 +4,30 @@ bpmrmf_params = {}
 nmf_params = {}
 svd_params = {}
 sgd_params = {}
+
 """
 Models:
+
 bpmrmf: Bayesian Probabilistic Matrix Factorization with Mixture Rank Matrix Factorization
 sgd: SGD Collaborative Filtering
 nmf: Non-Negative Matrix Factorization
 svd: Singular Value Decomposition
 """
+
 # general parameters
-general_params['model'] = "sgd" # bpmrmf, sgd, nmf, svd, svdpp
+general_params['model'] = "bpmrmf" # bpmrmf, sgd, nmf, svd, svdpp
 
 general_params['train_data_path'] = "data/data_train.csv"
 general_params['test_data_path']= "data/sampleSubmission.csv"
 general_params['surprise_train_path'] = "data/data_train_surprise.csv"
-# general_params['output_file'] = "bpmrmf.csv"
 general_params['n_users'] = 10000
 general_params['n_movies'] = 1000
 general_params['train_pct'] = 1.0
+
 # bpmrmf
-bpmrmf_params['n_features'] = [8] #ranks used in bpmrmf
+bpmrmf_params['n_features'] = [8,9,10,50] #ranks used in bpmrmf
 # NOTE: if n_features is just a scalar, it is equivalent to bpmf
-bpmrmf_params['eval_iters'] = 42
+bpmrmf_params['eval_iters'] = 21
 bpmrmf_params['beta'] = 2.0
 bpmrmf_params['beta0_user'] = 2.0
 bpmrmf_params['beta0_item'] = 2.0
@@ -58,4 +61,3 @@ nmf_params['lr_bi'] = 0.005
 svd_params['n_factors'] = 1
 svd_params['reg_all'] = 0.001
 svd_params['lr_all'] = 0.0005
-
