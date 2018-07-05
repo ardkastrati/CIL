@@ -3,13 +3,14 @@
 This is the project repository of the team **make** for the [Collaborative Filtering project][1] from the [Computational Intelligence Lab][2] at [ETH Zürich][3].
 
 ## Overview 
-We tried several models:
-1. Stochastic Gradient Descent with Regularization (SGD).
-2. Non-Negative Matrix Factorization (NMF).
-3. Bayesian Probabilistic Matrix Factorization (BPMF).
-4. Bayesian Probabilistic Matrix Factorization with Mixture Rank (BPMFMR).
+In this repository we provide implementations of the following collaborative filtering methods:
+1. Stochastic Gradient Descent with Regularization (SGD) (as in CIL Exercise 4, Problem 3)
+2. Bayesian Probabilistic Matrix Factorization (BPMF) (Salakhutdinov and Mnih, 2008)
+3. Bayesian Probabilistic Mixture-Rank Matrix Factorization (BPMRMF) (our method)
 
-Our best model is BPMFMR, in which we do a fully Bayesian treatment of the (hyper-)parameters of a Gaussian mixture model (GMM) to characterize user-item ratings as a mixture of LRMA models of different ranks. Please refer to our project report for more details.
+For all other methods considered in our project report, we ran the implementations available in the [`Surprise`][4] library.
+
+The model we developed is BPMFMR, in which we do a fully Bayesian treatment of the (hyper-)parameters of a Gaussian mixture model (GMM) to characterize user-item ratings as a mixture of LRMA models of different ranks. Please refer to our project report for more details.
 
 ## Installation
 You can conveniently set up the environment using `conda` by running the following commands:
@@ -51,7 +52,7 @@ Parameter | Default | Description
 `general_params['surprise_train_path']` | "data/data_train_surprise.csv" | Path to the training data in the format as required by the `Surprise` library
 `general_params['n_users']` | 10000 | The number of users that are rating the items (The number of rows in the rating matrix)
 `general_params['n_movies']` | 1000 | The number of items that are rated from the users (The number of columns in the rating matrix)
-`general_params['train_pct']` | 1.0 | Percentage of the data to be used for training; the remaining data will be used for validation; thus, if set to 1.0, all the data will be usd for training
+`general_params['train_pct']` | 1.0 | Percentage of the data to be used for training; the remaining data will be used for validation; thus, if set to 1.0, all the data will be used for training
 
 
 ### Setting the Parameters for BPMRMF
@@ -73,6 +74,10 @@ Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Defau
 `tau` | 1. | The concetration hyperparameter of the Dirichlet distribution. If less then K (the number of different ranks) the mass will be highly concentrated in a few components, leaving the rest with almost no mass, meaning for each rating only a few ranks (or even only one rank) will be considered for the prediction.
 
 
+## References
+Salakhutdinov, Ruslan, and Andriy Mnih. "Bayesian probabilistic matrix factorization using Markov chain Monte Carlo." Proceedings of the 25th International Conference on Machine Learning. ACM, 2008.
+
+
 ## Authors
 Ming-Da Liu Zhang, Ard Kastrati and Erik Alexander Daxberger
 
@@ -80,3 +85,4 @@ Ming-Da Liu Zhang, Ard Kastrati and Erik Alexander Daxberger
 [1]: https://inclass.kaggle.com/c/cil-collab-filtering-2018
 [2]: http://da.inf.ethz.ch/teaching/2018/CIL/
 [3]: http://ethz.ch
+[4]: http://surpriselib.com
