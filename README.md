@@ -44,12 +44,11 @@ as desired. The options are: 'bpmrmf' (default), 'sgd', 'nmf', 'svd', 'svdpp'.
 ### Setting the General Parameters
 The other general parameters (i.e., except for the model, which was described previously) are as follows:
 
-Parameter | Default | Description
+Parameter &nbsp; &nbsp; &nbsp; | Default | Description
 ------------ | ------------- | -------------
 `general_params['train_data_path']` | "data/data_train.csv" | Path to the training data
 `general_params['test_data_path']` | "data/sampleSubmission.csv" | Path to the test data
 `general_params['surprise_train_path']` | "data/data_train_surprise.csv" | Path to the training data in the format as required by the `Surprise` library
-# general_params['output_file'] | "bpmrmf.csv" |
 `general_params['n_users']` | 10000 | The number of users that are rating the items (The number of rows in the rating matrix)
 `general_params['n_movies']` | 1000 | The number of items that are rated from the users (The number of columns in the rating matrix)
 `general_params['train_pct']` | 1.0 | Percentage of the data to be used for training; the remaining data will be used for validation; thus, if set to 1.0, all the data will be usd for training
@@ -58,7 +57,7 @@ Parameter | Default | Description
 ### Setting the Parameters for BPMRMF
 The parameters of BPMRMF (i.e., our method) are as follows:
 
-Parameter | Default | Description
+Parameter &nbsp; &nbsp; &nbsp; | Default | Description
 ------------ | ------------- | -------------
 `bpmrmf_params['n_features']` | [8,9,10,50] | `list` of ranks of BPMRMF; if the list contains only one rank, it is equivalent to BPMF
 `bpmrmf_params['eval_iters']` | 21 | number of MCMC iterations
