@@ -44,7 +44,7 @@ as desired. The options are: 'bpmrmf' (default), 'sgd', 'nmf', 'svd', 'svdpp'.
 ### Setting the General Parameters
 The other general parameters (i.e., except for the model, which was described previously) are as follows:
 
-Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Default | Description
+Parameter ^1 Default ^2 Description
 ------------ | ------------- | -------------
 `general_params['train_data_path']` | "data/data_train.csv" | Path to the training data
 `general_params['test_data_path']` | "data/sampleSubmission.csv" | Path to the test data
