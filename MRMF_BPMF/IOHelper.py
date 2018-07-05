@@ -45,18 +45,23 @@ def numpy_training_data(train_data_path, verbose=False):
     if verbose: print("data extracted")
     return train
 
-def numpy_output_submission(preds, filename, implicit_data, verbose=False):
-
+def numpy_output_submission(preds, filename, test_data, verbose=False):
     """
-    sample_submission_file_path = "data/sampleSubmission.csv"
-    if verbose: print("Opening submission file...")
-    sample_submission_lines = open(sample_submission_file_path, 'r').readlines()
-    if verbose: print("Submission file opened.")
+    Create output file submission for the Kaggle competition
+    :param preds: Numpy array of the predictions.
+    :param filename: Name of the file to submit.
+    :param test_data: Sample submission file.
+    :param verbose: boolean; if true, it prints information about
+    the status of the program.
+    """
+    """
+    :param preds:
+    :param implicit_data:
+    :param verbose:
+    :return:
     """
     # read sample submission
     if verbose: print("Writing the data...")
-    # other settings
-    row_col_search = re.compile('r([0-9]+)_c([0-9]+)')
     submission_path = os.path.join("submission", filename)
     header = "Id,Prediction\n"
 
@@ -64,8 +69,8 @@ def numpy_output_submission(preds, filename, implicit_data, verbose=False):
         w.write(header)
 
         # iterate through sample file, fetch the corresponding matrix element
-        for i in range(len(implicit_data)):
-            new_line = "r{}_c{},{}\n".format(implicit_data[i, 0] + 1, implicit_data[i, 1] + 1, preds[i])
+        for i in range(len(test_data)):
+            new_line = "r{}_c{},{}\n".format(test_data[i, 0] + 1, test_data[i, 1] + 1, preds[i])
             w.write(new_line)
     if verbose: print("Finished.")
 

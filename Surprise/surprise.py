@@ -97,16 +97,16 @@ def svd():
 
 def svdpp():
     """
-    Train SVD model and creates an output submission for the Kaggle competition.
+    Train SVD++ model and creates an output submission for the Kaggle competition.
     """
-
     train_data = get_training_data()
     algo = SVDpp()
     algo.fit(train_data)
-
     surprise_output_submission(algo, 'svd.csv', general_params['test_data_path'], verbose=True)
 def train():
     train, val = get_train_val()
+    algo = SVDpp()
+    """
     algo = NMF(verbose=nmf_params['verbose'],
                biased=nmf_params['biased'],
                n_epochs=nmf_params['n_epochs'],
@@ -117,6 +117,8 @@ def train():
                reg_bi=nmf_params['reg_bi'],
                lr_bu=nmf_params['lr_bu'],
                lr_bi=nmf_params['lr_bi'])
+
+    """
     algo.fit(train)
     error = accuracy.rmse(algo.test(val), verbose=True)
     print(error)

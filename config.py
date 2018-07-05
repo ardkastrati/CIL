@@ -12,7 +12,7 @@ nmf: Non-Negative Matrix Factorization
 svd: Singular Value Decomposition
 """
 # general parameters
-general_params['model'] = "svd" # bpmrmf, sgd, nmf, svd
+general_params['model'] = "svdpp" # bpmrmf, sgd, nmf, svd, svdpp
 general_params['train_data_path'] = "data/data_train.csv"
 general_params['test_data_path']= "data/sampleSubmission.csv"
 general_params['surprise_train_path'] = "data/data_train_surprise.csv"

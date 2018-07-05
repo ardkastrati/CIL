@@ -1,6 +1,7 @@
 from config import general_params as params
 from config import bpmrmf_params
 from Surprise.surprise import svd
+from Surprise.surprise import svdpp
 from SGD.SGD_utils import validate
 from Surprise.surprise import train
 from Surprise.surprise import nmf
@@ -9,6 +10,7 @@ from MRMF_BPMF.bpmrmf import BPMRMF
 import MRMF_BPMF.IOHelper as IOHelper
 from MRMF_BPMF.utils.evaluation import RMSE
 import numpy as np
+import time
 
 train_data_path = params['train_data_path']
 test_data_path = params['test_data_path']
@@ -69,9 +71,8 @@ def bpmrmf():
     IOHelper.numpy_output_submission(bpmrmf.predictions, filename, test_data, verbose=True)
 
 def main():
-    validate()
-    """
-        if params['model'] == 'bpmrmf':
+    start_time = time.time()
+    if params['model'] == 'bpmrmf':
         bpmrmf()
     elif params['model'] == 'sgd':
         sgd()
@@ -79,12 +80,12 @@ def main():
         nmf()
     elif params['model'] == 'svd':
         svd()
+    elif params['model'] == 'svdpp':
+        train()
     else:
         raise Exception('Please choose one of the following models: '
                         'bpmrmf, sgd, nmf, svd')
-
-    :return:
-    """
+    print("--- %s seconds ---" % (time.time() - start_time))
 
 if __name__=='__main__':
     main()
