@@ -7,6 +7,7 @@ from Surprise.surprise import nmf
 from SGD.SGD_utils import sgd
 from MRMF_BPMF.bpmrmf import BPMRMF
 import MRMF_BPMF.IOHelper as IOHelper
+from MRMF_BPMF.utils.evaluation import RMSE
 import numpy as np
 
 train_data_path = params['train_data_path']
@@ -21,6 +22,18 @@ data = IOHelper.numpy_training_data(train_data_path, verbose=True)
 # print("Test data...")
 test_data = IOHelper.numpy_training_data(test_data_path, verbose=True)
 
+def bpmf():
+    rand_state = np.random.RandomState(0)
+    rand_state.shuffle(data)
+    train_size = int(params['train_pct'] * data.shape[0])
+    train = data[:train_size]
+    val = data[train_size:]
+    for k in bpmrmf_params['n_features']:
+        bpmrmf = BPMRMF(n_user=10000, n_item=1000, n_feature=[k])
+        bpmrmf.fit(train, val, test_data, n_iters=bpmrmf_params['eval_iters'])
+        #predictions = bpmrmf.predict(val)
+        #rmse = RMSE()
+
 def bpmrmf():
     rand_state = np.random.RandomState(0)
     n_user = D
@@ -29,7 +42,7 @@ def bpmrmf():
     n_features = bpmrmf_params['n_features']
     eval_iters = bpmrmf_params['eval_iters']
     train_pct = params['train_pct']
-    alpha = bpmrmf_params['bpmrmf_alpha']
+    alpha = bpmrmf_params['alpha']
     beta = bpmrmf_params['beta']
     beta0_user = bpmrmf_params['beta0_user']
     beta0_item = bpmrmf_params['beta0_item']
@@ -56,7 +69,7 @@ def bpmrmf():
     IOHelper.numpy_output_submission(bpmrmf.predictions, filename, test_data, verbose=True)
 
 def main():
-    validate()
+    bpmf()
     """
         if params['model'] == 'bpmrmf':
         bpmrmf()

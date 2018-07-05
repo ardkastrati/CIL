@@ -25,7 +25,7 @@ class BPMRMF(ModelBase):
     """
     Bayesian Probabilistic Matrix Factorization with Mixture Ranking
     """
-    def __init__(self, n_user, n_item, n_feature=[8], beta=2.0,
+    def __init__(self, n_user, n_item, n_feature=[8,9,10,50], beta=2.0,
                  beta0_user=2.0, nu0_user=None, mu0_user=0.,
                  beta0_item=2.0, nu0_item=None, mu0_item=0.,
                  converge=1e-5, seed=None,
