@@ -71,6 +71,7 @@ def bpmrmf():
 
 def main():
     start_time = time.time()
+    print("Start time: {}".format(start_time))
     if params['model'] == 'bpmrmf':
         print("Started running BPMRMF. If you want to run other methods please choose another model in the config.py file.")
         bpmrmf()
