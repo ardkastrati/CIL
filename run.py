@@ -28,9 +28,9 @@ def bpmf():
     train_size = int(params['train_pct'] * data.shape[0])
     train = data[:train_size]
     val = data[train_size:]
-    for k in bpmrmf_params['n_features']:
-        bpmrmf = BPMRMF(n_user=10000, n_item=1000, n_feature=[k])
-        bpmrmf.fit(train, val, test_data, n_iters=bpmrmf_params['eval_iters'])
+    #for k in bpmrmf_params['n_features']:
+    bpmrmf = BPMRMF(n_user=10000, n_item=1000)
+    bpmrmf.fit(train, val, test_data, n_iters=bpmrmf_params['eval_iters'])
         #predictions = bpmrmf.predict(val)
         #rmse = RMSE()
 
@@ -69,7 +69,7 @@ def bpmrmf():
     IOHelper.numpy_output_submission(bpmrmf.predictions, filename, test_data, verbose=True)
 
 def main():
-    bpmf()
+    sgd()
     """
         if params['model'] == 'bpmrmf':
         bpmrmf()

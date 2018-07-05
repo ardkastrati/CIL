@@ -37,10 +37,10 @@ bpmrmf_params['min_rating'] = 1.
 bpmrmf_params['alpha'] = 1.
 
 # sgd parameters
-sgd_params['sgd_eta'] = 0.011
-sgd_params['sgd_k'] = 34
-sgd_params['sgd_reg'] = 0.01
-sgd_params['std_n_samples'] = 10000
+sgd_params['sgd_eta'] = 0.001
+sgd_params['sgd_k'] = 114
+sgd_params['sgd_reg'] = 1e-06
+sgd_params['std_n_samples'] = 10000000
 
 # nmf parameters
 nmf_params['verbose'] = True

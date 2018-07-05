@@ -25,7 +25,7 @@ class BPMRMF(ModelBase):
     """
     Bayesian Probabilistic Matrix Factorization with Mixture Ranking
     """
-    def __init__(self, n_user, n_item, n_feature=[8,9,10,50], beta=2.0,
+    def __init__(self, n_user, n_item, n_feature=[8], beta=2.0,
                  beta0_user=2.0, nu0_user=None, mu0_user=0.,
                  beta0_item=2.0, nu0_item=None, mu0_item=0.,
                  converge=1e-5, seed=None,
@@ -88,11 +88,12 @@ class BPMRMF(ModelBase):
 
     def MCMC(self, ratings, validation, test):
         """
-        Update predictions
-        :param ratings:
-        :param validation:
-        :param test:
-        :return:
+        Obtain predictions that minimize the RMSE using Bayes estimator with MSE.
+        :param ratings: Training data. It is a numpy array matrix of shape (n_users*n_items, 3).
+        Each element has the form [user_id, item_id, rating]
+        :param validation: Validation data, it has the same format as ratings
+        :param test: Test data, it has the same format as the training/validation data.
+        For its raitings, it contains the current prediction of the algorithm.
         """
 
         iteration = self.MCMC_iteration
@@ -116,7 +117,15 @@ class BPMRMF(ModelBase):
 
 
     def fit(self, ratings, validation, test, n_iters=50):
-
+        """
+        Train the model by using Gibbs sampling
+        :param ratings: Training data. It is a numpy array matrix of shape (n_users*n_items, 3).
+        Each element has the form [user_id, item_id, rating]
+        :param validation: Validation data, it has the same format as ratings
+        :param test: Test data, it has the same format as the training/validation data.
+        For its raitings, it contains the current prediction of the algorithm.
+        :param n_iters: number of times to perform Gibbs sampling
+        """
         # Check correctness of the ratings matrix
         check_ratings(ratings, self.n_user, self.n_item, self.max_rating, self.min_rating)
 
@@ -158,6 +167,12 @@ class BPMRMF(ModelBase):
         return self
 
     def predict(self, data):
+        """
+        Predict target values of data.
+        :param data: Data to predict. It is a numpy array matrix of shape (n_users*n_items, 3).
+        Each element has the form [user_id, item_id, rating].
+        :returns: predicted data in rating.
+        """
         if not self.mean_rating_:
             raise NotFittedError()
 
@@ -191,32 +206,41 @@ class BPMRMF(ModelBase):
     def validate(self, val):
         """
         Check RMSE in validation set
-        :param val: Validation set, same format as training
-        :return: None
+        :param val: Validation set. It is a numpy array matrix of shape (n_users*n_items, 3).
+        Each element has the form [user_id, item_id, rating].
         """
         val_preds = self.predict(val[:, :2])
         val_rmse = RMSE(val_preds, val[:, 2])
         print("val RMSE: {}".format(val_rmse))
 
-    # Sample user class probabilities (beta in the report) from the Dirichlet distribution
     def sample_user_class_probability(self):
-
+        """
+        Sample user class probabilities (beta in the report) from the Dirichlet distribution
+        """
         occurences = np.array([self.ratings_csr_[k].getnnz(axis=1) for k in range(self.K)], dtype=float)
         occurences += self.alpha/self.K
         occurences /= (occurences.sum(axis=0) + self.alpha)
         user_class_probabilities = np.array([self.rand_state.dirichlet(occurences[:, user_id]) for user_id in range(self.n_user)]).T
         return user_class_probabilities
 
-        # Sample user class probabilities (alpha in the report) from the Dirichlet distribution
+
     def sample_item_class_probability(self):
+        """
+        Sample user class probabilities (alpha in the report) from the Dirichlet distribution
+        """
         occurences = np.array([self.ratings_csr_[k].getnnz(axis=0) for k in range(self.K)], dtype=float)
         occurences += self.alpha / self.K
         occurences /= (occurences.sum(axis=0) + self.alpha)
         item_class_probabilities = np.array([self.rand_state.dirichlet(occurences[:, item_id]) for item_id in range(self.n_item)]).T
         return item_class_probabilities
 
-    # Sample classes probabilities (c_ij from the report)
     def sample_user_item_classes(self, ratings):
+        """
+        Sample classes probabilities (c_ij from the report)
+        :param ratings: Training data. It is a numpy array matrix of shape (n_users*n_items, 3).
+        Each element has the form [user_id, item_id, rating]
+        """
+
         classes = np.zeros(len(ratings))
         discrete_probability = np.zeros((self.K, len(ratings)))
 
@@ -242,8 +266,10 @@ class BPMRMF(ModelBase):
         classes = np.array([self.rand_state.multinomial(n=1, pvals=discrete_probability[:, i]).argmax() for i in range(len(ratings))])
         return classes
 
-    # Sample user hyperparameters using Gaussian-Wishart as defined in R. Salakhutdinov and A.Mnih, 2008
     def sample_user_params(self):
+        """
+        Sample user hyperparameters using Gaussian-Wishart as defined in R. Salakhutdinov and A.Mnih, 2008
+        """
         alpha_user = []
         mu_user = []
         # Sample for every model
@@ -255,8 +281,11 @@ class BPMRMF(ModelBase):
             mu_user.append(self.sample_Gaussian(mu0_star, inv(np.dot(beta0_star, alpha_user[k]))))
         return mu_user, alpha_user
 
-    # Sample movies hyperparameters using Gaussian-Wishart as defined in R. Salakhutdinov and A.Mnih, 2008
+
     def sample_item_params(self):
+        """
+        Sample movies hyperparameters using Gaussian-Wishart as defined in R. Salakhutdinov and A.Mnih, 2008
+        """
         alpha_item = []
         mu_item = []
         # Sample for every model
@@ -268,8 +297,11 @@ class BPMRMF(ModelBase):
             mu_item.append(self.sample_Gaussian(mu0_star, inv(np.dot(beta0_star, alpha_item[k]))))
         return mu_item, alpha_item
 
-    # Sample user features
+
     def sample_user_features(self):
+        """
+        Sample user features
+        """
         user_features_ = []
         for k in range(self.K):
             curr_user_features_ = np.zeros((self.n_user, self.n_feature[k]), dtype='float64')
@@ -290,6 +322,9 @@ class BPMRMF(ModelBase):
         return user_features_
 
     def sample_item_features(self):
+        """
+        Sample user features
+        """
         item_features_ = []
         for k in range(self.K):
             curr_item_features_ = np.zeros((self.n_item, self.n_feature[k]), dtype='float64')
@@ -309,8 +344,18 @@ class BPMRMF(ModelBase):
 
         return item_features_
 
-    # Update the conditional parameters of the Gaussian-Wishart distribution
     def bayesian_update(self, N, mu0, beta0, nu0, W0, evidence, evidence_n_feature):
+        """
+        Update the conditional parameters of the Gaussian-Wishart distribution
+        :param N: int. Number of movies.
+        :param mu0:
+        :param beta0:
+        :param nu0:
+        :param W0:
+        :param evidence:
+        :param evidence_n_feature:
+        :returns:
+        """
         X_bar = np.mean(evidence, 0).reshape((evidence_n_feature, 1))
         S_bar = np.cov(evidence.T)
         diff_X_bar = mu0 - X_bar
