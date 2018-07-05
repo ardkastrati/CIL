@@ -70,7 +70,7 @@ Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Defau
 `mu0_item` | 0 | he mean of all the random means (for each item) of normally distributed V. If there is no prior information for this parameter, it is recommended to set it to 0, based on the symmetry argument.
 `max_rating` | 5. | The maximum rating number.
 `min_rating` | 1. | The minimum rating number.
-`tau` | 1. | The concetration hyperparameter of the Dirichlet distribution. If less then :math:`K` (the number of different ranks) the mass will be highly concentrated in a few components, leaving the rest with almost no mass, meaning for each rating only a few ranks (or even only one rank) will be considered for the prediction.
+`tau` | 1. | The concetration hyperparameter of the Dirichlet distribution. If less then K (the number of different ranks) the mass will be highly concentrated in a few components, leaving the rest with almost no mass, meaning for each rating only a few ranks (or even only one rank) will be considered for the prediction.
 
 
 ## Authors
