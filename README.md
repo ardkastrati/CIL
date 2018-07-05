@@ -57,20 +57,24 @@ Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Defau
 ### Setting the Parameters for BPMRMF
 The parameters of BPMRMF (i.e., our method) are as follows:
 
+<div class="foo">
+
 Parameter &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; | Default | Description
 ------------ | ------------- | -------------
-`bpmrmf_params['n_features']` | [8,9,10,50] | `list` of ranks of BPMRMF; if the list contains only one rank, it is equivalent to BPMF
-`bpmrmf_params['eval_iters']` | 21 | number of MCMC iterations
-`bpmrmf_params['beta']` | 2.0 | The precision of the gaussian distribution of the ratings
-`bpmrmf_params['beta0_user']` | 2.0 | The hyperparameter of the Gaussian-Wishart distribution for the users. A multiplicative factor of the precision (the inverse of Gaussian) in the Gaussian that is sampled from the Wishart distribution.  
-`bpmrmf_params['beta0_item']` | 2.0 | The hyperparameter of the Gaussian-Wishart distribution for the items. A multiplicative factor of the precision (the inverse of Gaussian) in the Gaussian that is sampled from the Wishart distribution.  
-`bpmrmf_params['nu0_user']` | None | Degrees of freedom in the Wishart distribution for the users.
-`bpmrmf_params['nu0_item']` | None | Degrees of freedom in the Wishart distribution for the items.
-`bpmrmf_params['mu0_user']` | 0 | The mean of all the random means (for each user) of normally distributed U. If there is no prior information for this parameter, it is recommended to set it to 0, based on the symmetry argument.
-`bpmrmf_params['mu0_item']` | 0 | he mean of all the random means (for each item) of normally distributed V. If there is no prior information for this parameter, it is recommended to set it to 0, based on the symmetry argument.
-`bpmrmf_params['max_rating']` | 5. | The maximum rating number.
-`bpmrmf_params['min_rating']` | 1. | The minimum rating number.
-`bpmrmf_params['tau']` | 1. | The concetration hyperparameter of the Dirichlet distribution. If less then :math:`K` (the number of different ranks) the mass will be highly concentrated in a few components, leaving the rest with almost no mass, meaning for each rating only a few ranks (or even only one rank) will be considered for the prediction.
+`n_features` | [8,9,10,50] | `list` of ranks of BPMRMF; if the list contains only one rank, it is equivalent to BPMF
+`eval_iters` | 21 | number of MCMC iterations
+`beta` | 2.0 | The precision of the gaussian distribution of the ratings
+`beta0_user` | 2.0 | The hyperparameter of the Gaussian-Wishart distribution for the users. A multiplicative factor of the precision (the inverse of Gaussian) in the Gaussian that is sampled from the Wishart distribution.  
+`beta0_item` | 2.0 | The hyperparameter of the Gaussian-Wishart distribution for the items. A multiplicative factor of the precision (the inverse of Gaussian) in the Gaussian that is sampled from the Wishart distribution.  
+`nu0_user` | None | Degrees of freedom in the Wishart distribution for the users.
+`nu0_item` | None | Degrees of freedom in the Wishart distribution for the items.
+`mu0_user` | 0 | The mean of all the random means (for each user) of normally distributed U. If there is no prior information for this parameter, it is recommended to set it to 0, based on the symmetry argument.
+`mu0_item` | 0 | he mean of all the random means (for each item) of normally distributed V. If there is no prior information for this parameter, it is recommended to set it to 0, based on the symmetry argument.
+`max_rating` | 5. | The maximum rating number.
+`min_rating` | 1. | The minimum rating number.
+`tau` | 1. | The concetration hyperparameter of the Dirichlet distribution. If less then :math:`K` (the number of different ranks) the mass will be highly concentrated in a few components, leaving the rest with almost no mass, meaning for each rating only a few ranks (or even only one rank) will be considered for the prediction.
+
+</div>
 
 
 ## Authors
