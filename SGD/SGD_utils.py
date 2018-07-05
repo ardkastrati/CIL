@@ -143,6 +143,13 @@ def validate():
     print(error)
 
 def rmse(predictions, y, verbose=False):
+    """
+    Calculate RMSE.
+    :param predictions: List of predictions
+    :param y: Real ratings
+    :param verbose:
+    :return: RMSE
+    """
     if verbose: print("Calculating training error...")
     error = 0
     for i in range(len(y)):
