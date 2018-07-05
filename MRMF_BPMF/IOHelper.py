@@ -1,11 +1,19 @@
-from config import general_params
+from config import general_params as params
+from config import bpmrmf_params
+from MRMF_BPMF.bpmrmf import BPMRMF
 import re
 import os
 import numpy as np
 
-MAX_ROW = general_params['n_users']
-MAX_COL = general_params['n_movies']
-datapath = general_params['train_data_path']
+train_data_path = params['train_data_path']
+test_data_path = params['test_data_path']
+D = params['n_users']
+N = params['n_movies']
+
+def get_data():
+    train_data = numpy_training_data(train_data_path, verbose=True)
+    test_data = numpy_training_data(test_data_path, verbose=True)
+    return train_data, test_data
 
 def load_data(datapath):
     """
@@ -68,3 +76,27 @@ def numpy_output_submission(preds, filename, test_data, verbose=False):
             w.write(new_line)
     if verbose: print("Finished.")
 
+def bpmrmf():
+    """
+    Trains the BPMRMF model with the parameters specified in
+    config and creates an output submission for Kaggle.
+    """
+    data, test_data = get_data()
+    rand_state = np.random.RandomState(0)
+    train_pct = params['train_pct']
+    rand_state.shuffle(data)
+    train_size = int(train_pct * data.shape[0])
+    train = data[:train_size]
+    val = data[train_size:]
+
+    bpmrmf = BPMRMF(n_user=params['n_users'], n_item=params['n_movies'],
+                    n_feature=bpmrmf_params['n_features'], beta=bpmrmf_params['beta'],
+                    beta0_user=bpmrmf_params['beta0_user'], nu0_user=bpmrmf_params['nu0_user'],
+                    mu0_user=bpmrmf_params['mu0_user'], beta0_item=bpmrmf_params['beta0_item'],
+                    nu0_item=bpmrmf_params['nu0_item'], mu0_item=bpmrmf_params['mu0_item'],
+                    seed=42, tau=bpmrmf_params['tau'],
+                    max_rating = bpmrmf_params['max_rating'],
+                    min_rating=bpmrmf_params['min_rating'])
+    bpmrmf.fit(train, val, test_data, n_iters=bpmrmf_params['eval_iters'])
+    # Create submission file
+    numpy_output_submission(bpmrmf.predictions, 'bpmrmf.csv', test_data, verbose=True)

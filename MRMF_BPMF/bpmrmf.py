@@ -18,7 +18,7 @@ from MRMF_BPMF.utils.exceptions import NotFittedError
 from MRMF_BPMF.utils.datasets import build_user_item_matrix
 from MRMF_BPMF.utils.validation import check_ratings
 from MRMF_BPMF.utils.evaluation import RMSE
-
+import time
 logger = logging.getLogger(__name__)
 
 class BPMRMF(ModelBase):
@@ -189,7 +189,7 @@ class BPMRMF(ModelBase):
             self.MCMC(ratings, validation, test)
 
             self.iter_ += 1
-
+            print("Timestamp: {}".format(time.time()))
         return self
 
     def __predict_in_current_iteration(self, data):
