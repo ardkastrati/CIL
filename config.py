@@ -19,11 +19,11 @@ general_params['surprise_train_path'] = "data/data_train_surprise.csv"
 general_params['output_file'] = "bpmrmf.csv"
 general_params['n_users'] = 10000
 general_params['n_movies'] = 1000
-general_params['train_pct'] = 0.9
+general_params['train_pct'] = 1.0
 # bpmrmf
-bpmrmf_params['n_features'] = [8,9,10,50] #ranks used in bpmrmf
+bpmrmf_params['n_features'] = [8] #ranks used in bpmrmf
 # NOTE: if n_features is just a scalar, it is equivalent to bpmf
-bpmrmf_params['eval_iters'] = 2
+bpmrmf_params['eval_iters'] = 42
 bpmrmf_params['beta'] = 2.0
 bpmrmf_params['beta0_user'] = 2.0
 bpmrmf_params['beta0_item'] = 2.0

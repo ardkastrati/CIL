@@ -1,48 +1,41 @@
-# CIL
+## Introduction
 
-SVD:
-RMSE: 0.9965796535138055
+This is the project repository of the team **make** for the [Collaborative Filtering project][1] from the [Computational Intelligence Lab][2] at [ETH Zürich][3].
 
-NMF:
-RMSE: 1.0007093783240044
-
-SGD:
-RMSE: 1.134257549370751
-
-BPMF rank 8
-36, train RMSE: 0.919386932791069 , val RMSE: 0.9812739446454559 
-
-BPMF rank 9
-iteration: 32, train RMSE: 0.9139997315475626 , val RMSE: 0.9808997873891879 
-
-BPMF rank 10
-iteration: 21, train RMSE: 0.9143092772462968 , val RMSE: 0.9818038027800366 
-
-BPMF rank 50
-iteration: 9, train RMSE: 0.8898841032499164 , val RMSE: 0.985430114045738 
-
-BPMFMR
-[8,9,10,50] 0.978407647369278
-
-Project of team make for the Collaborative Filtering project from the Computational Intelligence Lab at ETH Zürich.
-
-# Overview 
+## Overview 
 We tried several models:
 1. Stochastic Gradient Descent with Regularization (SGD).
 2. Non-Negative Matrix Factorization (NMF).
 3. Bayesian Probabilistic Matrix Factorization (BPMF).
 4. Bayesian Probabilistic Matrix Factorization with Mixture Rank (BPMFMR).
 
-Our best model is BPMFMR, in which we employ a  Gaussian  mixture  model (GMM)  to characterize  user-item ratings as a mixture of LRMA models of  different ranks and propose a fully Bayesian treatment of the model (hyper-)parameters. 
+Our best model is BPMFMR, in which we perform a fully Bayesian treatment of the (hyper-)parameters of a Gaussian mixture model (GMM) to characterize user-item ratings as a mixture of LRMA models of different ranks and propose a . 
 
-# Running
-You can reproduce our results by running:
-python run.py
+## Installation
+You can conveniently set up the environment using `conda` by running the following commands:
+```console
+$ git clone https://gitlab.ethz.ch/lming/make.git
+$ cd make
+$ conda env create
+$ source activate make-env
+```
 
-There is also a config.py file in which you can choose one of the implemented models, with different parameters.
-The output submission will be a .csv file in the submission directory. For our model, it is called bpmrmf.csv.
+## Running
+After creating and activating the `conda` environment, you can reproduce our results by simply running
+```console
+(make-env) $ python run.py
+```
 
-# Authors
+This will produce a file called 'bpmrmf.csv' in the 'submission' folder containing the test predictions of our model, which can then be submitted directly to the [Kaggle competition][2] to achieve the same score as we did with our selected submission.
+
+## Configuration
+You can change the type of model and its configuration in the 'config.py' file.
+
+
+## Authors
 Ming-Da Liu Zhang, Ard Kastrati and Erik Alexander Daxberger
 
 
+[1]: https://inclass.kaggle.com/c/cil-collab-filtering-2018
+[2]: http://da.inf.ethz.ch/teaching/2018/CIL/
+[3]: http://ethz.ch

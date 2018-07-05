@@ -1,4 +1,4 @@
-name: cil-env
+name: make-env
 dependencies:
     - python
     - numpy
