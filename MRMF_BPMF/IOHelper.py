@@ -45,7 +45,7 @@ def numpy_training_data(train_data_path, verbose=False):
     if verbose: print("data extracted")
     return train
 
-def numpy_output_submission(preds, filename, implicit_data, verbose=False):
+def numpy_output_submission(preds, filename, test_data, verbose=False):
 
     """
     sample_submission_file_path = "data/sampleSubmission.csv"
@@ -64,8 +64,8 @@ def numpy_output_submission(preds, filename, implicit_data, verbose=False):
         w.write(header)
 
         # iterate through sample file, fetch the corresponding matrix element
-        for i in range(len(implicit_data)):
-            new_line = "r{}_c{},{}\n".format(implicit_data[i, 0] + 1, implicit_data[i, 1] + 1, preds[i])
+        for i in range(len(test_data)):
+            new_line = "r{}_c{},{}\n".format(test_data[i, 0] + 1, test_data[i, 1] + 1, preds[i])
             w.write(new_line)
     if verbose: print("Finished.")
 
