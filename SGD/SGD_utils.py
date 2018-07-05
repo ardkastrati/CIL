@@ -110,16 +110,36 @@ def sgd():
     """
     Trains the SGD model and creates an output submission.
     """
+    # Percentage of training data
+    train_pct = general_params['train_pct']
     X, y = extract_training_scores(train_data_path, verbose=False)
+    # Check if the model has validation data
+    if train_pct < 1:
+        rand_state = np.random.RandomState(0)
+        rand_state.shuffle(X)
+        rand_state.shuffle(y)
+        train_size = int(train_pct * len(y))
+        X_train = X[:train_size]
+        y_train = y[:train_size]
+        X_val = X[train_size:]
+        y_val = y[train_size:]
+    else:
+        X_train = X
+        y_train = y
     eta = sgd_params['sgd_eta']
     k = sgd_params['sgd_k']
     reg_factor = sgd_params['sgd_reg']
     num_samples = sgd_params['sgd_n_samples']
     reg = SGD(eta=eta, k=k, reg_factor=reg_factor, num_of_samples=num_samples)
-    reg.fit(X, y, verbose=False)
+    reg.fit(X_train, y_train, verbose=False)
+    # If there is validation data, print RMSE for it
+    if train_pct < 1:
+        predictions = reg.predict(X_val)
+        error = rmse(predictions, y_val, verbose=False)
+        print("SGD RMSE: {} ".format(error))
     # print(training_error(reg.X_predict, X, y, verbose=False))
     output_submission(reg.X_predict, 'sgd.csv', verbose=True)
-
+"""
 def validate():
     rand_state = np.random.RandomState(0)
     X, y = extract_training_scores(train_data_path, verbose=False)
@@ -140,6 +160,8 @@ def validate():
     predictions = reg.predict(X_val)
     error = rmse(predictions, y_val, verbose=False)
     print(error)
+
+"""
 
 def rmse(predictions, y, verbose=False):
     """
