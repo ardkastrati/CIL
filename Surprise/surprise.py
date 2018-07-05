@@ -6,6 +6,7 @@ from surprise import Dataset
 from surprise import Reader
 from surprise import NMF
 from surprise import SVD
+from surprise import SVDpp
 from surprise import accuracy
 from surprise.model_selection import KFold
 from surprise.model_selection.split import train_test_split
@@ -16,11 +17,11 @@ from config import general_params
 
 def surprise_output_submission(algo, filename, test_path, verbose=False):
     """
-    Create the output submission for the Kaggle competition
+    Create the output submission for the Kaggle competition.
     :param algo: Fitted algorithm ready for prediction.
     :param filename: Name of the file for submission.
     :param verbose: Print running status.
-    :return: Creates a csv file for the predictions.
+    :returns: Creates a csv file for the predictions.
     """
     # read sample submission
     sample_submission_file_path = general_params['test_data_path']
@@ -46,19 +47,27 @@ def surprise_output_submission(algo, filename, test_path, verbose=False):
 
 def get_training_data():
     """
-    Get the training data with the format required by the Surprise algorithms
+    Get the training data with the format required by the Surprise algorithms.
+    :returns: Training data with Surprise format.
     """
     reader = Reader(line_format='user item rating', sep=',')
     data = Dataset.load_from_file(general_params['surprise_train_path'], reader=reader)
     return data.build_full_trainset()
 
 def get_train_val():
+    """
+    Get training and validation data with Surprise format.
+    :returns: Training and validation data with Surprise format.
+    """
     reader = Reader(line_format='user item rating', sep=',')
     data = Dataset.load_from_file(general_params['surprise_train_path'], reader=reader)
     train, val = train_test_split(data, test_size=0.1)
     return train, val
 # Fit Non-negative matrix factorization model and create output submission
 def nmf():
+    """
+    Train Non-Negative Matrix Factorization model and creates an output submission for the Kaggle competition.
+    """
     train_data = get_training_data()
     algo = NMF(verbose=nmf_params['verbose'],
                biased=nmf_params['biased'],
@@ -75,6 +84,10 @@ def nmf():
 
 # Fit SVD model and create output submission
 def svd():
+    """
+    Train SVD model and creates an output submission for the Kaggle competition.
+    """
+
     train_data = get_training_data()
     algo = SVD(n_factors=svd_params['n_factors'], reg_all=svd_params['reg_all'],
                lr_all=svd_params['lr_all'])
@@ -82,8 +95,18 @@ def svd():
 
     surprise_output_submission(algo, 'svd.csv', general_params['test_data_path'], verbose=True)
 
+def svdpp():
+    """
+    Train SVD++ model and creates an output submission for the Kaggle competition.
+    """
+    train_data = get_training_data()
+    algo = SVDpp()
+    algo.fit(train_data)
+    surprise_output_submission(algo, 'svd.csv', general_params['test_data_path'], verbose=True)
 def train():
     train, val = get_train_val()
+    algo = SVDpp()
+    """
     algo = NMF(verbose=nmf_params['verbose'],
                biased=nmf_params['biased'],
                n_epochs=nmf_params['n_epochs'],
@@ -94,6 +117,8 @@ def train():
                reg_bi=nmf_params['reg_bi'],
                lr_bu=nmf_params['lr_bu'],
                lr_bi=nmf_params['lr_bi'])
+
+    """
     algo.fit(train)
     error = accuracy.rmse(algo.test(val), verbose=True)
     print(error)

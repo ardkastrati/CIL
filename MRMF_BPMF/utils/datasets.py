@@ -3,7 +3,6 @@ Core implementation borrowed from: https://github.com/chyikwei/recommend
 """
 
 from six.moves import xrange
-from functools import partial
 import numpy as np
 from numpy.random import RandomState
 import scipy.sparse as sparse
@@ -11,12 +10,9 @@ import scipy.sparse as sparse
 
 def make_ratings(n_users, n_items, min_rating_per_user, max_rating_per_user,
                  rating_choices, seed=None, shuffle=True):
-    """Randomly generate a (user_id, item_id, rating) array
-
-    Return
-    ------
-        ndarray with shape (n_samples, 3)
-
+    """
+    Randomly generate a (user_id, item_id, rating) array
+    :returns:: ndarray with shape (n_samples, 3)
     """
     if not (isinstance(rating_choices, list) or
             isinstance(rating_choices, tuple)):
@@ -43,27 +39,10 @@ def make_ratings(n_users, n_items, min_rating_per_user, max_rating_per_user,
         rs.shuffle(ratings)
     return ratings
 
-
-def load_movielens_ratings(ratings_file, separator):
-    with open(ratings_file) as f:
-        ratings = []
-        for line in f:
-            line = line.split(separator)[:3]
-            line = [int(l) for l in line]
-            ratings.append(line)
-        ratings = np.array(ratings)
-    return ratings
-
-load_movielens_1m_ratings = partial(load_movielens_ratings, separator="::")
-load_movielens_100k_ratings = partial(load_movielens_ratings, separator="\t")
-
-
 def build_user_item_matrix(n_users, n_items, ratings, classes=None, the_class=None):
-    """Build user-item matrix
-
-    Return
-    ------
-        sparse matrix with shape (n_users, n_items)
+    """
+    Build user-item matrix
+    :returns: sparse matrix with shape (n_users, n_items)
     """
     #if classes != None and the_class != None:
     #    indices = np.where(classes == the_class)
