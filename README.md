@@ -29,7 +29,6 @@ After creating and activating the `conda` environment, you can reproduce our res
 This will produce a file called `bpmrmf.csv` in the `submission` folder containing the test predictions of our model, which can then be submitted directly to the [Kaggle competition][2] to achieve the same score as we did with our selected submission.
 
 ## Configuration
-### Introduction
 You can conveniently change the type of model used and its configuration by altering the `config.py` file. In the following we will describe the details of this.
 
 ### Structure of `config.py`
