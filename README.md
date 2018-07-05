@@ -8,7 +8,7 @@ In this repository we provide implementations of the following collaborative fil
 2. Bayesian Probabilistic Matrix Factorization (BPMF) (Salakhutdinov and Mnih, 2008)
 3. Bayesian Probabilistic Mixture-Rank Matrix Factorization (BPMRMF) (our method)
 
-For all other methods considered in our project report, we ran the implementations available in the [`Surprise`][4] library.
+For all other methods considered in our project report (i.e., SVD, NMF, SVD++), we wrapped the implementations available in the [`Surprise`][4] library.
 
 The model we developed is BPMFMR, in which we do a fully Bayesian treatment of the (hyper-)parameters of a Gaussian mixture model (GMM) to characterize user-item ratings as a mixture of LRMA models of different ranks. Please refer to our project report for more details.
 
@@ -28,10 +28,10 @@ After creating and activating the `conda` environment, you can reproduce our res
 (make-env) $ python run.py
 ```
 
-This will produce a file called `bpmrmf.csv` in the `submission` folder containing the test predictions of our model, which can then be submitted directly to the [Kaggle competition][2] to achieve the same score as we did with our selected submission.
+This will produce a file called `bpmrmf.csv` in the `submission` folder containing the test predictions of our model, which can then be submitted directly to the [Kaggle competition][2] to achieve the same score as we did with our final submission.
 
 ## Configuration
-You can conveniently change the type of model used and its configuration by altering the `config.py` file. In the following we will describe the details of this. The default parameters in the file will reproduce our final submission as well as the results reported in our paper (i.e., for each model).
+You can conveniently change the type of model used and its configuration by altering the `config.py` file. In the following we will describe the details of this. The default parameters in the file will reproduce our final submission. When you change the model to run (as we will describe below), you can reproduce the results for that model as reported in our paper.
 
 ### Structure of `config.py`
 The configuration file contains five different `Python` dictionaries, one containing general parameters and one for the parameters of each model (i.e., NMF, SVD, SGD and BPMRMF).
