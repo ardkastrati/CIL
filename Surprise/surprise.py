@@ -6,6 +6,9 @@ from surprise import Dataset
 from surprise import Reader
 from surprise import NMF
 from surprise import SVD
+from surprise import accuracy
+from surprise.model_selection import KFold
+from surprise.model_selection.split import train_test_split
 import os
 from config import svd_params
 from config import nmf_params
@@ -49,6 +52,11 @@ def get_training_data():
     data = Dataset.load_from_file(general_params['surprise_train_path'], reader=reader)
     return data.build_full_trainset()
 
+def get_train_val():
+    reader = Reader(line_format='user item rating', sep=',')
+    data = Dataset.load_from_file(general_params['surprise_train_path'], reader=reader)
+    train, val = train_test_split(data, test_size=0.1)
+    return train, val
 # Fit Non-negative matrix factorization model and create output submission
 def nmf():
     train_data = get_training_data()
@@ -68,6 +76,44 @@ def nmf():
 # Fit SVD model and create output submission
 def svd():
     train_data = get_training_data()
-    algo = SVD()
+    algo = SVD(n_factors=svd_params['n_factors'], reg_all=svd_params['reg_all'],
+               lr_all=svd_params['lr_all'])
     algo.fit(train_data)
+
     surprise_output_submission(algo, 'svd.csv', general_params['test_data_path'], verbose=True)
+
+def train():
+    train, val = get_train_val()
+    algo = NMF(verbose=nmf_params['verbose'],
+               biased=nmf_params['biased'],
+               n_epochs=nmf_params['n_epochs'],
+               n_factors=nmf_params['n_factors'],
+               reg_pu=nmf_params['reg_pu'],
+               reg_qi=nmf_params['reg_qi'],
+               reg_bu=nmf_params['reg_bu'],
+               reg_bi=nmf_params['reg_bi'],
+               lr_bu=nmf_params['lr_bu'],
+               lr_bi=nmf_params['lr_bi'])
+    algo.fit(train)
+    error = accuracy.rmse(algo.test(val), verbose=True)
+    print(error)
+
+
+"""
+# Load the movielens-100k dataset
+data = Dataset.load_builtin('ml-100k')
+
+# define a cross-validation iterator
+kf = KFold(n_splits=10)
+
+algo = SVD()
+
+for trainset, testset in kf.split(data):
+
+    # train and test algorithm.
+    algo.fit(trainset)
+    predictions = algo.test(testset)
+
+    # Compute and print Root Mean Squared Error
+    accuracy.rmse(predictions, verbose=True)
+"""

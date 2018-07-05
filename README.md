@@ -1,5 +1,14 @@
 # CIL
 
+SVD:
+RMSE: 0.9965796535138055
+
+NMF:
+RMSE: 1.0007093783240044
+
+SGD:
+RMSE: 1.134257549370751
+
 Project of team make for the Collaborative Filtering project from the Computational Intelligence Lab at ETH Zürich.
 
 # Overview 

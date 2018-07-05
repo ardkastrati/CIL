@@ -120,3 +120,36 @@ def sgd():
     reg.fit(X, y, verbose=False)
     # print(training_error(reg.X_predict, X, y, verbose=False))
     output_submission(reg.X_predict, 'sgd.csv', verbose=True)
+
+def validate():
+    rand_state = np.random.RandomState(0)
+    X, y = extract_training_scores(train_data_path, verbose=False)
+    rand_state.shuffle(X)
+    rand_state.shuffle(y)
+    train_pct = general_params['train_pct']
+    train_size = int(train_pct * len(y))
+    X_train = X[:train_size]
+    X_val = X[train_size:]
+    y_train = y[:train_size]
+    y_val = y[train_size:]
+    eta = sgd_params['sgd_eta']
+    k = sgd_params['sgd_k']
+    reg_factor = sgd_params['sgd_reg']
+    num_samples = sgd_params['std_n_samples']
+    reg = SGD(eta=eta, k=k, reg_factor=reg_factor, num_of_samples=num_samples)
+    reg.fit(X_train, y_train, verbose=False)
+    predictions = reg.predict(X_val)
+    error = rmse(predictions, y_val, verbose=False)
+    print(error)
+
+def rmse(predictions, y, verbose=False):
+    if verbose: print("Calculating training error...")
+    error = 0
+    for i in range(len(y)):
+        # (r, c) = X[i]
+        prediction = predictions[i]
+        error += (prediction - y[i]) ** 2
+    error = np.sqrt(error / (len(y)))
+    print(len(predictions))
+    if verbose: print("Training error calculated")
+    return error

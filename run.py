@@ -1,6 +1,8 @@
 from config import general_params as params
 from config import bpmrmf_params
 from Surprise.surprise import svd
+from SGD.SGD_utils import validate
+from Surprise.surprise import train
 from Surprise.surprise import nmf
 from SGD.SGD_utils import sgd
 from MRMF_BPMF.bpmrmf import BPMRMF
@@ -26,7 +28,7 @@ def bpmrmf():
     # Model parameters
     n_features = bpmrmf_params['n_features']
     eval_iters = bpmrmf_params['eval_iters']
-    train_pct = bpmrmf_params['train_pct']
+    train_pct = params['train_pct']
     alpha = bpmrmf_params['bpmrmf_alpha']
     beta = bpmrmf_params['beta']
     beta0_user = bpmrmf_params['beta0_user']
@@ -54,11 +56,12 @@ def bpmrmf():
     IOHelper.numpy_output_submission(bpmrmf.predictions, filename, test_data, verbose=True)
 
 def main():
-
-    if params['model'] == 'bpmrmf':
+    validate()
+    """
+        if params['model'] == 'bpmrmf':
         bpmrmf()
     elif params['model'] == 'sgd':
-        sgd.sgd()
+        sgd()
     elif params['model'] == 'nmf':
         nmf()
     elif params['model'] == 'svd':
@@ -66,6 +69,9 @@ def main():
     else:
         raise Exception('Please choose one of the following models: '
                         'bpmrmf, sgd, nmf, svd')
+
+    :return:
+    """
 
 if __name__=='__main__':
     main()
