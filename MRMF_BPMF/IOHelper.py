@@ -77,6 +77,10 @@ def numpy_output_submission(preds, filename, test_data, verbose=False):
     if verbose: print("Finished.")
 
 def bpmrmf():
+    """
+    Trains the BPMRMF model with the parameters specified in
+    config and creates an output submission for Kaggle.
+    """
     data, test_data = get_data()
     rand_state = np.random.RandomState(0)
     train_pct = params['train_pct']
