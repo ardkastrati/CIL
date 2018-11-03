@@ -1,6 +1,8 @@
 # Introduction
 
 This is the project repository of the team **make** for the [Collaborative Filtering project][1] from the [Computational Intelligence Lab][2] at [ETH Zürich][3].
+Our novel method can be found in BPMRMF folder. This is the clean version of the final implementation of this project, but the progress and the contributions while experimenting with different methods
+can be found in this repository [CIL Experiments][6]. 
 
 ## Overview 
 In this repository we provide implementations of the following collaborative filtering methods:
@@ -88,3 +90,4 @@ Ming-Da Liu Zhang, Ard Kastrati and Erik Alexander Daxberger
 [3]: http://ethz.ch
 [4]: http://surpriselib.com
 [5]: https://conda.io/docs/user-guide/install/index.html
+[6]: https://github.com/erikdax/CIL
